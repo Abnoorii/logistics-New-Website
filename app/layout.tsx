@@ -34,11 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${display.variable}`}>
       <body className="bg-ink-950 text-steel-100 font-sans antialiased">
+        <a href="#main" className="skip-link">Skip to content</a>
         <LenisProvider>
           <Preloader />
           <Cursor />
           <Nav />
-          <main>{children}</main>
+          <main id="main">{children}</main>
           <Footer />
         </LenisProvider>
       </body>

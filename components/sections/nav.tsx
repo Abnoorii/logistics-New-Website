@@ -3,20 +3,22 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { ChevronDown, Globe2, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { COUNTRIES, type Country } from "@/lib/countries";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const LINKS = [
-  { href: "#services", label: "Services" },
-  { href: "#reliability", label: "Network" },
-  { href: "#why", label: "Why us" },
-  { href: "#insights", label: "Insights" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/services", label: "Services" },
+  { href: "/about", label: "About" },
+  { href: "/track", label: "Track" },
+  { href: "/#insights", label: "Insights" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export function Nav() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [country, setCountry] = useState<Country>(COUNTRIES[0]);
   const [pickerOpen, setPickerOpen] = useState(false);
@@ -25,12 +27,14 @@ export function Nav() {
 
   useMotionValueEvent(scrollY, "change", (v) => setScrolled(v > 24));
 
+  const entryDelay = pathname === "/" ? 1.6 : 0;
+
   return (
     <>
       <motion.header
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 1.6 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: entryDelay }}
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-500",
           scrolled ? "py-3" : "py-6"
@@ -115,9 +119,9 @@ export function Nav() {
                 </AnimatePresence>
               </div>
 
-              <div className="hidden md:block">
+              <Link href="/contact" className="hidden md:block">
                 <Button size="sm" variant="primary">Get a quote</Button>
-              </div>
+              </Link>
 
               <button
                 onClick={() => setMobileOpen(true)}
@@ -164,11 +168,11 @@ export function Nav() {
                   {l.label}
                 </Link>
               ))}
-              <div className="mt-10">
+              <Link href="/contact" onClick={() => setMobileOpen(false)} className="mt-10 block">
                 <Button size="lg" variant="primary" magnetic={false}>
                   Get a quote
                 </Button>
-              </div>
+              </Link>
             </motion.nav>
           </motion.div>
         )}

@@ -1,18 +1,21 @@
 import Link from "next/link";
 import { COUNTRIES } from "@/lib/countries";
+import { SERVICES } from "@/lib/services";
 
-const LINKS = {
-  Services: [
-    "Air Freight",
-    "Ocean Freight",
-    "Customs Brokerage",
-    "Warehousing & 3PL",
-    "Project Cargo",
-    "Domestic & Interstate",
-  ],
-  Company: ["About", "Careers", "Insights", "Press", "Sustainability"],
-  Support: ["Contact", "Track a shipment", "Rate request", "FAQ"],
-};
+const COMPANY = [
+  { label: "About", href: "/about" },
+  { label: "Careers", href: "/about" },
+  { label: "Insights", href: "/#insights" },
+  { label: "Press", href: "/about" },
+  { label: "Sustainability", href: "/about" },
+];
+
+const SUPPORT = [
+  { label: "Contact", href: "/contact" },
+  { label: "Track a shipment", href: "/track" },
+  { label: "Rate request", href: "/contact" },
+  { label: "FAQ", href: "/#faq" },
+];
 
 export function Footer() {
   return (
@@ -49,25 +52,27 @@ export function Footer() {
           </div>
 
           <div className="grid gap-10 sm:grid-cols-3 lg:col-span-8">
-            {Object.entries(LINKS).map(([heading, items]) => (
-              <div key={heading}>
-                <h4 className="mb-5 text-[10px] uppercase tracking-widest text-steel-500">
-                  {heading}
-                </h4>
-                <ul className="space-y-3 text-sm text-steel-200">
-                  {items.map((l) => (
-                    <li key={l}>
-                      <Link
-                        href="#"
-                        className="transition-colors hover:text-amber-300"
-                      >
-                        {l}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <FooterCol heading="Services">
+              {SERVICES.map((s) => (
+                <FooterLink key={s.slug} href={`/services/${s.slug}`}>
+                  {s.title}
+                </FooterLink>
+              ))}
+            </FooterCol>
+            <FooterCol heading="Company">
+              {COMPANY.map((l) => (
+                <FooterLink key={l.label} href={l.href}>
+                  {l.label}
+                </FooterLink>
+              ))}
+            </FooterCol>
+            <FooterCol heading="Support">
+              {SUPPORT.map((l) => (
+                <FooterLink key={l.label} href={l.href}>
+                  {l.label}
+                </FooterLink>
+              ))}
+            </FooterCol>
           </div>
         </div>
 
@@ -84,5 +89,38 @@ export function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterCol({
+  heading,
+  children,
+}: {
+  heading: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <h4 className="mb-5 text-[10px] uppercase tracking-widest text-steel-500">
+        {heading}
+      </h4>
+      <ul className="space-y-3 text-sm text-steel-200">{children}</ul>
+    </div>
+  );
+}
+
+function FooterLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <li>
+      <Link href={href} className="transition-colors hover:text-amber-300">
+        {children}
+      </Link>
+    </li>
   );
 }

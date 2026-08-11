@@ -1,13 +1,16 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export function Preloader() {
-  const [visible, setVisible] = useState(true);
+  const pathname = usePathname();
+  const [visible, setVisible] = useState(pathname === "/");
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    if (pathname !== "/") return;
     let raf = 0;
     let start = 0;
     const dur = 1500;
@@ -21,7 +24,7 @@ export function Preloader() {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, []);
+  }, [pathname]);
 
   return (
     <AnimatePresence>

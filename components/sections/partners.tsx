@@ -2,31 +2,10 @@
 
 import { Marquee } from "@/components/interactive/marquee";
 import { Reveal } from "@/components/interactive/reveal";
-
-const AIRLINES = [
-  "Qantas Freight",
-  "Cathay Cargo",
-  "Singapore Airlines",
-  "Emirates SkyCargo",
-  "Lufthansa Cargo",
-  "Korean Air Cargo",
-  "China Airlines",
-  "Air New Zealand",
-  "ANA Cargo",
-];
-
-const SHIPPING = [
-  "Maersk",
-  "MSC",
-  "CMA CGM",
-  "Hapag-Lloyd",
-  "ONE",
-  "COSCO",
-  "Evergreen",
-  "Yang Ming",
-  "OOCL",
-  "HMM",
-];
+import {
+  AIRLINE_LOGOS,
+  SHIPPING_LOGOS,
+} from "@/components/interactive/partner-logos";
 
 export function Partners() {
   return (
@@ -53,18 +32,26 @@ export function Partners() {
         <div className="space-y-8">
           <LabelRow label="Air freight partners" />
           <Marquee>
-            {AIRLINES.map((name) => (
-              <PartnerBadge key={name} name={name} tone="amber" />
+            {AIRLINE_LOGOS.map(({ name, Logo }) => (
+              <LogoBadge key={name} name={name}>
+                <Logo />
+              </LogoBadge>
             ))}
           </Marquee>
 
           <LabelRow label="Ocean freight partners" />
           <Marquee speed="slow" reverse>
-            {SHIPPING.map((name) => (
-              <PartnerBadge key={name} name={name} tone="signal" />
+            {SHIPPING_LOGOS.map(({ name, Logo }) => (
+              <LogoBadge key={name} name={name}>
+                <Logo />
+              </LogoBadge>
             ))}
           </Marquee>
         </div>
+
+        <p className="mt-10 text-center text-[10px] uppercase tracking-widest text-steel-600">
+          Stylized wordmarks · replace with licensed brand assets when available
+        </p>
       </div>
     </section>
   );
@@ -82,21 +69,19 @@ function LabelRow({ label }: { label: string }) {
   );
 }
 
-function PartnerBadge({
+function LogoBadge({
   name,
-  tone,
+  children,
 }: {
   name: string;
-  tone: "amber" | "signal";
+  children: React.ReactNode;
 }) {
-  const dot =
-    tone === "amber" ? "bg-amber-400" : "bg-signal-400";
   return (
-    <div className="group flex shrink-0 items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 backdrop-blur transition-colors hover:border-amber-400/50">
-      <span className={`h-1.5 w-1.5 rounded-full ${dot}`} />
-      <span className="font-display text-base tracking-tight text-steel-100 opacity-70 transition-opacity group-hover:opacity-100">
-        {name}
-      </span>
+    <div
+      title={name}
+      className="flex h-16 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-8 text-steel-300 backdrop-blur transition-all duration-300 hover:border-amber-400/50 hover:text-amber-200"
+    >
+      {children}
     </div>
   );
 }

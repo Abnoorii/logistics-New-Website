@@ -4,6 +4,7 @@ import { Reveal } from "@/components/interactive/reveal";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, PhoneCall } from "lucide-react";
+import Link from "next/link";
 import { useRef } from "react";
 
 export function CTA() {
@@ -51,9 +52,11 @@ export function CTA() {
             </div>
 
             <div className="flex flex-wrap items-center gap-4 lg:col-span-4 lg:justify-end">
-              <Button size="lg" variant="primary">
-                Get a quote <ArrowRight className="h-4 w-4" />
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" variant="primary">
+                  Get a quote <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
               <a
                 href="tel:+61200000000"
                 className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-amber-400"

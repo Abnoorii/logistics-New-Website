@@ -49,6 +49,10 @@ export function Testimonials() {
     >
       <div
         className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-ink-800 via-ink-900 to-ink-950 p-8 md:p-14"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Customer testimonials"
+        aria-live="polite"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >

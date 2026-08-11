@@ -43,6 +43,39 @@ html.lenis, html.lenis body {
 .cursor-ring.hover { width: 68px; height: 68px; background: rgba(249,171,39,0.08); }
 @media (hover: none) { .cursor-dot, .cursor-ring { display: none; } }
 
+/* Focus rings */
+*:focus-visible {
+  outline: 2px solid #f9ab27;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 16px;
+  background: #f9ab27;
+  color: #05070d;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  z-index: 200;
+  transition: top .2s ease;
+}
+.skip-link:focus { top: 12px; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .cursor-dot, .cursor-ring { display: none; }
+}
+
 /* Utility */
 .text-balance { text-wrap: balance; }
 .text-pretty { text-wrap: pretty; }

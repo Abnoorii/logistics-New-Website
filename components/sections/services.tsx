@@ -3,63 +3,9 @@
 import { Section } from "@/components/ui/section";
 import { RevealItem, RevealStagger } from "@/components/interactive/reveal";
 import { motion } from "framer-motion";
-import {
-  Plane,
-  Ship,
-  ScrollText,
-  Warehouse,
-  Boxes,
-  Truck,
-  ArrowUpRight,
-} from "lucide-react";
-import { type LucideIcon } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-
-type Service = {
-  icon: LucideIcon;
-  title: string;
-  desc: string;
-  tag: string;
-};
-
-const SERVICES: Service[] = [
-  {
-    icon: Plane,
-    title: "Air Freight",
-    tag: "01 / Air",
-    desc: "Consolidated, express and charter — with priority uplift on partner carriers when hours matter.",
-  },
-  {
-    icon: Ship,
-    title: "Ocean Freight",
-    tag: "02 / Sea",
-    desc: "FCL and LCL sailings across every major trade lane, with weekly consolidations ex-Asia.",
-  },
-  {
-    icon: ScrollText,
-    title: "Customs Brokerage",
-    tag: "03 / Trade",
-    desc: "Licensed brokers on both ends — tariff advice, FTAs, permits, quarantine, drawbacks.",
-  },
-  {
-    icon: Warehouse,
-    title: "Warehousing & 3PL",
-    tag: "04 / Store",
-    desc: "Bonded and general storage with pick-pack, kitting, and DTC fulfilment out of five hubs.",
-  },
-  {
-    icon: Boxes,
-    title: "Project Cargo",
-    tag: "05 / Heavy",
-    desc: "Oversize, breakbulk, RoRo and multi-modal moves engineered lane-by-lane, permit-by-permit.",
-  },
-  {
-    icon: Truck,
-    title: "Domestic & Interstate",
-    tag: "06 / Road",
-    desc: "Line-haul, last-mile and dedicated fleets across ANZ — same asset base your ocean cargo lands on.",
-  },
-];
+import { SERVICES, type Service } from "@/lib/services";
 
 export function Services() {
   return (
@@ -85,6 +31,7 @@ function ServiceCard({
   title,
   desc,
   tag,
+  slug,
   index,
 }: Service & { index: number }) {
   return (
@@ -126,7 +73,7 @@ function ServiceCard({
 
       <div className="relative mt-8 border-t border-white/5 pt-5">
         <Link
-          href="#"
+          href={`/services/${slug}`}
           className="inline-flex items-center gap-2 text-sm font-medium text-steel-200 transition-colors group-hover:text-amber-300"
         >
           Learn more

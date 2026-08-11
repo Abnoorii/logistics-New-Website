@@ -96,11 +96,13 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 2.35, ease: [0.22, 1, 0.36, 1] }}
           className="mt-10 flex flex-wrap items-center gap-4"
         >
-          <Button size="lg" variant="primary">
-            Get a quote <ArrowRight className="h-4 w-4" />
-          </Button>
+          <Link href="/contact">
+            <Button size="lg" variant="primary">
+              Get a quote <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
           <Link
-            href="#services"
+            href="/services"
             className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm font-medium text-steel-100 backdrop-blur transition-colors hover:border-amber-400 hover:text-amber-300"
           >
             Explore services

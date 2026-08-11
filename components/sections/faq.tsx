@@ -98,12 +98,16 @@ function FAQRow({
   onToggle: () => void;
   index: number;
 }) {
+  const panelId = `faq-panel-${index}`;
+  const buttonId = `faq-button-${index}`;
   return (
     <div className="py-2">
       <button
         onClick={onToggle}
-        className="group flex w-full items-start justify-between gap-6 py-6 text-left"
+        id={buttonId}
+        aria-controls={panelId}
         aria-expanded={open}
+        className="group flex w-full items-start justify-between gap-6 py-6 text-left"
       >
         <div className="flex items-start gap-6">
           <span className="mt-1.5 font-mono text-xs text-steel-500">
@@ -124,6 +128,9 @@ function FAQRow({
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
+            id={panelId}
+            role="region"
+            aria-labelledby={buttonId}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
