@@ -54,7 +54,7 @@ export function Nav() {
               className="flex items-center gap-2 px-3 py-2 text-sm font-medium tracking-tight"
             >
               <LogoMark />
-              <span className="font-display text-base">Meridian</span>
+              <span className="font-display text-base">Logistics.af</span>
             </Link>
 
             <nav className="hidden items-center gap-1 lg:flex">
@@ -144,7 +144,7 @@ export function Nav() {
             className="fixed inset-0 z-[60] bg-ink-950/95 backdrop-blur-xl lg:hidden"
           >
             <div className="container flex items-center justify-between py-6">
-              <span className="font-display text-lg">Meridian</span>
+              <span className="font-display text-lg">Logistics.af</span>
               <button
                 onClick={() => setMobileOpen(false)}
                 className="rounded-full border border-white/10 bg-white/5 p-2"

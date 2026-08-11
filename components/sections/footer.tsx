@@ -29,7 +29,7 @@ export function Footer() {
                   <path d="M3 12L12 3l9 9-9 9-9-9zm9-5l-5 5 5 5 5-5-5-5z" fill="currentColor" />
                 </svg>
               </span>
-              <span className="font-display text-xl">Meridian Freight</span>
+              <span className="font-display text-xl">Logistics.af</span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-steel-400">
               Global freight forwarding across air, ocean, road and rail — with
@@ -77,14 +77,14 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-xs text-steel-500 md:flex-row md:items-center">
-          <span>© {new Date().getFullYear()} Meridian Freight. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Logistics.af. All rights reserved.</span>
           <div className="flex flex-wrap gap-6">
             <Link href="#" className="hover:text-steel-100">Privacy</Link>
             <Link href="#" className="hover:text-steel-100">Terms</Link>
             <Link href="#" className="hover:text-steel-100">Cookies</Link>
           </div>
           <span className="font-mono uppercase tracking-widest">
-            Made for cargo · Sydney → World
+            Made for cargo · Kabul → World
           </span>
         </div>
       </div>

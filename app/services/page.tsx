@@ -6,11 +6,23 @@ import { Reveal, RevealItem, RevealStagger } from "@/components/interactive/reve
 import { SERVICES } from "@/lib/services";
 import { ArrowUpRight } from "lucide-react";
 import { CTA } from "@/components/sections/cta";
+import { SITE } from "@/lib/site";
+
+const description =
+  "Six services under one roof: air freight, ocean freight, customs brokerage, warehousing & 3PL, project cargo, and domestic transport.";
 
 export const metadata: Metadata = {
-  title: "Services — Meridian Freight",
-  description:
-    "Six services under one roof: air freight, ocean freight, customs brokerage, warehousing & 3PL, project cargo, and domestic transport.",
+  title: "Services",
+  description,
+  alternates: { canonical: `${SITE.url}/services` },
+  openGraph: {
+    title: `Services — ${SITE.name}`,
+    description,
+    url: `${SITE.url}/services`,
+    siteName: SITE.name,
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: `Services — ${SITE.name}`, description },
 };
 
 export default function ServicesPage() {

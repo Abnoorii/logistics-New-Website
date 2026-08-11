@@ -20,10 +20,55 @@ const display = Space_Grotesk({
   display: "swap",
 });
 
+const siteUrl = "https://logistics.af";
+const siteName = "Logistics.af";
+const siteDescription =
+  "Global freight forwarding across air, ocean, road and rail — with the visibility, precision, and human care your cargo deserves.";
+
 export const metadata: Metadata = {
-  title: "Meridian Freight — Every leg of the journey",
-  description:
-    "Global freight forwarding across air, ocean, road and rail — with the visibility, precision, and human care your cargo deserves.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteName} — Every leg of the journey`,
+    template: `%s — ${siteName}`,
+  },
+  description: siteDescription,
+  applicationName: siteName,
+  keywords: [
+    "freight forwarder",
+    "logistics",
+    "air freight",
+    "ocean freight",
+    "customs brokerage",
+    "warehousing",
+    "3PL",
+    "Afghanistan logistics",
+    "Kabul freight",
+  ],
+  authors: [{ name: siteName }],
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName,
+    title: `${siteName} — Every leg of the journey`,
+    description: siteDescription,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteName} — Every leg of the journey`,
+    description: siteDescription,
+  },
+  alternates: { canonical: siteUrl },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

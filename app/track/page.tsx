@@ -4,11 +4,23 @@ import { Section } from "@/components/ui/section";
 import { TrackForm } from "@/components/sections/track-form";
 import { Reveal } from "@/components/interactive/reveal";
 import { PhoneCall, Mail } from "lucide-react";
+import { CONTACT, SITE } from "@/lib/site";
+
+const description =
+  "Look up the status of your Logistics.af shipment. Enter a reference, container number, master B/L or AWB to see live milestones.";
 
 export const metadata: Metadata = {
-  title: "Track a shipment — Meridian Freight",
-  description:
-    "Look up the status of your Meridian shipment. Enter a reference or B/L number to see live milestones.",
+  title: "Track a shipment",
+  description,
+  alternates: { canonical: `${SITE.url}/track` },
+  openGraph: {
+    title: `Track a shipment — ${SITE.name}`,
+    description,
+    url: `${SITE.url}/track`,
+    siteName: SITE.name,
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: `Track a shipment — ${SITE.name}`, description },
 };
 
 export default function TrackPage() {
@@ -17,7 +29,7 @@ export default function TrackPage() {
       <PageHero
         eyebrow="Live tracking"
         title="Where is my cargo?"
-        intro="Enter a Meridian reference, container number, master B/L or AWB. You'll see the same milestones your account team sees — as they land."
+        intro="Enter a Logistics.af reference, container number, master B/L or AWB. You'll see the same milestones your account team sees — as they land."
       />
 
       <Section>
@@ -37,18 +49,18 @@ export default function TrackPage() {
                 </p>
                 <div className="mt-6 space-y-4 text-sm">
                   <a
-                    href="tel:+61200000000"
+                    href={CONTACT.ops.phoneHref}
                     className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
                   >
                     <PhoneCall className="h-4 w-4 text-amber-300" />
-                    +61 2 0000 0000 (Sydney ops)
+                    {CONTACT.ops.phone} · {CONTACT.ops.label}
                   </a>
                   <a
-                    href="mailto:ops@meridianfreight.example"
+                    href={`mailto:${CONTACT.emails.info}`}
                     className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
                   >
                     <Mail className="h-4 w-4 text-amber-300" />
-                    ops@meridianfreight.example
+                    {CONTACT.emails.info}
                   </a>
                 </div>
               </div>

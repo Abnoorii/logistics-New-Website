@@ -4,12 +4,24 @@ import { Section } from "@/components/ui/section";
 import { ContactForm } from "@/components/sections/contact-form";
 import { Reveal } from "@/components/interactive/reveal";
 import { COUNTRIES } from "@/lib/countries";
+import { CONTACT, SITE } from "@/lib/site";
 import { PhoneCall, Mail, Clock } from "lucide-react";
 
+const description =
+  "Tell us the lane, the ship-by date, and what's in the box. Firm quote and a named contact within four business hours.";
+
 export const metadata: Metadata = {
-  title: "Get a quote — Meridian Freight",
-  description:
-    "Tell us the lane, the ship-by date, and what's in the box. Firm quote and a named contact within four business hours.",
+  title: "Get a quote",
+  description,
+  alternates: { canonical: `${SITE.url}/contact` },
+  openGraph: {
+    title: `Get a quote — ${SITE.name}`,
+    description,
+    url: `${SITE.url}/contact`,
+    siteName: SITE.name,
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: `Get a quote — ${SITE.name}`, description },
 };
 
 export default function ContactPage() {
@@ -61,18 +73,32 @@ export default function ContactPage() {
                 <h3 className="font-display text-xl text-steel-100">Prefer to call?</h3>
                 <div className="mt-6 space-y-4 text-sm">
                   <a
-                    href="tel:+61200000000"
+                    href={CONTACT.sales.phoneHref}
                     className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
                   >
                     <PhoneCall className="h-4 w-4 text-amber-300" />
-                    +61 2 0000 0000 (Sydney HQ)
+                    {CONTACT.sales.phone} · {CONTACT.sales.label}
                   </a>
                   <a
-                    href="mailto:hello@meridianfreight.example"
+                    href={CONTACT.ops.phoneHref}
+                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
+                  >
+                    <PhoneCall className="h-4 w-4 text-amber-300" />
+                    {CONTACT.ops.phone} · {CONTACT.ops.label}
+                  </a>
+                  <a
+                    href={`mailto:${CONTACT.emails.sales}`}
                     className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
                   >
                     <Mail className="h-4 w-4 text-amber-300" />
-                    hello@meridianfreight.example
+                    {CONTACT.emails.sales}
+                  </a>
+                  <a
+                    href={`mailto:${CONTACT.emails.info}`}
+                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
+                  >
+                    <Mail className="h-4 w-4 text-amber-300" />
+                    {CONTACT.emails.info}
                   </a>
                 </div>
               </div>

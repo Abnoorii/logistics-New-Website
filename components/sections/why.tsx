@@ -50,7 +50,7 @@ export function Why() {
   return (
     <Section
       id="why"
-      eyebrow="Why Meridian"
+      eyebrow="Why Logistics.af"
       title="The reasons customers rebook — every quarter, every peak."
       intro="Freight forwarders promise the world. Here's what earns repeat business, according to the operations leaders we work with."
     >

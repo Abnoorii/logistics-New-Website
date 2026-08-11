@@ -8,7 +8,7 @@ import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 const QUOTES = [
   {
     quote:
-      "We moved seven brands off three different forwarders onto Meridian. Ocean and air, ANZ and Europe. First peak season with them, on-time was ninety-nine percent. That's not what forwarders usually deliver.",
+      "We moved seven brands off three different forwarders onto Logistics.af. Ocean and air, across Europe and Asia. First peak season with them, on-time was ninety-nine percent. That's not what forwarders usually deliver.",
     author: "Priya Menon",
     role: "Head of Supply Chain",
     company: "Halcyon Home",
@@ -16,7 +16,7 @@ const QUOTES = [
   {
     quote:
       "The dashboard replaced two spreadsheets and a WhatsApp group. When our customs entry got pulled last month, someone from their team called us before the alert email even landed.",
-    author: "Marcus Cheng",
+    author: "Farid Rahmani",
     role: "Operations Director",
     company: "Northline Apparel Group",
   },

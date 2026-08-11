@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, PhoneCall } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
+import { CONTACT } from "@/lib/site";
 
 export function CTA() {
   const ref = useRef<HTMLDivElement>(null);
@@ -58,11 +59,11 @@ export function CTA() {
                 </Button>
               </Link>
               <a
-                href="tel:+61200000000"
+                href={CONTACT.ops.phoneHref}
                 className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-amber-400"
               >
                 <PhoneCall className="h-4 w-4 text-amber-300" />
-                Talk to ops
+                Talk to ops · {CONTACT.ops.phone}
               </a>
             </div>
           </div>

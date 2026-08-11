@@ -13,17 +13,17 @@ type Result = {
 };
 
 const SAMPLE: Result = {
-  ref: "MDU-4489327",
+  ref: "LAFU-4489327",
   origin: "Shanghai, CN",
-  destination: "Sydney, AU",
-  mode: "Ocean · 40′ HC",
+  destination: "Kabul, AF",
+  mode: "Ocean + Road · 40′ HC",
   milestones: [
     { label: "Booking confirmed", date: "Jul 21", done: true },
     { label: "Cargo received at origin CFS", date: "Jul 24", done: true },
-    { label: "Loaded on vessel MERIDIAN VOYAGER", date: "Jul 27", done: true },
-    { label: "Transhipment at Singapore", date: "Aug 03", done: true },
-    { label: "Arrived Port of Sydney", date: "Aug 11", active: true, done: false },
-    { label: "Customs cleared", date: "Est. Aug 13", done: false },
+    { label: "Loaded on vessel AURORA VOYAGER", date: "Jul 27", done: true },
+    { label: "Transhipment at Karachi", date: "Aug 03", done: true },
+    { label: "Cleared border, Torkham", date: "Aug 11", active: true, done: false },
+    { label: "Customs cleared, Kabul", date: "Est. Aug 13", done: false },
     { label: "Delivered to consignee", date: "Est. Aug 14", done: false },
   ],
 };
@@ -40,7 +40,7 @@ export function TrackForm() {
     if (!ref.trim()) return;
     setStatus("loading");
     setTimeout(() => {
-      if (ref.toUpperCase().includes("MDU") || ref === "demo") {
+      if (ref.toUpperCase().includes("LAFU") || ref === "demo") {
         setResult({ ...SAMPLE, ref });
         setStatus("found");
       } else {
@@ -60,7 +60,7 @@ export function TrackForm() {
         <input
           value={ref}
           onChange={(e) => setRef(e.target.value)}
-          placeholder="Try MDU-4489327 or ‘demo’"
+          placeholder="Try LAFU-4489327 or ‘demo’"
           className="flex-1 bg-transparent px-4 py-5 text-base text-steel-100 placeholder:text-steel-500 focus:outline-none"
           aria-label="Reference number"
         />
@@ -75,8 +75,8 @@ export function TrackForm() {
       </form>
 
       <p className="mt-3 text-xs text-steel-500">
-        Enter a Meridian reference, container number, master B/L or AWB. This is
-        a preview — real feeds will resolve to carrier data.
+        Enter a Logistics.af reference, container number, master B/L or AWB.
+        This is a preview — real feeds will resolve to carrier data.
       </p>
 
       <AnimatePresence mode="wait">

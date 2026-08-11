@@ -1,4 +1,4 @@
-# Meridian Freight — Design System
+# Logistics.af — Design System
 
 ## Voice
 Industrial precision, humanized. The tone should feel like an operations

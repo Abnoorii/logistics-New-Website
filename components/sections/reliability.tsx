@@ -103,11 +103,11 @@ export function Reliability() {
                 Container
               </div>
               <div className="mt-1 font-mono text-lg text-amber-300">
-                MDU 4489327 · 40′ HC
+                LAFU 4489327 · 40′ HC
               </div>
               <div className="mt-4 flex flex-col gap-2 text-xs text-steel-300">
                 <MilestoneDot label="Shanghai · loaded" done />
-                <MilestoneDot label="Vessel MERIDIAN VOYAGER" done />
+                <MilestoneDot label="Vessel AURORA VOYAGER" done />
                 <MilestoneDot label="Singapore · transhipped" done />
                 <MilestoneDot label="Sydney · in port" active />
                 <MilestoneDot label="Delivery · scheduled" />
@@ -162,7 +162,7 @@ export function Reliability() {
 
             {/* Bottom label */}
             <div className="absolute inset-x-0 bottom-4 text-center text-[10px] uppercase tracking-widest text-steel-500">
-              Sydney metro · last mile
+              Kabul metro · last mile
             </div>
           </div>
         </div>

@@ -86,7 +86,7 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 max-w-xl text-lg leading-relaxed text-steel-300 text-pretty md:text-xl"
         >
-          Meridian moves cargo across air, ocean, road and rail — with the
+          Logistics.af moves cargo across air, ocean, road and rail — with the
           visibility, precision, and human care your supply chain deserves.
         </motion.p>
 

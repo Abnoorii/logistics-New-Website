@@ -64,8 +64,9 @@ export async function POST(req: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO ?? "hello@meridianfreight.example";
-  const from = process.env.CONTACT_FROM ?? "Meridian Website <noreply@meridianfreight.example>";
+  const to = process.env.CONTACT_TO ?? "sales@logistics.af";
+  const from =
+    process.env.CONTACT_FROM ?? "Logistics.af Website <noreply@logistics.af>";
 
   if (!apiKey) {
     console.log("[contact] no RESEND_API_KEY — logging submission only", body);

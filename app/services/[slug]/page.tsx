@@ -7,6 +7,7 @@ import { Reveal, RevealItem, RevealStagger } from "@/components/interactive/reve
 import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections/cta";
 import { SERVICES, getService } from "@/lib/services";
+import { SITE } from "@/lib/site";
 import { ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 export function generateStaticParams() {
@@ -20,10 +21,24 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const svc = getService(slug);
-  if (!svc) return { title: "Service not found — Meridian Freight" };
+  if (!svc) return { title: "Service not found" };
+  const url = `${SITE.url}/services/${svc.slug}`;
   return {
-    title: `${svc.title} — Meridian Freight`,
+    title: svc.title,
     description: svc.desc,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${svc.title} — ${SITE.name}`,
+      description: svc.desc,
+      url,
+      siteName: SITE.name,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${svc.title} — ${SITE.name}`,
+      description: svc.desc,
+    },
   };
 }
 

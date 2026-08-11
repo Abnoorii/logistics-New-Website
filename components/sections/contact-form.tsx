@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle2, Send } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { CONTACT } from "@/lib/site";
 
 const SERVICES = [
   "Air Freight",
@@ -81,8 +82,8 @@ export function ContactForm() {
           </h3>
           <p className="mt-3 max-w-md text-base text-steel-300">
             You&rsquo;ll hear back from a named ops lead within four business
-            hours. If it&rsquo;s urgent, call the Sydney desk on
-            &nbsp;<a href="tel:+61200000000" className="text-amber-300 underline underline-offset-4">+61 2 0000 0000</a>.
+            hours. If it&rsquo;s urgent, call the sales desk on
+            &nbsp;<a href={CONTACT.sales.phoneHref} className="text-amber-300 underline underline-offset-4">{CONTACT.sales.phone}</a>.
           </p>
           <button
             onClick={() => setStatus("idle")}

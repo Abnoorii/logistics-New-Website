@@ -5,11 +5,23 @@ import { Counter } from "@/components/interactive/counter";
 import { Reveal, RevealItem, RevealStagger } from "@/components/interactive/reveal";
 import { CTA } from "@/components/sections/cta";
 import { COUNTRIES } from "@/lib/countries";
+import { SITE } from "@/lib/site";
+
+const description =
+  "Meet the team moving cargo across air, ocean, road and rail. Owned hubs in Kabul, Auckland, Shanghai, LA, Hamburg and London.";
 
 export const metadata: Metadata = {
-  title: "About — Meridian Freight",
-  description:
-    "Meet the team moving cargo across air, ocean, road and rail. Owned hubs in Sydney, Auckland, Shanghai, LA, Hamburg and London.",
+  title: "About",
+  description,
+  alternates: { canonical: `${SITE.url}/about` },
+  openGraph: {
+    title: `About — ${SITE.name}`,
+    description,
+    url: `${SITE.url}/about`,
+    siteName: SITE.name,
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: `About — ${SITE.name}`, description },
 };
 
 const VALUES = [
@@ -32,9 +44,9 @@ const VALUES = [
 ];
 
 const TIMELINE = [
-  { year: "2018", note: "Meridian founded in Sydney with a single air-freight desk." },
+  { year: "2018", note: "Logistics.af founded in Kabul with a single air-freight desk." },
   { year: "2020", note: "Opened Shanghai and Auckland offices; ocean freight goes live." },
-  { year: "2022", note: "Hamburg and Los Angeles hubs open; 3PL launches out of Sydney." },
+  { year: "2022", note: "Hamburg and Los Angeles hubs open; 3PL launches out of Kabul." },
   { year: "2024", note: "London opens. Project cargo team stands up." },
   { year: "2026", note: "42 active lanes, 98.2% on-time, 2,500+ shipments a month." },
 ];
@@ -43,9 +55,9 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Meridian"
+        eyebrow="About Logistics.af"
         title={<>Built by operators. Run for shippers.</>}
-        intro="We started in 2018 with a single air-freight desk in Sydney and a working theory: forwarders overpromise and underexplain. Eight years later, we're a 220-person team with owned hubs across three continents and a rebook rate our competitors keep asking about."
+        intro="We started in 2018 with a single air-freight desk in Kabul and a working theory: forwarders overpromise and underexplain. Eight years later, we're a 220-person team with owned hubs across three continents and a rebook rate our competitors keep asking about."
       />
 
       <Section>
