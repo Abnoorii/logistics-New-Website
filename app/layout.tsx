@@ -8,6 +8,8 @@ import { PageTransition } from "@/components/interactive/page-transition";
 import { Preloader } from "@/components/sections/preloader";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -93,6 +95,8 @@ export default function RootLayout({
             <Footer />
           </RegionProvider>
         </LenisProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

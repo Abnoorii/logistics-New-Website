@@ -12,10 +12,10 @@ import { useRegion } from "@/components/providers/region-provider";
 
 const LINKS = [
   { href: "/services", label: "Services" },
+  { href: "/scenarios", label: "How we work" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/about", label: "About" },
   { href: "/track", label: "Track" },
-  { href: "/#faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export function Nav() {

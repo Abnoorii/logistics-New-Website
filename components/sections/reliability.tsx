@@ -116,19 +116,47 @@ export function Reliability() {
 
             <motion.div
               style={{ y: cardY }}
-              className="absolute right-8 top-40 rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur"
+              className="absolute right-6 top-40 w-[210px] rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur"
             >
-              <div className="text-[10px] uppercase tracking-widest text-steel-400">
-                On-time
+              <div className="flex items-center justify-between">
+                <div className="text-[10px] uppercase tracking-widest text-steel-400">
+                  On-time · 30d
+                </div>
+                <span className="rounded-full bg-signal-500/15 px-1.5 py-0.5 text-[9px] uppercase tracking-widest text-signal-400">
+                  ↑ 1.4
+                </span>
               </div>
               <div className="mt-1 font-display text-3xl text-steel-100">
                 98.2<span className="text-amber-400">%</span>
               </div>
-              <div className="mt-3 h-1.5 w-32 overflow-hidden rounded-full bg-white/5">
+              <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/5">
                 <motion.div
                   style={{ width: progress }}
                   className="h-full rounded-full bg-gradient-to-r from-amber-400 to-signal-400"
                 />
+              </div>
+              <SparkChart />
+              <div className="mt-2 flex items-center justify-between text-[9px] text-steel-500">
+                <span>W-4</span>
+                <span>W-3</span>
+                <span>W-2</span>
+                <span>W-1</span>
+                <span className="text-amber-300">Now</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              style={{ y: cardY }}
+              className="absolute left-8 top-[19rem] w-[220px] rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur"
+            >
+              <div className="text-[10px] uppercase tracking-widest text-steel-400">
+                Active this week
+              </div>
+              <div className="mt-3 grid grid-cols-2 gap-3 text-xs">
+                <MiniStat label="Bookings" value="127" trend="+8" />
+                <MiniStat label="In transit" value="84" trend="+3" />
+                <MiniStat label="Cleared" value="41" trend="+12" />
+                <MiniStat label="Exceptions" value="2" trend="0" flat />
               </div>
             </motion.div>
 
@@ -202,6 +230,74 @@ function MilestoneDot({
       >
         {label}
       </span>
+    </div>
+  );
+}
+
+function SparkChart() {
+  const points = [58, 62, 55, 71, 68, 82, 76, 88, 81, 92, 86, 94];
+  const max = 100;
+  const min = 40;
+  const w = 178;
+  const h = 36;
+  const step = w / (points.length - 1);
+  const y = (v: number) => h - ((v - min) / (max - min)) * h;
+  const path = points
+    .map((v, i) => `${i === 0 ? "M" : "L"} ${i * step},${y(v)}`)
+    .join(" ");
+  const area = `${path} L ${w},${h} L 0,${h} Z`;
+  return (
+    <svg viewBox={`0 0 ${w} ${h}`} className="mt-3 h-9 w-full">
+      <defs>
+        <linearGradient id="sparkFill" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stopColor="#f9ab27" stopOpacity="0.35" />
+          <stop offset="1" stopColor="#f9ab27" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <path d={area} fill="url(#sparkFill)" />
+      <path d={path} fill="none" stroke="#f9ab27" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <circle
+        cx={(points.length - 1) * step}
+        cy={y(points[points.length - 1])}
+        r="2.5"
+        fill="#f9ab27"
+      />
+    </svg>
+  );
+}
+
+function MiniStat({
+  label,
+  value,
+  trend,
+  flat = false,
+}: {
+  label: string;
+  value: string;
+  trend: string;
+  flat?: boolean;
+}) {
+  return (
+    <div className="rounded-lg bg-white/[0.03] px-2 py-1.5">
+      <div className="text-[9px] uppercase tracking-widest text-steel-500">
+        {label}
+      </div>
+      <div className="mt-0.5 flex items-baseline justify-between gap-1">
+        <span className="font-display text-base text-steel-100 tabular-nums">
+          {value}
+        </span>
+        <span
+          className={
+            flat
+              ? "text-[10px] text-steel-500"
+              : trend.startsWith("-")
+              ? "text-[10px] text-red-300"
+              : "text-[10px] text-signal-400"
+          }
+        >
+          {flat ? "—" : trend}
+        </span>
+      </div>
     </div>
   );
 }

@@ -22,6 +22,7 @@ export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [mountedAt] = useState<number>(() => Date.now());
   const { country, hydrated } = useRegion();
   const originDefault = hydrated
     ? `${country.hub.split(" · ")[0]}, ${country.name}`
@@ -48,6 +49,8 @@ export function ContactForm() {
       shipBy: String(fd.get("shipBy") ?? "").trim(),
       services: selectedServices,
       message: String(fd.get("message") ?? "").trim(),
+      website: String(fd.get("website") ?? ""),
+      ts: mountedAt,
     };
 
     try {
@@ -105,6 +108,19 @@ export function ContactForm() {
           animate={{ opacity: 1 }}
           className="rounded-3xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur md:p-10"
         >
+          {/* Honeypot — visually hidden, off tab order. Bots fill it, humans don't. */}
+          <div aria-hidden="true" style={{ position: "absolute", left: -10000, top: "auto", width: 1, height: 1, overflow: "hidden" }}>
+            <label>
+              Website (leave blank)
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                defaultValue=""
+              />
+            </label>
+          </div>
           {hydrated && (
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/[0.06] px-3 py-1.5 text-xs text-amber-200">
               <span className="text-base leading-none">{country.flag}</span>

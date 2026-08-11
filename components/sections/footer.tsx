@@ -4,9 +4,10 @@ import { SERVICES } from "@/lib/services";
 
 const COMPANY = [
   { label: "About", href: "/about" },
+  { label: "How we work", href: "/scenarios" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Careers", href: "/about" },
   { label: "Press", href: "/about" },
-  { label: "Sustainability", href: "/about" },
 ];
 
 const SUPPORT = [
@@ -78,9 +79,9 @@ export function Footer() {
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-xs text-steel-500 md:flex-row md:items-center">
           <span>© {new Date().getFullYear()} Logistics.af. All rights reserved.</span>
           <div className="flex flex-wrap gap-6">
-            <Link href="#" className="hover:text-steel-100">Privacy</Link>
-            <Link href="#" className="hover:text-steel-100">Terms</Link>
-            <Link href="#" className="hover:text-steel-100">Cookies</Link>
+            <Link href="/privacy" className="hover:text-steel-100">Privacy</Link>
+            <Link href="/terms" className="hover:text-steel-100">Terms</Link>
+            <Link href="/cookies" className="hover:text-steel-100">Cookies</Link>
           </div>
           <span className="font-mono uppercase tracking-widest">
             Made for cargo · Kabul → World

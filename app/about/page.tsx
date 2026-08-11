@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/ui/page-hero";
 import { Section } from "@/components/ui/section";
 import { Counter } from "@/components/interactive/counter";
@@ -59,6 +60,25 @@ export default function AboutPage() {
         title={<>Built by operators. Run for shippers.</>}
         intro="We started in 2018 with a single air-freight desk in Kabul and a working theory: forwarders overpromise and underexplain. Eight years later, we're a 220-person team with owned hubs across three continents and a rebook rate our competitors keep asking about."
       />
+
+      <section className="container -mt-4">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-ink-800">
+            <Image
+              src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=2000&q=75"
+              alt="Container yard at dusk"
+              width={2000}
+              height={1000}
+              priority
+              className="h-[280px] w-full object-cover opacity-80 md:h-[420px]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/20 to-transparent" />
+            <div className="absolute inset-x-0 bottom-6 text-center text-[10px] uppercase tracking-widest text-steel-500">
+              Placeholder photography · replace with owned assets pre-launch
+            </div>
+          </div>
+        </Reveal>
+      </section>
 
       <Section>
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
