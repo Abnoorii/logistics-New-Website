@@ -23,26 +23,6 @@ html.lenis, html.lenis body {
 /* Selection */
 ::selection { background: #f9ab27; color: #05070d; }
 
-/* Custom cursor */
-.cursor-dot, .cursor-ring {
-  position: fixed;
-  top: 0; left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  border-radius: 9999px;
-  transform: translate3d(-50%, -50%, 0);
-  will-change: transform, width, height, opacity;
-  mix-blend-mode: difference;
-}
-.cursor-dot { width: 6px; height: 6px; background: #f9ab27; }
-.cursor-ring {
-  width: 34px; height: 34px;
-  border: 1.5px solid rgba(249,171,39,0.7);
-  transition: width .25s ease, height .25s ease, opacity .2s ease, background .2s ease;
-}
-.cursor-ring.hover { width: 68px; height: 68px; background: rgba(249,171,39,0.08); }
-@media (hover: none) { .cursor-dot, .cursor-ring { display: none; } }
-
 /* Focus rings */
 *:focus-visible {
   outline: 2px solid #f9ab27;
@@ -73,7 +53,6 @@ html.lenis, html.lenis body {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-  .cursor-dot, .cursor-ring { display: none; }
 }
 
 /* Utility */

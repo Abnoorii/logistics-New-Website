@@ -14,8 +14,8 @@ const LINKS = [
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/track", label: "Track" },
-  { href: "/#insights", label: "Insights" },
   { href: "/#faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Nav() {

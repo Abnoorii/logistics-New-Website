@@ -38,18 +38,15 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-steel-200 backdrop-blur"
+          className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-steel-200 backdrop-blur"
         >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inset-0 animate-ping rounded-full bg-signal-400 opacity-70" />
-            <span className="relative h-2 w-2 rounded-full bg-signal-400" />
-          </span>
-          Live network · 42 lanes moving right now
+          <span className="h-1 w-6 bg-amber-400" />
+          Air · Ocean · Road · Customs · 3PL
         </motion.div>
 
         <motion.h1
           style={{ y: titleY }}
-          className="max-w-[18ch] font-display text-display-1 font-medium text-steel-100 text-balance"
+          className="max-w-[14ch] font-display text-display-1 font-medium text-steel-100 text-balance md:max-w-[15ch] lg:max-w-[18ch]"
         >
           <motion.span
             initial={{ opacity: 0, y: 40 }}
@@ -118,7 +115,7 @@ export function Hero() {
       {/* Orbit graphic */}
       <motion.div
         style={{ rotate: orbitRot }}
-        className="pointer-events-none absolute -right-[28%] top-[8%] hidden aspect-square w-[880px] items-center justify-center md:flex"
+        className="pointer-events-none absolute -right-[18%] top-[16%] hidden aspect-square w-[880px] origin-center scale-[0.55] items-center justify-center md:flex lg:-right-[28%] lg:top-[8%] lg:scale-100"
       >
         <div className="absolute inset-0 rounded-full border border-white/10" />
         <div className="absolute inset-16 rounded-full border border-white/10" />

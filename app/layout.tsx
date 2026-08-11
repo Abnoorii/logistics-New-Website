@@ -3,8 +3,8 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/lenis-provider";
 import { RegionProvider } from "@/components/providers/region-provider";
-import { Cursor } from "@/components/interactive/cursor";
 import { HashHandler } from "@/components/interactive/hash-handler";
+import { PageTransition } from "@/components/interactive/page-transition";
 import { Preloader } from "@/components/sections/preloader";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
@@ -86,9 +86,10 @@ export default function RootLayout({
           <RegionProvider>
             <HashHandler />
             <Preloader />
-            <Cursor />
             <Nav />
-            <main id="main">{children}</main>
+            <main id="main">
+              <PageTransition>{children}</PageTransition>
+            </main>
             <Footer />
           </RegionProvider>
         </LenisProvider>
