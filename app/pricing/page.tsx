@@ -6,6 +6,8 @@ import { Reveal, RevealItem, RevealStagger } from "@/components/interactive/reve
 import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections/cta";
 import { SITE } from "@/lib/site";
+import { IMAGES } from "@/lib/images";
+import { TreatedImage } from "@/components/interactive/treated-image";
 import { ArrowRight, CheckCircle2, HelpCircle } from "lucide-react";
 
 const description =
@@ -110,6 +112,19 @@ export default function PricingPage() {
           </>
         }
       />
+
+      <section className="container -mt-4 mb-6">
+        <Reveal>
+          <TreatedImage
+            src={IMAGES.pricingBorder.src}
+            alt={IMAGES.pricingBorder.alt}
+            focal={IMAGES.pricingBorder.focal}
+            aspect="aspect-[21/8]"
+            caption="Every quote is lane-specific"
+            sizes="(min-width: 1024px) 1200px, 100vw"
+          />
+        </Reveal>
+      </section>
 
       <Section
         eyebrow="Indicative rates"

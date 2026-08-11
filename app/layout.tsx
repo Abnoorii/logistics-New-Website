@@ -5,6 +5,7 @@ import { LenisProvider } from "@/components/providers/lenis-provider";
 import { RegionProvider } from "@/components/providers/region-provider";
 import { HashHandler } from "@/components/interactive/hash-handler";
 import { PageTransition } from "@/components/interactive/page-transition";
+import { ImageFilters } from "@/components/interactive/image-filters";
 import { Preloader } from "@/components/sections/preloader";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
@@ -84,6 +85,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${display.variable}`}>
       <body className="bg-ink-950 text-steel-100 font-sans antialiased">
         <a href="#main" className="skip-link">Skip to content</a>
+        <ImageFilters />
         <LenisProvider>
           <RegionProvider>
             <HashHandler />

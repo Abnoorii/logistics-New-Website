@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { PageHero } from "@/components/ui/page-hero";
+import { TreatedImage } from "@/components/interactive/treated-image";
 import { Section } from "@/components/ui/section";
 import { Reveal, RevealItem, RevealStagger } from "@/components/interactive/reveal";
 import { CTA } from "@/components/sections/cta";
@@ -79,17 +79,15 @@ export default async function ScenarioDetail({
 
       <Section>
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-ink-800">
-            <Image
-              src={sc.image}
-              alt=""
-              width={1600}
-              height={900}
-              className="h-auto w-full object-cover opacity-90"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent" />
-          </div>
+          <TreatedImage
+            src={sc.image}
+            alt={sc.title}
+            aspect="aspect-[21/9]"
+            focal="center 40%"
+            caption={`${sc.category} · Illustrative`}
+            priority
+            sizes="(min-width: 1024px) 1200px, 100vw"
+          />
         </Reveal>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-3">

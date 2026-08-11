@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { PageHero } from "@/components/ui/page-hero";
 import { Section } from "@/components/ui/section";
 import { Counter } from "@/components/interactive/counter";
 import { Reveal, RevealItem, RevealStagger } from "@/components/interactive/reveal";
+import { TreatedImage } from "@/components/interactive/treated-image";
 import { CTA } from "@/components/sections/cta";
 import { COUNTRIES } from "@/lib/countries";
 import { SITE } from "@/lib/site";
+import { IMAGES } from "@/lib/images";
 
 const description =
   "Meet the team moving cargo across air, ocean, road and rail. Owned hubs in Kabul, Auckland, Shanghai, LA, Hamburg and London.";
@@ -63,20 +64,15 @@ export default function AboutPage() {
 
       <section className="container -mt-4">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-ink-800">
-            <Image
-              src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=2000&q=75"
-              alt="Container yard at dusk"
-              width={2000}
-              height={1000}
-              priority
-              className="h-[280px] w-full object-cover opacity-80 md:h-[420px]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/20 to-transparent" />
-            <div className="absolute inset-x-0 bottom-6 text-center text-[10px] uppercase tracking-widest text-steel-500">
-              Placeholder photography · replace with owned assets pre-launch
-            </div>
-          </div>
+          <TreatedImage
+            src={IMAGES.aboutHero.src}
+            alt={IMAGES.aboutHero.alt}
+            focal={IMAGES.aboutHero.focal}
+            aspect="aspect-[21/9]"
+            caption="Placeholder · swap for owned photography"
+            priority
+            sizes="(min-width: 1024px) 1200px, 100vw"
+          />
         </Reveal>
       </section>
 
@@ -132,6 +128,35 @@ export default function AboutPage() {
           ))}
         </RevealStagger>
       </Section>
+
+      <section className="container">
+        <Reveal>
+          <div className="grid gap-6 md:grid-cols-5 md:gap-8">
+            <div className="md:col-span-3">
+              <TreatedImage
+                src={IMAGES.aboutTeam.src}
+                alt={IMAGES.aboutTeam.alt}
+                focal={IMAGES.aboutTeam.focal}
+                aspect="aspect-[16/10]"
+                sizes="(min-width: 768px) 60vw, 100vw"
+              />
+            </div>
+            <div className="flex flex-col justify-center gap-6 md:col-span-2">
+              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400">
+                <span className="h-1 w-6 bg-amber-400" /> The team
+              </div>
+              <h3 className="font-display text-2xl text-steel-100 md:text-3xl">
+                Operators, brokers, drivers and desk leads — 220 across nine countries.
+              </h3>
+              <p className="text-base leading-relaxed text-steel-300">
+                Named account leads reachable in your time zone, in-house
+                licensed brokers on both ends of every lane, and a 24/7 ops
+                desk during active shipments.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+      </section>
 
       <Section
         eyebrow="Trajectory"

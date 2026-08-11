@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { PageHero } from "@/components/ui/page-hero";
+import { TreatedImage } from "@/components/interactive/treated-image";
 import { Section } from "@/components/ui/section";
 import { RevealItem, RevealStagger } from "@/components/interactive/reveal";
 import { CTA } from "@/components/sections/cta";
@@ -51,17 +51,15 @@ export default function ScenariosPage() {
                 className="group grid gap-8 overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 backdrop-blur transition-colors hover:border-amber-400/50 md:grid-cols-12"
               >
                 <div className="relative md:col-span-5">
-                  <div className="aspect-[5/4] overflow-hidden bg-ink-700 md:aspect-auto md:h-full">
-                    <Image
-                      src={s.image}
-                      alt=""
-                      width={1600}
-                      height={1200}
-                      className="h-full w-full object-cover opacity-70 transition-all duration-700 group-hover:scale-105 group-hover:opacity-90"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-ink-900/60 via-ink-900/20 to-ink-800/40" />
-                  </div>
-                  <span className="absolute left-6 top-6 rounded-full border border-white/15 bg-ink-900/70 px-3 py-1 text-[10px] uppercase tracking-widest text-amber-300 backdrop-blur">
+                  <TreatedImage
+                    src={s.image}
+                    alt={s.title}
+                    aspect="aspect-[5/4] md:aspect-auto md:h-full"
+                    focal="center 40%"
+                    bordered={false}
+                    className="!rounded-none md:!rounded-none"
+                  />
+                  <span className="absolute left-6 top-6 z-10 rounded-full border border-white/15 bg-ink-900/70 px-3 py-1 text-[10px] uppercase tracking-widest text-amber-300 backdrop-blur">
                     {s.category}
                   </span>
                 </div>

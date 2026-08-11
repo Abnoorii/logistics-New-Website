@@ -3,8 +3,10 @@ import { PageHero } from "@/components/ui/page-hero";
 import { Section } from "@/components/ui/section";
 import { ContactForm } from "@/components/sections/contact-form";
 import { Reveal } from "@/components/interactive/reveal";
+import { TreatedImage } from "@/components/interactive/treated-image";
 import { COUNTRIES } from "@/lib/countries";
 import { CONTACT, SITE } from "@/lib/site";
+import { IMAGES } from "@/lib/images";
 import { PhoneCall, Mail, Clock } from "lucide-react";
 
 const description =
@@ -120,6 +122,18 @@ export default function ContactPage() {
           </div>
         </div>
       </Section>
+
+      <section className="container mb-24">
+        <Reveal>
+          <TreatedImage
+            src={IMAGES.contactQuiet.src}
+            alt={IMAGES.contactQuiet.alt}
+            focal={IMAGES.contactQuiet.focal}
+            aspect="aspect-[21/7]"
+            sizes="(min-width: 1024px) 1200px, 100vw"
+          />
+        </Reveal>
+      </section>
     </>
   );
 }

@@ -93,6 +93,15 @@ export function Reliability() {
         {/* Parallax truck + container illustration */}
         <div className="relative lg:col-span-7">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-b from-ink-800 to-ink-950">
+            {/* Subtle photo backdrop, heavily veiled */}
+            <div className="absolute inset-0 opacity-30">
+              <img
+                src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1600&q=60"
+                alt=""
+                className="h-full w-full object-cover [filter:url(#subtle-brand)] saturate-[.85]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-ink-800/70 via-ink-900/85 to-ink-950" />
+            </div>
             <div className="absolute inset-0 bg-grid opacity-30" />
 
             <motion.div

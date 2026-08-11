@@ -8,7 +8,19 @@ import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections/cta";
 import { SERVICES, getService } from "@/lib/services";
 import { SITE } from "@/lib/site";
+import { IMAGES, type ImageKey } from "@/lib/images";
+import { TreatedImage } from "@/components/interactive/treated-image";
+import { Reveal as RevealClient } from "@/components/interactive/reveal";
 import { ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
+
+const HERO_BY_SLUG: Record<string, ImageKey> = {
+  "air-freight": "serviceAir",
+  "ocean-freight": "serviceOcean",
+  "customs-brokerage": "serviceCustoms",
+  "warehousing-3pl": "serviceWarehouse",
+  "project-cargo": "serviceProject",
+  "domestic-transport": "serviceDomestic",
+};
 
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
@@ -52,6 +64,8 @@ export default async function ServiceDetailPage({
   if (!svc) notFound();
   const Icon = svc.icon;
   const others = SERVICES.filter((s) => s.slug !== svc.slug);
+  const heroKey = HERO_BY_SLUG[svc.slug];
+  const heroImage = heroKey ? IMAGES[heroKey] : null;
 
   return (
     <>
@@ -75,6 +89,22 @@ export default async function ServiceDetailPage({
           </>
         }
       />
+
+      {heroImage && (
+        <section className="container -mt-4 mb-6">
+          <RevealClient>
+            <TreatedImage
+              src={heroImage.src}
+              alt={heroImage.alt}
+              focal={heroImage.focal}
+              aspect="aspect-[21/9]"
+              caption={`${svc.tag} · Illustrative`}
+              priority
+              sizes="(min-width: 1024px) 1200px, 100vw"
+            />
+          </RevealClient>
+        </section>
+      )}
 
       <Section>
         <div className="grid gap-14 lg:grid-cols-12">
