@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/lenis-provider";
+import { RegionProvider } from "@/components/providers/region-provider";
 import { Cursor } from "@/components/interactive/cursor";
+import { HashHandler } from "@/components/interactive/hash-handler";
 import { Preloader } from "@/components/sections/preloader";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
@@ -81,11 +83,14 @@ export default function RootLayout({
       <body className="bg-ink-950 text-steel-100 font-sans antialiased">
         <a href="#main" className="skip-link">Skip to content</a>
         <LenisProvider>
-          <Preloader />
-          <Cursor />
-          <Nav />
-          <main id="main">{children}</main>
-          <Footer />
+          <RegionProvider>
+            <HashHandler />
+            <Preloader />
+            <Cursor />
+            <Nav />
+            <main id="main">{children}</main>
+            <Footer />
+          </RegionProvider>
         </LenisProvider>
       </body>
     </html>

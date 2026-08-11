@@ -4,27 +4,51 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
+const SESSION_KEY = "logisticsaf.seenIntro";
+
 export function Preloader() {
   const pathname = usePathname();
-  const [visible, setVisible] = useState(pathname === "/");
+  const [visible, setVisible] = useState(false);
   const [progress, setProgress] = useState(0);
 
+  // Decide once, after mount, whether to run at all.
   useEffect(() => {
     if (pathname !== "/") return;
+    let seen = false;
+    try {
+      seen = sessionStorage.getItem(SESSION_KEY) === "1";
+    } catch {
+      /* ignore (private mode) */
+    }
+    if (seen) return;
+    setVisible(true);
+  }, [pathname]);
+
+  // Run progress animation once when visible.
+  useEffect(() => {
+    if (!visible) return;
     let raf = 0;
     let start = 0;
-    const dur = 1500;
+    const dur = 900;
 
     const tick = (t: number) => {
       if (!start) start = t;
       const p = Math.min(1, (t - start) / dur);
       setProgress(Math.floor(p * 100));
-      if (p < 1) raf = requestAnimationFrame(tick);
-      else setTimeout(() => setVisible(false), 300);
+      if (p < 1) {
+        raf = requestAnimationFrame(tick);
+      } else {
+        try {
+          sessionStorage.setItem(SESSION_KEY, "1");
+        } catch {
+          /* ignore */
+        }
+        setTimeout(() => setVisible(false), 250);
+      }
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [pathname]);
+  }, [visible]);
 
   return (
     <AnimatePresence>
@@ -33,7 +57,10 @@ export function Preloader() {
           key="preloader"
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-ink-950"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }}
+          exit={{
+            opacity: 0,
+            transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+          }}
         >
           <div className="noise" />
           <div className="relative">
@@ -62,7 +89,6 @@ export function Preloader() {
 
 /** Stylized dotted world map. Each dot pulses in sequence. */
 function WorldMap({ progress }: { progress: number }) {
-  // Rough continent silhouettes as dot grid (12x24)
   const grid = [
     "                        ",
     "     xxx   xxx  xxxx    ",
@@ -105,7 +131,12 @@ function WorldMap({ progress }: { progress: number }) {
               r={2}
               fill={activate ? "#f9ab27" : "#243049"}
               animate={activate ? { r: [2, 3, 2] } : {}}
-              transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut", delay: (idx % 12) * 0.05 }}
+              transition={{
+                duration: 1.4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: (idx % 12) * 0.05,
+              }}
             />
           );
         })

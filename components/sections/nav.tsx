@@ -5,9 +5,10 @@ import { ChevronDown, Globe2, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { COUNTRIES, type Country } from "@/lib/countries";
+import { COUNTRIES } from "@/lib/countries";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useRegion } from "@/components/providers/region-provider";
 
 const LINKS = [
   { href: "/services", label: "Services" },
@@ -20,21 +21,19 @@ const LINKS = [
 export function Nav() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [country, setCountry] = useState<Country>(COUNTRIES[0]);
+  const { country, setCountry } = useRegion();
   const [pickerOpen, setPickerOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (v) => setScrolled(v > 24));
 
-  const entryDelay = pathname === "/" ? 1.6 : 0;
-
   return (
     <>
       <motion.header
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: entryDelay }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-500",
           scrolled ? "py-3" : "py-6"

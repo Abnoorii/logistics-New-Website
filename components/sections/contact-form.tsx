@@ -5,6 +5,7 @@ import { CheckCircle2, Send } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { CONTACT } from "@/lib/site";
+import { useRegion } from "@/components/providers/region-provider";
 
 const SERVICES = [
   "Air Freight",
@@ -21,6 +22,10 @@ export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const { country, hydrated } = useRegion();
+  const originDefault = hydrated
+    ? `${country.hub.split(" · ")[0]}, ${country.name}`
+    : "";
 
   const toggle = (s: string) =>
     setSelectedServices((prev) =>
@@ -100,6 +105,12 @@ export function ContactForm() {
           animate={{ opacity: 1 }}
           className="rounded-3xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur md:p-10"
         >
+          {hydrated && (
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/[0.06] px-3 py-1.5 text-xs text-amber-200">
+              <span className="text-base leading-none">{country.flag}</span>
+              Serving from {country.name} · change in the top nav
+            </div>
+          )}
           <div className="grid gap-5 md:grid-cols-2">
             <Field label="Name" name="name" required autoComplete="name" />
             <Field
@@ -111,7 +122,13 @@ export function ContactForm() {
             />
             <Field label="Company" name="company" autoComplete="organization" />
             <Field label="Ship-by date" name="shipBy" placeholder="e.g. 22 Aug" />
-            <Field label="Origin" name="origin" placeholder="City, country" />
+            <Field
+              label="Origin"
+              name="origin"
+              placeholder="City, country"
+              defaultValue={originDefault}
+              key={originDefault}
+            />
             <Field label="Destination" name="destination" placeholder="City, country" />
           </div>
 
@@ -185,6 +202,7 @@ function Field({
   required,
   placeholder,
   autoComplete,
+  defaultValue,
 }: {
   label: string;
   name: string;
@@ -192,6 +210,7 @@ function Field({
   required?: boolean;
   placeholder?: string;
   autoComplete?: string;
+  defaultValue?: string;
 }) {
   return (
     <label className="block">
@@ -205,6 +224,7 @@ function Field({
         required={required}
         placeholder={placeholder}
         autoComplete={autoComplete}
+        defaultValue={defaultValue}
         className="mt-2 w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-base text-steel-100 placeholder:text-steel-500 focus:border-amber-400 focus:outline-none"
       />
     </label>

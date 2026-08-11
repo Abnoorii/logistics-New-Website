@@ -5,27 +5,30 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 
-const QUOTES = [
+type Principle = {
+  quote: string;
+  category: string;
+  detail: string;
+};
+
+const PRINCIPLES: Principle[] = [
   {
     quote:
-      "We moved seven brands off three different forwarders onto Logistics.af. Ocean and air, across Europe and Asia. First peak season with them, on-time was ninety-nine percent. That's not what forwarders usually deliver.",
-    author: "Priya Menon",
-    role: "Head of Supply Chain",
-    company: "Halcyon Home",
+      "The best forwarders replace two spreadsheets and a WhatsApp group with one dashboard — and call you before the alert email lands.",
+    category: "Visibility",
+    detail: "How we think about status reporting",
   },
   {
     quote:
-      "The dashboard replaced two spreadsheets and a WhatsApp group. When our customs entry got pulled last month, someone from their team called us before the alert email even landed.",
-    author: "Farid Rahmani",
-    role: "Operations Director",
-    company: "Northline Apparel Group",
+      "First peak season should be the test. Ocean, air, ANZ and Europe combined — if on-time isn't in the high nineties, the operating model is broken.",
+    category: "Reliability",
+    detail: "How we measure ourselves",
   },
   {
     quote:
-      "Project cargo out of Hamburg to Melbourne, ten oversize crates, one permit chain across three countries. They ran the whole thing and sent one invoice. It landed on time.",
-    author: "Ana Silveira",
-    role: "Logistics Manager",
-    company: "Kestrel Renewables",
+      "Project cargo across three countries with one accountable lead, one quote, one invoice — this is table stakes, not a premium tier.",
+    category: "Accountability",
+    detail: "How we scope engagements",
   },
 ];
 
@@ -35,23 +38,23 @@ export function Testimonials() {
 
   useEffect(() => {
     if (paused) return;
-    const t = setInterval(() => setI((v) => (v + 1) % QUOTES.length), 7000);
+    const t = setInterval(() => setI((v) => (v + 1) % PRINCIPLES.length), 7000);
     return () => clearInterval(t);
   }, [paused]);
 
-  const current = QUOTES[i];
+  const current = PRINCIPLES[i];
 
   return (
     <Section
-      eyebrow="Customer stories"
-      title="Called on when it counts."
-      intro="Repeat customers describe what changed after they moved their freight to us."
+      eyebrow="What good freight looks like"
+      title="Our operating principles."
+      intro="Three things we believe make freight forwarding worth paying for. Real customer stories are on the way — for now, this is how we think."
     >
       <div
         className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-ink-800 via-ink-900 to-ink-950 p-8 md:p-14"
         role="region"
         aria-roledescription="carousel"
-        aria-label="Customer testimonials"
+        aria-label="Operating principles"
         aria-live="polite"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
@@ -62,7 +65,8 @@ export function Testimonials() {
         <div className="relative flex items-start justify-between gap-6">
           <Quote className="h-10 w-10 shrink-0 text-amber-400/60 md:h-14 md:w-14" />
           <div className="hidden font-mono text-xs tracking-widest text-steel-500 md:block">
-            {String(i + 1).padStart(2, "0")} / {String(QUOTES.length).padStart(2, "0")}
+            {String(i + 1).padStart(2, "0")} /{" "}
+            {String(PRINCIPLES.length).padStart(2, "0")}
           </div>
         </div>
 
@@ -79,20 +83,16 @@ export function Testimonials() {
               &ldquo;{current.quote}&rdquo;
             </blockquote>
             <div className="mt-10 flex items-center gap-4">
-              <div className="grid h-12 w-12 place-items-center rounded-full bg-amber-400 text-lg font-medium text-ink-950">
-                {current.author
-                  .split(" ")
-                  .map((s) => s[0])
-                  .join("")
-                  .slice(0, 2)}
+              <div className="grid h-12 w-12 place-items-center rounded-full border border-amber-400/40 bg-amber-400/10 text-amber-300">
+                <span className="font-mono text-xs">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
               </div>
               <div>
-                <div className="text-sm font-medium text-steel-100">
-                  {current.author}
+                <div className="text-sm font-medium text-amber-300">
+                  {current.category}
                 </div>
-                <div className="text-xs text-steel-400">
-                  {current.role} · {current.company}
-                </div>
+                <div className="text-xs text-steel-400">{current.detail}</div>
               </div>
             </div>
           </motion.div>
@@ -100,17 +100,15 @@ export function Testimonials() {
 
         <div className="mt-12 flex items-center justify-between">
           <div className="flex items-center gap-1.5">
-            {QUOTES.map((_, idx) => (
+            {PRINCIPLES.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setI(idx)}
-                aria-label={`Go to testimonial ${idx + 1}`}
+                aria-label={`Go to principle ${idx + 1}`}
                 className="group h-1.5 w-8 overflow-hidden rounded-full bg-white/10"
               >
                 <motion.span
-                  animate={{
-                    width: i === idx ? "100%" : "0%",
-                  }}
+                  animate={{ width: i === idx ? "100%" : "0%" }}
                   transition={{ duration: i === idx ? 6.8 : 0.3, ease: "linear" }}
                   className="block h-full origin-left rounded-full bg-amber-400"
                 />
@@ -119,14 +117,16 @@ export function Testimonials() {
           </div>
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setI((v) => (v - 1 + QUOTES.length) % QUOTES.length)}
+              onClick={() =>
+                setI((v) => (v - 1 + PRINCIPLES.length) % PRINCIPLES.length)
+              }
               className="rounded-full border border-white/10 bg-white/5 p-3 text-steel-100 transition-colors hover:border-amber-400 hover:text-amber-300"
               aria-label="Previous"
             >
               <ArrowLeft className="h-4 w-4" />
             </button>
             <button
-              onClick={() => setI((v) => (v + 1) % QUOTES.length)}
+              onClick={() => setI((v) => (v + 1) % PRINCIPLES.length)}
               className="rounded-full border border-white/10 bg-white/5 p-3 text-steel-100 transition-colors hover:border-amber-400 hover:text-amber-300"
               aria-label="Next"
             >

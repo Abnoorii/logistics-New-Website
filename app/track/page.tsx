@@ -27,9 +27,9 @@ export default function TrackPage() {
   return (
     <>
       <PageHero
-        eyebrow="Live tracking"
+        eyebrow="Live tracking · preview"
         title="Where is my cargo?"
-        intro="Enter a Logistics.af reference, container number, master B/L or AWB. You'll see the same milestones your account team sees — as they land."
+        intro="Real-time tracking connects to carrier feeds and our internal dispatch system. This page is a preview — try the demo reference to see what it feels like. Real accounts get their own login and live milestones from day one."
       />
 
       <Section>

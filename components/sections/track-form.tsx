@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Search, PackageSearch, CheckCircle2, Clock, Ship } from "lucide-react";
+import { Search, PackageSearch, CheckCircle2, Clock, Ship, Info } from "lucide-react";
 import { useState } from "react";
 
 type Result = {
@@ -52,6 +52,16 @@ export function TrackForm() {
 
   return (
     <div>
+      <div className="mb-6 flex items-start gap-3 rounded-2xl border border-amber-400/30 bg-amber-400/[0.05] px-4 py-3 text-sm text-amber-100">
+        <Info className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
+        <div>
+          <span className="font-medium text-amber-200">Demo mode.</span>{" "}
+          The live carrier feed and dispatch integration go live at launch. Try{" "}
+          <span className="font-mono text-amber-200">LAFU-4489327</span> or{" "}
+          <span className="font-mono text-amber-200">demo</span> to preview the
+          tracking view. Real account holders will use a signed-in dashboard.
+        </div>
+      </div>
       <form
         onSubmit={submit}
         className="relative flex items-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur transition-colors focus-within:border-amber-400"

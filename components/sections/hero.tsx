@@ -37,7 +37,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-steel-200 backdrop-blur"
         >
           <span className="relative flex h-2 w-2">
@@ -54,7 +54,7 @@ export function Hero() {
           <motion.span
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="block"
           >
             Every leg
@@ -62,7 +62,7 @@ export function Hero() {
           <motion.span
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.95, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="block"
           >
             of the{" "}
@@ -73,7 +73,7 @@ export function Hero() {
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
-                transition={{ duration: 1.2, delay: 2.4, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 className="absolute -bottom-2 left-0 h-1 w-full origin-left bg-amber-400/60"
               />
             </span>
@@ -83,7 +83,7 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.9, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 max-w-xl text-lg leading-relaxed text-steel-300 text-pretty md:text-xl"
         >
           Logistics.af moves cargo across air, ocean, road and rail — with the
@@ -93,7 +93,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 2.35, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.9, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="mt-10 flex flex-wrap items-center gap-4"
         >
           <Link href="/contact">
