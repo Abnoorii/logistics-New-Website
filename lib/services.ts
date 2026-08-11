@@ -26,13 +26,13 @@ export const SERVICES: Service[] = [
     title: "Air Freight",
     tag: "01 / Air",
     desc:
-      "Consolidated, express and charter — with priority uplift on partner carriers when hours matter.",
+      "Consolidated, express and charter — priority uplift out of Kabul, Dubai, Istanbul and Delhi when hours matter.",
     intro:
-      "When ship-by dates shift and cargo has to move now, air is the answer. We hold named allocations with Qantas, Cathay, Singapore Airlines and Lufthansa Cargo, plus charter capacity for oversize and time-critical.",
+      "When ship-by dates shift and cargo has to move now, air is the answer. We hold named allocations out of Kabul (KBL) and named gateway partners at Dubai (DXB), Istanbul (IST) and Delhi (DEL), plus ad-hoc charter capacity for oversize and time-critical.",
     highlights: [
       {
         label: "Priority uplift",
-        body: "Named-allocation space with our carrier partners, even during peak.",
+        body: "Named allocations with our carrier partners into KBL, even during peak.",
       },
       {
         label: "Express & charter",
@@ -44,10 +44,10 @@ export const SERVICES: Service[] = [
       },
     ],
     lanes: [
-      "Sydney ↔ Shanghai",
-      "Auckland → LA",
-      "Hong Kong → Hamburg",
-      "London → Sydney",
+      "Dubai ↔ Kabul",
+      "Istanbul → Kabul",
+      "Delhi → Kabul",
+      "Kabul → Frankfurt (export cargo)",
     ],
   },
   {
@@ -56,17 +56,17 @@ export const SERVICES: Service[] = [
     title: "Ocean Freight",
     tag: "02 / Sea",
     desc:
-      "FCL and LCL sailings across every major trade lane, with weekly consolidations ex-Asia.",
+      "FCL and LCL to Karachi, Bandar Abbas and Chabahar — then trucked overland into Kabul.",
     intro:
-      "The backbone of most supply chains. FCL, LCL, buyer's consolidation, and named contracts with Maersk, MSC, CMA CGM, Hapag-Lloyd and ONE. Weekly ex-Asia consolidations to Sydney, Auckland and LA.",
+      "Afghanistan is landlocked. Every ocean lane we run terminates at Karachi, Bandar Abbas or Chabahar, then transitions to road for the final leg. Named contracts with Maersk, MSC, CMA CGM and Hapag-Lloyd. Weekly consolidations ex-Asia via Karachi.",
     highlights: [
       {
         label: "FCL & LCL",
-        body: "Weekly departures from every major origin, with door-to-door options.",
+        body: "Weekly departures from every major East Asia and Europe origin.",
       },
       {
-        label: "Contract rates",
-        body: "Named-account allocations that hold when spot rates spike.",
+        label: "Multi-modal by design",
+        body: "Sea-to-road handoff at Karachi or Bandar Abbas is our specialty, not an afterthought.",
       },
       {
         label: "Documentation",
@@ -74,10 +74,10 @@ export const SERVICES: Service[] = [
       },
     ],
     lanes: [
-      "Shanghai → Sydney",
-      "Shenzhen → Auckland",
-      "Ho Chi Minh City → LA",
-      "Hamburg → Melbourne",
+      "Shanghai → Karachi → Kabul",
+      "Shenzhen → Bandar Abbas → Kabul",
+      "Mumbai → Chabahar → Kabul",
+      "Hamburg → Karachi → Kabul",
     ],
   },
   {
@@ -85,17 +85,18 @@ export const SERVICES: Service[] = [
     icon: ScrollText,
     title: "Customs Brokerage",
     tag: "03 / Trade",
-    desc: "Licensed brokers on both ends — tariff advice, FTAs, permits, quarantine, drawbacks.",
+    desc:
+      "Licensed brokers at every border crossing — Torkham, Chaman, Islam Qala, Turgundi, Sher Khan Bandar, Hairatan.",
     intro:
-      "In-house licensed brokers at every gateway we work through. That means faster clearance, fewer surprises, and someone who owns the disputes when they happen.",
+      "In-house licensed brokers at every named crossing we work through. That means faster clearance at Torkham and Chaman, correct paperwork through Islam Qala, and someone who owns the disputes when they happen.",
     highlights: [
       {
-        label: "Tariff & FTA advice",
-        body: "Correct classification, FTA eligibility, drawback claims and rulings.",
+        label: "Border crossings",
+        body: "Torkham, Chaman (PK); Islam Qala (IR); Turgundi (TM); Hairatan, Sher Khan Bandar (UZ/TJ).",
       },
       {
-        label: "Permits & quarantine",
-        body: "AQIS, DAFF, and equivalent authorities across every hub.",
+        label: "Tariff & FTA advice",
+        body: "Correct HS classification, ATA carnets, drawback claims and rulings.",
       },
       {
         label: "Dispute management",
@@ -103,10 +104,10 @@ export const SERVICES: Service[] = [
       },
     ],
     lanes: [
-      "AU import clearance",
-      "NZ MPI-cleared release",
-      "US CBP entries",
-      "EU AEO status",
+      "Torkham & Chaman (PK)",
+      "Islam Qala (IR)",
+      "Turgundi (TM)",
+      "Hairatan · Sher Khan Bandar",
     ],
   },
   {
@@ -114,9 +115,10 @@ export const SERVICES: Service[] = [
     icon: Warehouse,
     title: "Warehousing & 3PL",
     tag: "04 / Store",
-    desc: "Bonded and general storage with pick-pack, kitting, and DTC fulfilment out of five hubs.",
+    desc:
+      "Bonded and general storage in Kabul, with pick-pack, kitting and last-mile dispatch.",
     intro:
-      "Five owned facilities — Sydney, Auckland, Shanghai, LA, London — plus partner networks in Ho Chi Minh City, Bangkok and Hamburg. Bonded and general storage, real WMS, real people.",
+      "Owned facilities in Kabul plus partner networks in Karachi, Dubai and Istanbul at the origin end. Bonded and general storage, real WMS, real people — with dispatch cut-offs designed around Afghan retail and NGO calendars.",
     highlights: [
       {
         label: "Bonded storage",
@@ -124,18 +126,18 @@ export const SERVICES: Service[] = [
       },
       {
         label: "Fulfilment",
-        body: "Pick-pack, kitting, DTC packaging, and same-day dispatch cut-offs.",
+        body: "Pick-pack, kitting, and same-day dispatch cut-offs from our Kabul hub.",
       },
       {
-        label: "Integrations",
-        body: "Shopify, Amazon, NetSuite, and any WMS/ERP via webhooks or EDI.",
+        label: "Origin storage",
+        body: "Partner networks at Dubai, Karachi and Istanbul for pre-consolidation.",
       },
     ],
     lanes: [
-      "Sydney bonded",
-      "Auckland general",
-      "LA DTC hub",
-      "London European",
+      "Kabul bonded",
+      "Kabul general",
+      "Dubai partner",
+      "Karachi partner",
     ],
   },
   {
@@ -144,9 +146,9 @@ export const SERVICES: Service[] = [
     title: "Project Cargo",
     tag: "05 / Heavy",
     desc:
-      "Oversize, breakbulk, RoRo and multi-modal moves engineered lane-by-lane, permit-by-permit.",
+      "Oversize, breakbulk and multi-modal moves — mining, energy, infrastructure and humanitarian.",
     intro:
-      "When the freight doesn't fit in a container, our project team takes over. We handle route surveys, permits, cranage, and cross-border escorts as a single accountable engagement.",
+      "When the freight doesn't fit in a container, our project team takes over. Route surveys through Salang, cross-border escort permits, mountain-pass cranage plans — as a single accountable engagement.",
     highlights: [
       {
         label: "Route engineering",
@@ -154,7 +156,7 @@ export const SERVICES: Service[] = [
       },
       {
         label: "Modal combinations",
-        body: "RoRo, breakbulk, heavy-lift air, barge — combined for cost or speed.",
+        body: "RoRo at Bandar Abbas, breakbulk into Karachi, heavy-lift air into Kabul.",
       },
       {
         label: "Single P&L",
@@ -162,28 +164,28 @@ export const SERVICES: Service[] = [
       },
     ],
     lanes: [
-      "Hamburg → Melbourne (wind)",
-      "Shanghai → Sydney (mining)",
-      "Rotterdam → Auckland (renewables)",
+      "Bandar Abbas → Herat (energy)",
+      "Karachi → Kabul (mining)",
+      "Hamburg → Kabul (infrastructure)",
     ],
   },
   {
     slug: "domestic-transport",
     icon: Truck,
-    title: "Domestic & Interstate",
+    title: "Domestic & Regional Road",
     tag: "06 / Road",
     desc:
-      "Line-haul, last-mile and dedicated fleets across ANZ — same asset base your ocean cargo lands on.",
+      "Line-haul into every Afghan provincial centre plus cross-border road into Pakistan, Iran, Uzbekistan and Turkmenistan.",
     intro:
-      "Owned truck fleet across ANZ metros plus partner line-haul to every regional centre. Same team owns the container from the wharf to your dock — no baton handoffs.",
+      "Owned truck fleet across Afghanistan plus partner line-haul into every regional centre. Same team owns the container from the border crossing to your dock — no baton handoffs.",
     highlights: [
       {
         label: "Line-haul",
-        body: "Nightly linehaul between Sydney, Melbourne, Brisbane, Perth and Adelaide.",
+        body: "Nightly linehaul between Kabul, Herat, Kandahar, Mazar-i-Sharif and Jalalabad.",
       },
       {
-        label: "Last-mile",
-        body: "Time-slot delivery, tail-lift, and white-glove options for retail.",
+        label: "Cross-border road",
+        body: "Direct road into PK, IR, UZ and TM — one carrier, one bill.",
       },
       {
         label: "Dedicated fleet",
@@ -191,10 +193,10 @@ export const SERVICES: Service[] = [
       },
     ],
     lanes: [
-      "Sydney metro",
-      "Melbourne CBD & M2 corridor",
-      "Brisbane metro",
-      "Perth metro",
+      "Kabul metro",
+      "Herat corridor",
+      "Kandahar corridor",
+      "Mazar-i-Sharif corridor",
     ],
   },
 ];

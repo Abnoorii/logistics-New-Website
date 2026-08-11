@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/hero";
 import { Stats } from "@/components/sections/stats";
+import { TradeNetwork } from "@/components/sections/trade-network";
 import { Services } from "@/components/sections/services";
 import { Reliability } from "@/components/sections/reliability";
 import { Why } from "@/components/sections/why";
@@ -13,6 +14,7 @@ export default function HomePage() {
     <>
       <Hero />
       <Stats />
+      <TradeNetwork />
       <Services />
       <Reliability />
       <Why />

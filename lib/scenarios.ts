@@ -13,10 +13,10 @@ export type Scenario = {
 export const SCENARIOS: Scenario[] = [
   {
     slug: "ecommerce-brand-multi-forwarder",
-    category: "E-commerce",
-    title: "Home-goods brand: consolidating 3 forwarders into 1",
+    category: "Retail import",
+    title: "Retail importer: consolidating 3 forwarders into 1",
     summary:
-      "A 7-SKU home-goods brand shipping FCL out of Shenzhen and LCL out of Ho Chi Minh City. Three forwarders, three dashboards, one very unhappy ops manager.",
+      "A Kabul-based retail importer shipping FCL out of Shenzhen and LCL out of Dubai. Three forwarders, three dashboards, one very unhappy ops manager.",
     challenge: [
       "Rates and cut-offs on three different portals",
       "Weekly reconciliation of demurrage and detention across carriers",
@@ -43,9 +43,9 @@ export const SCENARIOS: Scenario[] = [
   {
     slug: "industrial-project-cargo",
     category: "Industrial",
-    title: "Project cargo: 10 oversize crates, 3 borders, 1 permit chain",
+    title: "Project cargo: 10 oversize crates, 3 borders into Kabul",
     summary:
-      "Heavy equipment from a European OEM to a mining customer in Central Asia. Ten oversize crates, multi-modal, three cross-border permit regimes.",
+      "Heavy equipment from a European OEM to a mining customer near Kabul. Ten oversize crates, multi-modal via Karachi and the Torkham corridor, three cross-border permit regimes.",
     challenge: [
       "No single provider willing to own the full multi-modal chain",
       "Route survey needed for bridge and gauge clearance",
@@ -72,9 +72,9 @@ export const SCENARIOS: Scenario[] = [
   {
     slug: "humanitarian-cold-chain",
     category: "Humanitarian",
-    title: "Cold-chain pharma into constrained-access regions",
+    title: "Cold-chain pharma into Afghanistan",
     summary:
-      "Recurrent medical shipments into logistically difficult regions, temperature-controlled from origin to warehouse.",
+      "Recurrent medical shipments into Kabul and provincial centres, temperature-controlled from origin airport (usually Dubai or Delhi) to warehouse.",
     challenge: [
       "Cold-chain integrity across a 4–6 day multi-modal move",
       "Documentation for donor reporting on every consignment",

@@ -24,9 +24,7 @@ export function ContactForm() {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [mountedAt] = useState<number>(() => Date.now());
   const { country, hydrated } = useRegion();
-  const originDefault = hydrated
-    ? `${country.hub.split(" · ")[0]}, ${country.name}`
-    : "";
+  const originDefault = hydrated ? country.name : "";
 
   const toggle = (s: string) =>
     setSelectedServices((prev) =>

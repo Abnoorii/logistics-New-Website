@@ -10,7 +10,7 @@ import { SITE } from "@/lib/site";
 import { IMAGES } from "@/lib/images";
 
 const description =
-  "Meet the team moving cargo across air, ocean, road and rail. Owned hubs in Kabul, Auckland, Shanghai, LA, Hamburg and London.";
+  "Afghanistan-based freight forwarder moving import and export shipments between Afghanistan and its 13 principal trading partners across Central Asia, South Asia, the Middle East, China and Russia.";
 
 export const metadata: Metadata = {
   title: "About",
@@ -47,10 +47,10 @@ const VALUES = [
 
 const TIMELINE = [
   { year: "2018", note: "Logistics.af founded in Kabul with a single air-freight desk." },
-  { year: "2020", note: "Opened Shanghai and Auckland offices; ocean freight goes live." },
-  { year: "2022", note: "Hamburg and Los Angeles hubs open; 3PL launches out of Kabul." },
-  { year: "2024", note: "London opens. Project cargo team stands up." },
-  { year: "2026", note: "42 active lanes, 98.2% on-time, 2,500+ shipments a month." },
+  { year: "2020", note: "Torkham and Chaman road corridors go live — Pakistan lanes at scale." },
+  { year: "2022", note: "Iran corridors added (Islam Qala) and 3PL warehousing launches in Kabul." },
+  { year: "2024", note: "Central Asia expansion — Uzbekistan, Turkmenistan and Tajikistan corridors named." },
+  { year: "2026", note: "13 trade partner markets, 98.2% on-time, project cargo team established." },
 ];
 
 export default function AboutPage() {
@@ -59,7 +59,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Logistics.af"
         title={<>Built by operators. Run for shippers.</>}
-        intro="We started in 2018 with a single air-freight desk in Kabul and a working theory: forwarders overpromise and underexplain. Eight years later, we're a 220-person team with owned hubs across three continents and a rebook rate our competitors keep asking about."
+        intro="We started in 2018 with a single air-freight desk in Kabul and a working theory: forwarders overpromise and underexplain. Eight years later, we run 13 named trade lanes into and out of Afghanistan — with a rebook rate our competitors keep asking about."
       />
 
       <section className="container -mt-4">
@@ -101,10 +101,10 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <Stat n={220} suffix="+" label="People, globally" />
+            <Stat n={13} suffix="" label="Trade partner markets" />
             <Stat n={2500} suffix="+" label="Shipments a month" />
             <Stat n={98.2} suffix="%" label="On-time delivery" decimals={1} />
-            <Stat n={42} suffix="" label="Active trade lanes" />
+            <Stat n={8} suffix="+ yrs" label="Since 2018" />
           </div>
         </div>
       </Section>
@@ -146,7 +146,7 @@ export default function AboutPage() {
                 <span className="h-1 w-6 bg-amber-400" /> The team
               </div>
               <h3 className="font-display text-2xl text-steel-100 md:text-3xl">
-                Operators, brokers, drivers and desk leads — 220 across nine countries.
+                Operators, brokers, drivers and desk leads — across 13 trade partner markets.
               </h3>
               <p className="text-base leading-relaxed text-steel-300">
                 Named account leads reachable in your time zone, in-house
@@ -189,9 +189,9 @@ export default function AboutPage() {
       </Section>
 
       <Section
-        eyebrow="Global footprint"
-        title="Where we operate."
-        intro="Owned offices across nine countries, backed by trusted agents at every other origin and destination we touch."
+        eyebrow="Trade lanes"
+        title="Where we move cargo."
+        intro="Afghanistan-based, 13 principal trade partners across five regions. Each corridor has a named lane lead, licensed brokers and long-standing carrier relationships."
       >
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
           {COUNTRIES.map((c) => (

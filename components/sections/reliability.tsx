@@ -117,8 +117,8 @@ export function Reliability() {
               <div className="mt-4 flex flex-col gap-2 text-xs text-steel-300">
                 <MilestoneDot label="Shanghai · loaded" done />
                 <MilestoneDot label="Vessel AURORA VOYAGER" done />
-                <MilestoneDot label="Singapore · transhipped" done />
-                <MilestoneDot label="Sydney · in port" active />
+                <MilestoneDot label="Karachi · discharged" done />
+                <MilestoneDot label="Torkham · cleared" active />
                 <MilestoneDot label="Delivery · scheduled" />
               </div>
             </motion.div>

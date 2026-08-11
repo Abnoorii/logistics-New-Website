@@ -62,12 +62,28 @@ const SAMPLE_LANES: Lane[] = [
     eta: "5–8 days",
   },
   {
-    origin: "Frankfurt, DE",
+    origin: "Delhi, IN",
     destination: "Kabul, AF",
     mode: "Air",
     spec: "1 CBM · pharma cold chain",
-    rate: "from USD 620",
+    rate: "from USD 420",
     eta: "2–4 days",
+  },
+  {
+    origin: "Kabul, AF",
+    destination: "Riyadh, SA",
+    mode: "Air",
+    spec: "200 kg · high-value export",
+    rate: "from USD 3.80 / kg",
+    eta: "3–5 days",
+  },
+  {
+    origin: "Almaty, KZ",
+    destination: "Kabul, AF",
+    mode: "Road",
+    spec: "24 t · dry general cargo",
+    rate: "from USD 3,600",
+    eta: "8–11 days",
   },
 ];
 

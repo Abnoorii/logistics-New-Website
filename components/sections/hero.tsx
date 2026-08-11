@@ -108,7 +108,7 @@ export function Hero() {
         </motion.div>
 
         <div className="mt-24 flex flex-wrap items-center gap-x-8 gap-y-4 text-xs uppercase tracking-widest text-steel-400 md:mt-32">
-          <span>Sydney · Auckland · Shanghai · Hamburg · LA · London</span>
+          <span>Kabul · Tehran · Karachi · Dubai · Istanbul · Beijing · Moscow · Almaty</span>
         </div>
       </div>
 

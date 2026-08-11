@@ -7,7 +7,7 @@ const STATS = [
   { value: 2500, suffix: "+", label: "Shipments moved monthly" },
   { value: 98.2, suffix: "%", label: "On-time delivery", decimals: 1 },
   { value: 8, suffix: "+ yrs", label: "Moving cargo since 2018" },
-  { value: 42, suffix: "", label: "Active lanes worldwide" },
+  { value: 13, suffix: "", label: "Trade partner markets" },
 ];
 
 export function Stats() {
