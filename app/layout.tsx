@@ -3,9 +3,13 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/lenis-provider";
 import { RegionProvider } from "@/components/providers/region-provider";
+import { LocaleProvider } from "@/components/providers/locale-provider";
 import { HashHandler } from "@/components/interactive/hash-handler";
 import { PageTransition } from "@/components/interactive/page-transition";
 import { ImageFilters } from "@/components/interactive/image-filters";
+import { WhatsAppFAB } from "@/components/interactive/whatsapp-fab";
+import { CookieBanner } from "@/components/interactive/cookie-banner";
+import { StructuredData } from "@/components/interactive/structured-data";
 import { Preloader } from "@/components/sections/preloader";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
@@ -85,8 +89,10 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${display.variable}`}>
       <body className="bg-ink-950 text-steel-100 font-sans antialiased">
         <a href="#main" className="skip-link">Skip to content</a>
+        <StructuredData />
         <ImageFilters />
         <LenisProvider>
+          <LocaleProvider>
           <RegionProvider>
             <HashHandler />
             <Preloader />
@@ -95,7 +101,10 @@ export default function RootLayout({
               <PageTransition>{children}</PageTransition>
             </main>
             <Footer />
+            <WhatsAppFAB />
+            <CookieBanner />
           </RegionProvider>
+          </LocaleProvider>
         </LenisProvider>
         <Analytics />
         <SpeedInsights />

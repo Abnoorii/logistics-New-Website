@@ -15,9 +15,21 @@ export default function TermsPage() {
       <LegalHeading>1. Scope</LegalHeading>
       <LegalP>
         These terms govern your use of the {SITE.domain} website. Freight
-        services provided by {SITE.name} are subject to a separate service
-        agreement and to standard trading conditions applicable in the
-        relevant jurisdiction.
+        forwarding services provided by {SITE.name} are subject to a
+        separate service agreement and to Standard Trading Conditions
+        applicable in the relevant jurisdiction.
+      </LegalP>
+
+      <LegalHeading>1a. Standard Trading Conditions</LegalHeading>
+      <LegalP>
+        Unless a separate written agreement states otherwise, all freight
+        forwarding services are provided under the{" "}
+        <strong>FIATA Model Rules for Freight Forwarding Services</strong>{" "}
+        and, where applicable, the standard trading conditions of the Afghan
+        Freight Forwarders Association. These conditions govern liability
+        limits, claims windows, jurisdiction, and force-majeure — including
+        the standard 9-month claims window and unit-based liability caps
+        typical to FIATA-based conditions. A copy is available on request.
       </LegalP>
 
       <LegalHeading>2. Use of the website</LegalHeading>

@@ -129,14 +129,14 @@ export function Reliability() {
             >
               <div className="flex items-center justify-between">
                 <div className="text-[10px] uppercase tracking-widest text-steel-400">
-                  On-time · 30d
+                  Dashboard preview
                 </div>
-                <span className="rounded-full bg-signal-500/15 px-1.5 py-0.5 text-[9px] uppercase tracking-widest text-signal-400">
-                  ↑ 1.4
+                <span className="rounded-full bg-amber-400/15 px-1.5 py-0.5 text-[9px] uppercase tracking-widest text-amber-300">
+                  Sample
                 </span>
               </div>
               <div className="mt-1 font-display text-3xl text-steel-100">
-                98.2<span className="text-amber-400">%</span>
+                On-time<span className="text-amber-400">·</span>trend
               </div>
               <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/5">
                 <motion.div

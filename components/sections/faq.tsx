@@ -37,7 +37,7 @@ const FAQS = [
   },
   {
     q: "What SLA do you commit to?",
-    a: "98% on-time to milestone by lane, 4-hour rate response on standard lanes, and a named account lead reachable in your time zone 24/7 during active shipments.",
+    a: "SLA-per-lane on-time to milestone (specifics agreed at contract), 4-hour rate response on standard lanes, and a named account lead reachable in your time zone 24/7 during active shipments.",
   },
 ];
 

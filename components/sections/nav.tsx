@@ -9,17 +9,20 @@ import { COUNTRIES } from "@/lib/countries";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useRegion } from "@/components/providers/region-provider";
+import { useT } from "@/components/providers/locale-provider";
+import { LanguageSwitcher } from "@/components/interactive/language-switcher";
 
-const LINKS = [
-  { href: "/services", label: "Services" },
-  { href: "/#trade-network", label: "Network" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/scenarios", label: "How we work" },
-  { href: "/about", label: "About" },
+const LINKS: { href: string; key: string }[] = [
+  { href: "/services", key: "nav.services" },
+  { href: "/#trade-network", key: "nav.network" },
+  { href: "/pricing", key: "nav.pricing" },
+  { href: "/about", key: "nav.about" },
+  { href: "/track", key: "nav.track" },
 ];
 
 export function Nav() {
   const pathname = usePathname();
+  const t = useT();
   const [scrolled, setScrolled] = useState(false);
   const { country, setCountry } = useRegion();
   const [pickerOpen, setPickerOpen] = useState(false);
@@ -63,12 +66,15 @@ export function Nav() {
                   href={l.href}
                   className="rounded-full px-4 py-2 text-sm text-steel-200 transition-colors hover:text-amber-300"
                 >
-                  {l.label}
+                  {t(l.key)}
                 </Link>
               ))}
             </nav>
 
             <div className="flex items-center gap-2">
+              <div className="hidden md:block">
+                <LanguageSwitcher />
+              </div>
               <div className="relative">
                 <button
                   onClick={() => setPickerOpen((v) => !v)}
@@ -119,7 +125,7 @@ export function Nav() {
               </div>
 
               <Link href="/contact" className="hidden md:block">
-                <Button size="sm" variant="primary">Get a quote</Button>
+                <Button size="sm" variant="primary">{t("nav.getQuote")}</Button>
               </Link>
 
               <button
@@ -164,12 +170,15 @@ export function Nav() {
                   onClick={() => setMobileOpen(false)}
                   className="border-b border-white/5 py-4 font-display text-3xl text-steel-100"
                 >
-                  {l.label}
+                  {t(l.key)}
                 </Link>
               ))}
-              <Link href="/contact" onClick={() => setMobileOpen(false)} className="mt-10 block">
+              <div className="mt-6">
+                <LanguageSwitcher />
+              </div>
+              <Link href="/contact" onClick={() => setMobileOpen(false)} className="mt-6 block">
                 <Button size="lg" variant="primary" magnetic={false}>
-                  Get a quote
+                  {t("nav.getQuote")}
                 </Button>
               </Link>
             </motion.nav>

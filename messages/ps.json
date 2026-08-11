@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "note": "TRANSLATION DRAFT — review with a native Pashto speaker before launch. Freight/logistics terminology should be verified against local industry usage.",
+    "reviewer": "TODO"
+  },
+  "nav": {
+    "services": "خدمتونه",
+    "network": "د سوداګرۍ شبکه",
+    "pricing": "قیمت‌ګذاري",
+    "about": "زموږ په اړه",
+    "track": "د محموله تعقیب",
+    "getQuote": "د قیمت غوښتنه",
+    "region": "سیمه",
+    "chooseRegion": "سیمه وټاکئ"
+  },
+  "hero": {
+    "modeStrip": "هوایي · بحري · جاده · ګمرک · ګودام",
+    "headlinePart1": "د سفر",
+    "headlinePart2": "هر",
+    "headlinePart3": "ګام",
+    "description": "لوژستیکس.اف تاسو ته د هوا، بحر، سړک او ریل له لارې د بار وړل درکوي — د لیدلوري، دقت او انساني پاملرنې سره چې ستاسو د اکمالاتو زنځیر یې مستحق دی.",
+    "primaryCta": "د قیمت غوښتنه",
+    "secondaryCta": "خدمتونه وګورئ"
+  },
+  "cta": {
+    "eyebrow": "هر وخت چې تیار یاست",
+    "titleLine1": "کرښه راته ووایاست.",
+    "titleLine2": "موږ به پلان جوړ کړو.",
+    "description": "د لیږلو نیټه، لار او د بکس منځپانګه راولئ. په څلورو کاري ساعتونو کې قطعي قیمت او مسؤل تماس.",
+    "primary": "د قیمت غوښتنه",
+    "secondary": "له عملیاتو سره خبرې"
+  },
+  "footer": {
+    "services": "خدمتونه",
+    "company": "شرکت",
+    "support": "ملاتړ",
+    "accreditations": "اعتبارنامې",
+    "rights": "ټول حقونه خوندي دي.",
+    "tagline": "د بار لپاره جوړ شوی · کابل ← نړۍ"
+  },
+  "whatsapp": {
+    "label": "په واتساپ کې خبرې وکړئ"
+  },
+  "language": {
+    "en": "English",
+    "fa": "دری",
+    "ps": "پښتو"
+  }
+}

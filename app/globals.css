@@ -55,6 +55,17 @@ html.lenis, html.lenis body {
   }
 }
 
+/* RTL — invert horizontal flexbox rows for Persian/Dari and Pashto */
+html[dir="rtl"] .rtl-mirror {
+  transform: scaleX(-1);
+}
+/* Numeric tabular content and mono strings stay LTR even in RTL layouts. */
+html[dir="rtl"] .tabular-nums,
+html[dir="rtl"] .font-mono {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
 /* Utility */
 .text-balance { text-wrap: balance; }
 .text-pretty { text-wrap: pretty; }

@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "services": "Services",
+    "network": "Network",
+    "pricing": "Pricing",
+    "about": "About",
+    "track": "Track",
+    "getQuote": "Get a quote",
+    "region": "Region",
+    "chooseRegion": "Choose region"
+  },
+  "hero": {
+    "modeStrip": "Air · Ocean · Road · Customs · 3PL",
+    "headlinePart1": "Every leg",
+    "headlinePart2": "of the",
+    "headlinePart3": "journey",
+    "description": "Logistics.af moves cargo across air, ocean, road and rail — with the visibility, precision, and human care your supply chain deserves.",
+    "primaryCta": "Get a quote",
+    "secondaryCta": "Explore services"
+  },
+  "cta": {
+    "eyebrow": "Ready when you are",
+    "titleLine1": "Tell us the lane.",
+    "titleLine2": "We'll build the plan.",
+    "description": "Bring us a ship-by date, a lane, and what's in the box. A firm quote and a named contact within four business hours.",
+    "primary": "Get a quote",
+    "secondary": "Talk to ops"
+  },
+  "footer": {
+    "services": "Services",
+    "company": "Company",
+    "support": "Support",
+    "accreditations": "Accreditations",
+    "rights": "All rights reserved.",
+    "tagline": "Made for cargo · Kabul → World"
+  },
+  "whatsapp": {
+    "label": "Chat on WhatsApp"
+  },
+  "language": {
+    "en": "English",
+    "fa": "دری",
+    "ps": "پښتو"
+  }
+}

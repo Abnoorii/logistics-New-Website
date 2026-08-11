@@ -5,9 +5,9 @@ import { ContactForm } from "@/components/sections/contact-form";
 import { Reveal } from "@/components/interactive/reveal";
 import { TreatedImage } from "@/components/interactive/treated-image";
 import { COUNTRIES } from "@/lib/countries";
-import { CONTACT, SITE } from "@/lib/site";
+import { CONTACT, SITE, ADDRESS } from "@/lib/site";
 import { IMAGES } from "@/lib/images";
-import { PhoneCall, Mail, Clock } from "lucide-react";
+import { PhoneCall, Mail, Clock, MapPin } from "lucide-react";
 
 const description =
   "Tell us the lane, the ship-by date, and what's in the box. Firm quote and a named contact within four business hours.";
@@ -67,6 +67,30 @@ export default function ContactPage() {
                     Named account lead on the reply, reachable in your time zone.
                   </li>
                 </ul>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-8">
+                <h3 className="font-display text-xl text-steel-100">Kabul HQ</h3>
+                <div className="mt-6 flex items-start gap-3 text-sm text-steel-200">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
+                  <address className="not-italic leading-relaxed">
+                    {ADDRESS.street}
+                    <br />
+                    {ADDRESS.landmark}
+                    <br />
+                    {ADDRESS.city}, {ADDRESS.country}
+                  </address>
+                </div>
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${ADDRESS.lat},${ADDRESS.lon}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex text-xs text-amber-300 underline underline-offset-4 hover:text-amber-200"
+                >
+                  Open in maps →
+                </a>
               </div>
             </Reveal>
 

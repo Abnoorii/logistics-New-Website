@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "note": "TRANSLATION DRAFT — review with a native Dari (Farsi-Afghanistan) speaker before launch. Freight/logistics terminology in particular should be checked against local industry usage.",
+    "reviewer": "TODO"
+  },
+  "nav": {
+    "services": "خدمات",
+    "network": "شبکه تجاری",
+    "pricing": "قیمت‌گذاری",
+    "about": "درباره ما",
+    "track": "پیگیری محموله",
+    "getQuote": "درخواست قیمت",
+    "region": "منطقه",
+    "chooseRegion": "منطقه را انتخاب کنید"
+  },
+  "hero": {
+    "modeStrip": "هوایی · دریایی · جاده‌ای · گمرک · انبارداری",
+    "headlinePart1": "هر مرحله",
+    "headlinePart2": "از",
+    "headlinePart3": "سفر",
+    "description": "لوجستیک.اف بار را از طریق هوا، دریا، جاده و ریل با شفافیت، دقت و توجه انسانی که زنجیره تأمین شما شایسته آن است، جابجا می‌کند.",
+    "primaryCta": "درخواست قیمت",
+    "secondaryCta": "مشاهده خدمات"
+  },
+  "cta": {
+    "eyebrow": "هر زمان که آماده باشید",
+    "titleLine1": "خط را به ما بگویید.",
+    "titleLine2": "ما برنامه را می‌سازیم.",
+    "description": "تاریخ ارسال، مسیر، و محتوای بار را برای ما ارسال کنید. قیمت قطعی و تماس اختصاصی ظرف چهار ساعت کاری.",
+    "primary": "درخواست قیمت",
+    "secondary": "با عملیات صحبت کنید"
+  },
+  "footer": {
+    "services": "خدمات",
+    "company": "شرکت",
+    "support": "پشتیبانی",
+    "accreditations": "اعتبارنامه‌ها",
+    "rights": "کلیه حقوق محفوظ است.",
+    "tagline": "ساخته شده برای بار · کابل ← جهان"
+  },
+  "whatsapp": {
+    "label": "چت در واتساپ"
+  },
+  "language": {
+    "en": "English",
+    "fa": "دری",
+    "ps": "پښتو"
+  }
+}

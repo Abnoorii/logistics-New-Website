@@ -50,7 +50,7 @@ const TIMELINE = [
   { year: "2020", note: "Torkham and Chaman road corridors go live — Pakistan lanes at scale." },
   { year: "2022", note: "Iran corridors added (Islam Qala) and 3PL warehousing launches in Kabul." },
   { year: "2024", note: "Central Asia expansion — Uzbekistan, Turkmenistan and Tajikistan corridors named." },
-  { year: "2026", note: "13 trade partner markets, 98.2% on-time, project cargo team established." },
+  { year: "2026", note: "13 trade partner markets, 6 named border corridors, project cargo team established." },
 ];
 
 export default function AboutPage() {
@@ -102,8 +102,8 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-2 gap-4">
             <Stat n={13} suffix="" label="Trade partner markets" />
-            <Stat n={2500} suffix="+" label="Shipments a month" />
-            <Stat n={98.2} suffix="%" label="On-time delivery" decimals={1} />
+            <Stat n={6} suffix="" label="Named border corridors" />
+            <Stat n={5} suffix="" label="Regions served" />
             <Stat n={8} suffix="+ yrs" label="Since 2018" />
           </div>
         </div>

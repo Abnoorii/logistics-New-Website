@@ -158,7 +158,7 @@ export default async function ServiceDetailPage({
                   </h4>
                   <ul className="mt-4 space-y-2 text-sm text-steel-300">
                     <li>Rate response: 4 business hrs</li>
-                    <li>On-time to milestone: 98%</li>
+                    <li>On-time to milestone: SLA per lane</li>
                     <li>Named ops lead: 24/7</li>
                   </ul>
                 </div>

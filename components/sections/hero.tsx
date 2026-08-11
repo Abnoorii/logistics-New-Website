@@ -5,8 +5,10 @@ import { ArrowRight, ArrowUpRight, Plane, Ship, Truck } from "lucide-react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useT } from "@/components/providers/locale-provider";
 
 export function Hero() {
+  const t = useT();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -41,7 +43,7 @@ export function Hero() {
           className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-steel-200 backdrop-blur"
         >
           <span className="h-1 w-6 bg-amber-400" />
-          Air · Ocean · Road · Customs · 3PL
+          {t("hero.modeStrip")}
         </motion.div>
 
         <motion.h1
@@ -54,7 +56,7 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="block"
           >
-            Every leg
+            {t("hero.headlinePart1")}
           </motion.span>
           <motion.span
             initial={{ opacity: 0, y: 40 }}
@@ -62,10 +64,10 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="block"
           >
-            of the{" "}
+            {t("hero.headlinePart2")}{" "}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">
-                journey
+                {t("hero.headlinePart3")}
               </span>
               <motion.span
                 initial={{ scaleX: 0 }}
@@ -83,8 +85,7 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 max-w-xl text-lg leading-relaxed text-steel-300 text-pretty md:text-xl"
         >
-          Logistics.af moves cargo across air, ocean, road and rail — with the
-          visibility, precision, and human care your supply chain deserves.
+          {t("hero.description")}
         </motion.p>
 
         <motion.div
@@ -95,14 +96,14 @@ export function Hero() {
         >
           <Link href="/contact">
             <Button size="lg" variant="primary">
-              Get a quote <ArrowRight className="h-4 w-4" />
+              {t("hero.primaryCta")} <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
           <Link
             href="/services"
             className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm font-medium text-steel-100 backdrop-blur transition-colors hover:border-amber-400 hover:text-amber-300"
           >
-            Explore services
+            {t("hero.secondaryCta")}
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </Link>
         </motion.div>
