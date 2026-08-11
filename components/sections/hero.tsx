@@ -1,0 +1,159 @@
+"use client";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowRight, ArrowUpRight, Plane, Ship, Truck } from "lucide-react";
+import { useRef } from "react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
+export function Hero() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const blurY = useTransform(scrollYProgress, [0, 1], [0, 220]);
+  const titleY = useTransform(scrollYProgress, [0, 1], [0, -60]);
+  const orbitRot = useTransform(scrollYProgress, [0, 1], [0, 90]);
+
+  return (
+    <section
+      ref={ref}
+      className="relative min-h-[100svh] overflow-hidden pt-32 md:pt-40"
+    >
+      <div className="absolute inset-0 bg-mesh-1" />
+      <div className="absolute inset-0 bg-grid opacity-40" />
+      <motion.div
+        style={{ y: blurY }}
+        className="absolute -left-40 top-1/3 h-[520px] w-[520px] rounded-full bg-amber-400/20 blur-[120px]"
+      />
+      <motion.div
+        style={{ y: blurY }}
+        className="absolute -right-32 top-10 h-[420px] w-[420px] rounded-full bg-signal-500/15 blur-[100px]"
+      />
+      <div className="noise" />
+
+      <div className="container relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.7, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-steel-200 backdrop-blur"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inset-0 animate-ping rounded-full bg-signal-400 opacity-70" />
+            <span className="relative h-2 w-2 rounded-full bg-signal-400" />
+          </span>
+          Live network · 42 lanes moving right now
+        </motion.div>
+
+        <motion.h1
+          style={{ y: titleY }}
+          className="max-w-[18ch] font-display text-display-1 font-medium text-steel-100 text-balance"
+        >
+          <motion.span
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
+            className="block"
+          >
+            Every leg
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.95, ease: [0.22, 1, 0.36, 1] }}
+            className="block"
+          >
+            of the{" "}
+            <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">
+                journey
+              </span>
+              <motion.span
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 1.2, delay: 2.4, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute -bottom-2 left-0 h-1 w-full origin-left bg-amber-400/60"
+              />
+            </span>
+          </motion.span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-8 max-w-xl text-lg leading-relaxed text-steel-300 text-pretty md:text-xl"
+        >
+          Meridian moves cargo across air, ocean, road and rail — with the
+          visibility, precision, and human care your supply chain deserves.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 2.35, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-10 flex flex-wrap items-center gap-4"
+        >
+          <Button size="lg" variant="primary">
+            Get a quote <ArrowRight className="h-4 w-4" />
+          </Button>
+          <Link
+            href="#services"
+            className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm font-medium text-steel-100 backdrop-blur transition-colors hover:border-amber-400 hover:text-amber-300"
+          >
+            Explore services
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </Link>
+        </motion.div>
+
+        <div className="mt-24 flex flex-wrap items-center gap-x-8 gap-y-4 text-xs uppercase tracking-widest text-steel-400 md:mt-32">
+          <span>Sydney · Auckland · Shanghai · Hamburg · LA · London</span>
+        </div>
+      </div>
+
+      {/* Orbit graphic */}
+      <motion.div
+        style={{ rotate: orbitRot }}
+        className="pointer-events-none absolute -right-[28%] top-[8%] hidden aspect-square w-[880px] items-center justify-center md:flex"
+      >
+        <div className="absolute inset-0 rounded-full border border-white/10" />
+        <div className="absolute inset-16 rounded-full border border-white/10" />
+        <div className="absolute inset-32 rounded-full border border-white/10" />
+        <div className="absolute inset-52 rounded-full border border-dashed border-amber-400/40" />
+        <Orbiter icon={<Plane className="h-4 w-4" />} radius={440} speed={22} />
+        <Orbiter icon={<Ship className="h-4 w-4" />} radius={370} speed={30} reverse />
+        <Orbiter icon={<Truck className="h-4 w-4" />} radius={300} speed={18} />
+      </motion.div>
+    </section>
+  );
+}
+
+function Orbiter({
+  icon,
+  radius,
+  speed,
+  reverse = false,
+}: {
+  icon: React.ReactNode;
+  radius: number;
+  speed: number;
+  reverse?: boolean;
+}) {
+  return (
+    <motion.div
+      className="absolute left-1/2 top-1/2"
+      style={{ width: radius * 2, height: radius * 2, marginLeft: -radius, marginTop: -radius }}
+      animate={{ rotate: reverse ? -360 : 360 }}
+      transition={{ duration: speed, repeat: Infinity, ease: "linear" }}
+    >
+      <div
+        className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-ink-800/80 p-2 text-amber-300 backdrop-blur"
+        style={{ left: "50%", top: 0 }}
+      >
+        {icon}
+      </div>
+    </motion.div>
+  );
+}
