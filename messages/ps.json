@@ -1,7 +1,14 @@
 {
   "_meta": {
     "note": "TRANSLATION DRAFT — review with a native Pashto speaker before launch. Freight/logistics terminology should be verified against local industry usage.",
-    "reviewer": "TODO"
+    "reviewer": "TODO",
+    "reviewChecklist": [
+      "Common freight terms: FCL, LCL, B/L, AWB — confirm whether transliterated or translated",
+      "Border-crossing names — confirm local Pashto spelling",
+      "Address formatting — confirm postal-style ordering",
+      "Formality/register — b2b freight buyers, direct not floral",
+      "Numbers/dates — verify Arabic-Indic numerals vs Western digits preference"
+    ]
   },
   "nav": {
     "services": "خدمتونه",
@@ -22,6 +29,45 @@
     "primaryCta": "د قیمت غوښتنه",
     "secondaryCta": "خدمتونه وګورئ"
   },
+  "stats": {
+    "markets": "د سوداګرۍ ملګري بازارونه",
+    "corridors": "نومول شوي پولیز کوریدورونه",
+    "yearsSince": "له ۲۰۱۸ راهیسې د بار انتقال",
+    "opsDesk": "د فعال محموله پرمهال د عملیاتو ډیسک",
+    "caption": "له ۲۰۱۸ راهیسې په افغانستان کې · ۱۳ نومول شوي لارې"
+  },
+  "services": {
+    "eyebrow": "څه لیږدوو",
+    "title": "شپږ خدمتونه. د هر انتقال شاته یو مسؤل ټیم.",
+    "intro": "طریقه وټاکئ. موږ اداره کوو — د بکس کولو څخه د تحویل ثبوت پورې، په یو ډشبورډ کې.",
+    "learnMore": "نور معلومات",
+    "air": "هوایی وړنه",
+    "ocean": "بحري وړنه",
+    "customs": "ګمرکي دلالي",
+    "warehousing": "ګودام او لوژستیک",
+    "project": "د پروژې بار",
+    "domestic": "کورني او سیمه‌ییز سړک"
+  },
+  "tradeNetwork": {
+    "eyebrow": "د سوداګرۍ شبکه",
+    "title": "افغانستان د خپلو سوداګریزو لارو په زړه کې.",
+    "intro": "موږ د افغانستان او د هغې د ۱۳ سترو سوداګریزو ملګرو ترمنځ د واردات او صادراتو محمولې د منځنۍ اسیا، سویلي اسیا، منځني ختیځ او هغه پورې لیږدوو.",
+    "importExport": "واردات او صادرات",
+    "import": "واردات",
+    "export": "صادرات",
+    "markets": "بازارونه",
+    "market": "بازار"
+  },
+  "why": {
+    "eyebrow": "ولې لوژستیکس.اف",
+    "title": "د هغو دلایلو چې پیرودونکي بیا رزرو کوي — هر رب کال، هره اوج موده.",
+    "intro": "د بار وړونکي وعدې کوي. دا هغه څه دي چې تکراري سوداګرۍ ترلاسه کوي — د هغو عملیاتي مشرانو په وینا چې له هغوی سره کار کوو."
+  },
+  "faq": {
+    "eyebrow": "ډیرې پوښتنې",
+    "title": "هغه پوښتنې چې مخکې له انتقاله ډیرې راڅرګندیږي.",
+    "replyTime": "د ځواب اوسط وخت: ۴۲ دقیقې"
+  },
   "cta": {
     "eyebrow": "هر وخت چې تیار یاست",
     "titleLine1": "کرښه راته ووایاست.",
@@ -36,10 +82,16 @@
     "support": "ملاتړ",
     "accreditations": "اعتبارنامې",
     "rights": "ټول حقونه خوندي دي.",
-    "tagline": "د بار لپاره جوړ شوی · کابل ← نړۍ"
+    "tagline": "د بار لپاره جوړ شوی · کابل ← نړۍ",
+    "kabulHq": "د کابل مرکزي دفتر"
   },
   "whatsapp": {
     "label": "په واتساپ کې خبرې وکړئ"
+  },
+  "bookACall": {
+    "eyebrow": "تلیفوني تماس غوره ګڼئ؟",
+    "title": "د پلور ټیم سره ۲۰ دقیقې رزرو کړئ.",
+    "intro": "هغه وخت چې ستاسو لپاره مناسب وي وټاکئ. یو مسؤل حساب مشر به په هغه وخت تاسو ته زنګ ووهي."
   },
   "language": {
     "en": "English",

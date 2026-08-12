@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/section";
 import { ContactForm } from "@/components/sections/contact-form";
 import { Reveal } from "@/components/interactive/reveal";
 import { TreatedImage } from "@/components/interactive/treated-image";
+import { BookACall } from "@/components/interactive/book-a-call";
 import { COUNTRIES } from "@/lib/countries";
 import { CONTACT, SITE, ADDRESS } from "@/lib/site";
 import { IMAGES } from "@/lib/images";
@@ -146,6 +147,8 @@ export default function ContactPage() {
           </div>
         </div>
       </Section>
+
+      <BookACall />
 
       <section className="container mb-24">
         <Reveal>

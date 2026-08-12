@@ -18,6 +18,45 @@
     "primaryCta": "Get a quote",
     "secondaryCta": "Explore services"
   },
+  "stats": {
+    "markets": "Trade partner markets",
+    "corridors": "Named border corridors",
+    "yearsSince": "Moving cargo since 2018",
+    "opsDesk": "Ops desk during active shipments",
+    "caption": "Afghanistan-based since 2018 · 13 named lanes"
+  },
+  "services": {
+    "eyebrow": "What we move",
+    "title": "Six services. One accountable team behind every move.",
+    "intro": "Choose the mode. We handle the choreography — from booking to proof of delivery, on one dashboard.",
+    "learnMore": "Learn more",
+    "air": "Air Freight",
+    "ocean": "Ocean Freight",
+    "customs": "Customs Brokerage",
+    "warehousing": "Warehousing & 3PL",
+    "project": "Project Cargo",
+    "domestic": "Domestic & Regional Road"
+  },
+  "tradeNetwork": {
+    "eyebrow": "Trade network",
+    "title": "Afghanistan at the heart of its trade lanes.",
+    "intro": "We move import and export shipments between Afghanistan and its 13 principal trading partners across Central Asia, South Asia, the Middle East, and beyond.",
+    "importExport": "Import & export",
+    "import": "Import",
+    "export": "Export",
+    "markets": "markets",
+    "market": "market"
+  },
+  "why": {
+    "eyebrow": "Why Logistics.af",
+    "title": "The reasons customers rebook — every quarter, every peak.",
+    "intro": "Freight forwarders promise the world. Here's what earns repeat business, according to the operations leaders we work with."
+  },
+  "faq": {
+    "eyebrow": "Frequently asked",
+    "title": "The questions we get most before people move.",
+    "replyTime": "Avg. reply time: 42 minutes"
+  },
   "cta": {
     "eyebrow": "Ready when you are",
     "titleLine1": "Tell us the lane.",
@@ -32,10 +71,16 @@
     "support": "Support",
     "accreditations": "Accreditations",
     "rights": "All rights reserved.",
-    "tagline": "Made for cargo · Kabul → World"
+    "tagline": "Made for cargo · Kabul → World",
+    "kabulHq": "Kabul HQ"
   },
   "whatsapp": {
     "label": "Chat on WhatsApp"
+  },
+  "bookACall": {
+    "eyebrow": "Prefer a call?",
+    "title": "Book 20 minutes with sales.",
+    "intro": "Pick a time that suits you. A named account lead will call you at that time to walk through your lane."
   },
   "language": {
     "en": "English",

@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useT } from "@/components/providers/locale-provider";
+import { VideoBackdrop } from "@/components/interactive/video-backdrop";
 
 export function Hero() {
   const t = useT();
@@ -23,7 +24,12 @@ export function Hero() {
       ref={ref}
       className="relative min-h-[100svh] overflow-hidden pt-32 md:pt-40"
     >
-      <div className="absolute inset-0 bg-mesh-1" />
+      {/* Absolute layers, back-to-front:
+          1) Video backdrop (falls back gracefully)
+          2) Mesh gradient (always present)
+          3) Grid + noise */}
+      <VideoBackdrop opacityClass="opacity-20" />
+      <div className="absolute inset-0 bg-mesh-1 mix-blend-normal" />
       <div className="absolute inset-0 bg-grid opacity-40" />
       <motion.div
         style={{ y: blurY }}

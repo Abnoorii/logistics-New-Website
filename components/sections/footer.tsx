@@ -11,6 +11,7 @@ const COMPANY = [
   { label: "Pricing", href: "/pricing" },
   { label: "Compare", href: "/compare" },
   { label: "Sustainability", href: "/sustainability" },
+  { label: "Press", href: "/press" },
 ];
 
 const SUPPORT = [

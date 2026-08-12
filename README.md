@@ -21,13 +21,15 @@ production branch is chosen).
 ### Environment variables
 
 Add these in Vercel → Project → Settings → Environment Variables (production
-scope):
+scope). Nothing is required for the site to run — each unlocks a feature.
 
-| Name | Value | Required |
-|------|-------|----------|
-| `RESEND_API_KEY` | Your Resend API key from https://resend.com | Yes, to receive form emails |
-| `CONTACT_TO` | Inbox for quote requests | Default: `sales@logistics.af` |
-| `CONTACT_FROM` | Verified sender for outbound | Default: `Logistics.af Website <noreply@logistics.af>` |
+| Name | Purpose | Default without it |
+|------|---------|--------------------|
+| `RESEND_API_KEY` | Email delivery for contact + newsletter forms (https://resend.com) | Submissions log server-side only |
+| `CONTACT_TO` | Inbox for quote requests | `sales@logistics.af` |
+| `CONTACT_FROM` | Verified sender | `Logistics.af Website <noreply@logistics.af>` |
+| `NEXT_PUBLIC_CRISP_ID` | Live-chat widget from https://crisp.chat (Website ID) | Chat widget hidden; WhatsApp FAB is primary |
+| `NEXT_PUBLIC_CAL_LINK` | Book-a-call embed from https://cal.com (e.g. `logistics-af/sales-intro`) | `/contact` shows "Scheduling coming soon" placeholder |
 
 **Without `RESEND_API_KEY`**, the form still accepts submissions and returns a
 success screen to the user, but the message is only written to Vercel server

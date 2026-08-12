@@ -1,7 +1,14 @@
 {
   "_meta": {
     "note": "TRANSLATION DRAFT — review with a native Dari (Farsi-Afghanistan) speaker before launch. Freight/logistics terminology in particular should be checked against local industry usage.",
-    "reviewer": "TODO"
+    "reviewer": "TODO",
+    "reviewChecklist": [
+      "Common freight terms: FCL, LCL, B/L, AWB — confirm whether transliterated or translated",
+      "Border-crossing names — confirm local Dari spelling",
+      "Address formatting — confirm postal-style ordering",
+      "Formality/register — b2b freight buyers, direct not floral",
+      "Numbers/dates — verify Persian numerals vs Western digits preference"
+    ]
   },
   "nav": {
     "services": "خدمات",
@@ -22,6 +29,45 @@
     "primaryCta": "درخواست قیمت",
     "secondaryCta": "مشاهده خدمات"
   },
+  "stats": {
+    "markets": "بازارهای شریک تجاری",
+    "corridors": "کوریدورهای مرزی نام‌گذاری‌شده",
+    "yearsSince": "انتقال بار از سال ۲۰۱۸",
+    "opsDesk": "میز عملیات در زمان محموله فعال",
+    "caption": "مستقر در افغانستان از ۲۰۱۸ · ۱۳ مسیر نام‌گذاری‌شده"
+  },
+  "services": {
+    "eyebrow": "چه چیزی را حمل می‌کنیم",
+    "title": "شش خدمت. یک تیم مسئول در پشت هر انتقال.",
+    "intro": "شیوه را انتخاب کنید. ما هماهنگی را انجام می‌دهیم — از رزرو تا اثبات تحویل، در یک داشبورد.",
+    "learnMore": "بیشتر بدانید",
+    "air": "حمل هوایی",
+    "ocean": "حمل دریایی",
+    "customs": "دلالی گمرکی",
+    "warehousing": "انبارداری و لوجستیک",
+    "project": "بار پروژه‌ای",
+    "domestic": "حمل داخلی و منطقه‌ای"
+  },
+  "tradeNetwork": {
+    "eyebrow": "شبکه تجاری",
+    "title": "افغانستان در قلب مسیرهای تجاری خود.",
+    "intro": "ما بارهای وارداتی و صادراتی را بین افغانستان و ۱۳ شریک تجاری اصلی آن در آسیای مرکزی، جنوبی، خاورمیانه و فراتر از آن جابجا می‌کنیم.",
+    "importExport": "واردات و صادرات",
+    "import": "واردات",
+    "export": "صادرات",
+    "markets": "بازار",
+    "market": "بازار"
+  },
+  "why": {
+    "eyebrow": "چرا لوجستیک.اف",
+    "title": "دلایلی که مشتریان دوباره رزرو می‌کنند — هر فصل، هر اوج فصلی.",
+    "intro": "شرکت‌های حمل و نقل قول می‌دهند. این چیزی است که کسب و کار تکراری را به دست می‌آورد — طبق گفته مدیران عملیاتی که با آن‌ها کار می‌کنیم."
+  },
+  "faq": {
+    "eyebrow": "سوالات متداول",
+    "title": "سوالاتی که قبل از انتقال بیشتر دریافت می‌کنیم.",
+    "replyTime": "میانگین زمان پاسخ: ۴۲ دقیقه"
+  },
   "cta": {
     "eyebrow": "هر زمان که آماده باشید",
     "titleLine1": "خط را به ما بگویید.",
@@ -36,10 +82,16 @@
     "support": "پشتیبانی",
     "accreditations": "اعتبارنامه‌ها",
     "rights": "کلیه حقوق محفوظ است.",
-    "tagline": "ساخته شده برای بار · کابل ← جهان"
+    "tagline": "ساخته شده برای بار · کابل ← جهان",
+    "kabulHq": "دفتر مرکزی کابل"
   },
   "whatsapp": {
     "label": "چت در واتساپ"
+  },
+  "bookACall": {
+    "eyebrow": "تماس تلفنی ترجیح می‌دهید؟",
+    "title": "۲۰ دقیقه با تیم فروش رزرو کنید.",
+    "intro": "زمانی را که برای شما مناسب است انتخاب کنید. یک مسئول حساب اختصاصی در آن زمان با شما تماس خواهد گرفت."
   },
   "language": {
     "en": "English",

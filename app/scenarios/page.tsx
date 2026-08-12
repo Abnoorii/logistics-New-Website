@@ -97,6 +97,32 @@ export default function ScenariosPage() {
         </RevealStagger>
       </Section>
 
+      <Section
+        eyebrow="Featured customer story"
+        title="Are you our next case study?"
+        intro="If we've moved cargo for you and you're open to being featured — logo, quote and quantified result — we'd love to publish your story. In return: bespoke assets, cross-linking, and a $500 credit on your next shipment."
+      >
+        <div className="rounded-3xl border border-amber-400/30 bg-amber-400/[0.06] p-8 md:p-10">
+          <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h3 className="font-display text-2xl text-steel-100">
+                Nominate your company for a case study.
+              </h3>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-steel-300">
+                One 30-minute interview, one round of copy review, and your
+                logo appears on the page. All approvals stay with you.
+              </p>
+            </div>
+            <a
+              href="mailto:info@logistics.af?subject=Case%20study%20nomination"
+              className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-3 text-sm font-medium text-ink-950 transition-colors hover:bg-amber-300"
+            >
+              Volunteer your story
+            </a>
+          </div>
+        </div>
+      </Section>
+
       <CTA />
     </>
   );

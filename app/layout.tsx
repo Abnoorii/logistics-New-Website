@@ -10,6 +10,7 @@ import { ImageFilters } from "@/components/interactive/image-filters";
 import { WhatsAppFAB } from "@/components/interactive/whatsapp-fab";
 import { CookieBanner } from "@/components/interactive/cookie-banner";
 import { StructuredData } from "@/components/interactive/structured-data";
+import { CrispChat } from "@/components/interactive/crisp-chat";
 import { Preloader } from "@/components/sections/preloader";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
@@ -103,6 +104,7 @@ export default function RootLayout({
             <Footer />
             <WhatsAppFAB />
             <CookieBanner />
+            <CrispChat />
           </RegionProvider>
           </LocaleProvider>
         </LenisProvider>
