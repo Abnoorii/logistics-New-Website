@@ -8,11 +8,12 @@ export default function manifest(): MetadataRoute.Manifest {
     description: SITE.description,
     start_url: "/",
     display: "standalone",
-    background_color: "#05070d",
-    theme_color: "#f9ab27",
+    background_color: "#16305A",
+    theme_color: "#16305A",
     icons: [
-      { src: "/icon", sizes: "64x64", type: "image/png" },
-      { src: "/apple-icon", sizes: "180x180", type: "image/png" },
+      { src: "/icon.svg", sizes: "any", type: "image/svg+xml" },
+      { src: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      { src: "/brand/logistics-af-app-icon.png", sizes: "512x512", type: "image/png" },
     ],
   };
 }

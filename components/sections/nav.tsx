@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { useRegion } from "@/components/providers/region-provider";
 import { useT } from "@/components/providers/locale-provider";
 import { LanguageSwitcher } from "@/components/interactive/language-switcher";
+import { LogoMark } from "@/components/interactive/logo-mark";
 
 const LINKS: { href: string; key: string }[] = [
   { href: "/services", key: "nav.services" },
@@ -53,10 +54,13 @@ export function Nav() {
           >
             <Link
               href="/"
-              className="flex items-center gap-2 px-3 py-2 text-sm font-medium tracking-tight"
+              className="flex items-center gap-2.5 px-3 py-2 text-sm font-medium tracking-tight"
+              aria-label="Logistics.af — home"
             >
-              <LogoMark />
-              <span className="font-display text-base">Logistics.af</span>
+              <LogoMark className="h-7 w-auto" />
+              <span className="font-display text-base tracking-tight text-steel-100">
+                logistics.af
+              </span>
             </Link>
 
             <nav className="hidden items-center gap-1 lg:flex">
@@ -149,7 +153,10 @@ export function Nav() {
             className="fixed inset-0 z-[60] bg-ink-950/95 backdrop-blur-xl lg:hidden"
           >
             <div className="container flex items-center justify-between py-6">
-              <span className="font-display text-lg">Logistics.af</span>
+              <span className="inline-flex items-center gap-2.5">
+                <LogoMark className="h-6 w-auto" />
+                <span className="font-display text-lg tracking-tight">logistics.af</span>
+              </span>
               <button
                 onClick={() => setMobileOpen(false)}
                 className="rounded-full border border-white/10 bg-white/5 p-2"
@@ -189,15 +196,3 @@ export function Nav() {
   );
 }
 
-function LogoMark() {
-  return (
-    <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-lg bg-amber-400 text-ink-950">
-      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
-        <path
-          d="M3 12L12 3l9 9-9 9-9-9zm9-5l-5 5 5 5 5-5-5-5z"
-          fill="currentColor"
-        />
-      </svg>
-    </span>
-  );
-}

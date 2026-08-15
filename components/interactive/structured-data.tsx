@@ -15,7 +15,7 @@ export function StructuredData() {
     "@id": `${SITE.url}#organization`,
     name: SITE.name,
     url: SITE.url,
-    logo: `${SITE.url}/apple-icon`,
+    logo: `${SITE.url}/brand/logistics-af-logo-primary.png`,
     description: SITE.description,
     email: CONTACT.emails.info,
     telephone: CONTACT.sales.phone,

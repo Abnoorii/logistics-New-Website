@@ -4,6 +4,7 @@ import { SERVICES } from "@/lib/services";
 import { SITE, CONTACT, ADDRESS, ACCREDITATIONS } from "@/lib/site";
 import { MapPin, PhoneCall, Mail } from "lucide-react";
 import { NewsletterForm } from "@/components/sections/newsletter-form";
+import { LogoMark } from "@/components/interactive/logo-mark";
 
 const COMPANY = [
   { label: "About", href: "/about" },
@@ -28,13 +29,15 @@ export function Footer() {
       <div className="container">
         <div className="grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Link href="/" className="inline-flex items-center gap-2">
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-amber-400 text-ink-950">
-                <svg viewBox="0 0 24 24" className="h-4 w-4">
-                  <path d="M3 12L12 3l9 9-9 9-9-9zm9-5l-5 5 5 5 5-5-5-5z" fill="currentColor" />
-                </svg>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-3"
+              aria-label="Logistics.af — home"
+            >
+              <LogoMark className="h-8 w-auto" />
+              <span className="font-display text-xl tracking-tight">
+                logistics.af
               </span>
-              <span className="font-display text-xl">{SITE.name}</span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-steel-400">
               {SITE.description}
