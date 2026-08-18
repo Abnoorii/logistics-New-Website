@@ -89,7 +89,7 @@ export function NewsletterForm() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="mr-1.5 inline-flex items-center gap-1 rounded-lg bg-amber-400 px-3 py-1.5 text-xs font-medium text-ink-950 transition-colors hover:bg-amber-300 disabled:opacity-60"
+                className="mr-1.5 inline-flex items-center gap-1 rounded-lg bg-amber-400 px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-amber-500 disabled:opacity-60"
               >
                 {status === "sending" ? "…" : "Subscribe"}
                 <ArrowRight className="h-3 w-3" />

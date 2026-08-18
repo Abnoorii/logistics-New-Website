@@ -21,7 +21,7 @@ export function CTA() {
     <section ref={ref} className="relative overflow-hidden py-24 md:py-32">
       <motion.div
         style={{ y }}
-        className="absolute inset-0 bg-[radial-gradient(900px_600px_at_50%_-10%,rgba(249,171,39,0.18),transparent_60%),radial-gradient(700px_400px_at_20%_100%,rgba(30,194,173,0.15),transparent_60%)]"
+        className="absolute inset-0 bg-[radial-gradient(900px_600px_at_50%_-10%,rgba(218,38,46,0.18),transparent_60%),radial-gradient(700px_400px_at_20%_100%,rgba(22,48,90,0.35),transparent_60%)]"
       />
       <div className="container relative">
         <motion.div

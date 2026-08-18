@@ -197,7 +197,7 @@ export function ContactForm() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3.5 text-sm font-medium text-ink-950 transition-colors hover:bg-amber-300 disabled:opacity-60"
+              className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-amber-500 disabled:opacity-60"
             >
               {status === "sending" ? "Sending…" : "Send request"}
               <Send className="h-4 w-4" />

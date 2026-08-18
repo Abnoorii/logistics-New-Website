@@ -11,7 +11,7 @@ const buttonStyles = cva(
     variants: {
       variant: {
         primary:
-          "bg-amber-400 text-ink-950 hover:bg-amber-300 shadow-[0_10px_30px_-10px_rgba(249,171,39,0.6)]",
+          "bg-amber-400 text-white hover:bg-amber-500 shadow-[0_10px_30px_-10px_rgba(218,38,46,0.6)]",
         secondary:
           "bg-white/5 text-steel-100 hover:bg-white/10 border border-white/10",
         ghost:

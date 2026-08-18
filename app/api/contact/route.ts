@@ -38,7 +38,7 @@ function renderHtml(p: Payload) {
       : "";
   return `<!doctype html>
   <html><body style="background:#05070d;font-family:Inter,system-ui,sans-serif;color:#e6ebf3;padding:24px">
-    <h2 style="color:#f9ab27;font-family:'Space Grotesk',sans-serif;margin:0 0 16px">New quote request</h2>
+    <h2 style="color:#DA262E;font-family:'Space Grotesk',sans-serif;margin:0 0 16px">New quote request</h2>
     <table style="border-collapse:collapse;font-size:14px">
       ${row("Name", p.name)}
       ${row("Email", p.email)}

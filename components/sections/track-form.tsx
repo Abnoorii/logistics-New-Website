@@ -77,7 +77,7 @@ export function TrackForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="mr-2 inline-flex items-center gap-2 rounded-xl bg-amber-400 px-5 py-3 text-sm font-medium text-ink-950 transition-colors hover:bg-amber-300 disabled:opacity-60"
+          className="mr-2 inline-flex items-center gap-2 rounded-xl bg-amber-400 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-amber-500 disabled:opacity-60"
         >
           <Search className="h-4 w-4" />
           {status === "loading" ? "Searching…" : "Track"}
@@ -129,7 +129,7 @@ export function TrackForm() {
                   <span
                     className={
                       m.active
-                        ? "mt-0.5 grid h-8 w-8 place-items-center rounded-full bg-amber-400 text-ink-950"
+                        ? "mt-0.5 grid h-8 w-8 place-items-center rounded-full bg-amber-400 text-white"
                         : m.done
                         ? "mt-0.5 grid h-8 w-8 place-items-center rounded-full bg-signal-500/20 text-signal-400"
                         : "mt-0.5 grid h-8 w-8 place-items-center rounded-full border border-white/10 text-steel-500"

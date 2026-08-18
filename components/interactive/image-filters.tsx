@@ -3,8 +3,8 @@
  * at the root of the layout so CSS `filter: url(#name)` works everywhere.
  *
  * Two treatments:
- *  - `duotone-amber`  → dramatic ink→amber mapping (editorial)
- *  - `subtle-brand`   → light desaturation + warm-shadow lift (understated corporate)
+ *  - `duotone-brand`  → dramatic ink→brand-red mapping (editorial)
+ *  - `subtle-brand`   → light desaturation + red shadow-lift (understated corporate)
  */
 export function ImageFilters() {
   return (
@@ -20,7 +20,7 @@ export function ImageFilters() {
       }}
     >
       <defs>
-        {/* Editorial duotone: ink-800 → amber-100 */}
+        {/* Editorial duotone: brand-navy → brand-red-100 (was ink→amber) */}
         <filter id="duotone-amber" colorInterpolationFilters="sRGB">
           <feColorMatrix
             type="matrix"
@@ -32,27 +32,30 @@ export function ImageFilters() {
             "
           />
           <feComponentTransfer>
-            <feFuncR tableValues="0.063 0.996" />
-            <feFuncG tableValues="0.090 0.937" />
-            <feFuncB tableValues="0.156 0.788" />
+            {/* Shadows map to brand-navy #16305A (0.086, 0.188, 0.353)
+                Highlights map to brand-red-100 #fee2e2 (0.996, 0.886, 0.886) */}
+            <feFuncR tableValues="0.086 0.996" />
+            <feFuncG tableValues="0.188 0.886" />
+            <feFuncB tableValues="0.353 0.886" />
           </feComponentTransfer>
         </filter>
 
-        {/* Understated: preserve original color, drop saturation slightly, warm shadows */}
+        {/* Understated: preserve colour, drop saturation slightly, warm red shadows */}
         <filter id="subtle-brand" colorInterpolationFilters="sRGB">
           <feColorMatrix
             type="matrix"
             values="
-              0.72 0.20 0.08 0 0.01
-              0.10 0.78 0.12 0 0.005
-              0.05 0.15 0.75 0 0
+              0.78 0.14 0.10 0 0.02
+              0.06 0.80 0.10 0 0
+              0.05 0.10 0.80 0 0.01
               0    0    0    1 0
             "
           />
           <feComponentTransfer>
-            <feFuncR tableValues="0.04 1" />
-            <feFuncG tableValues="0.03 0.97" />
-            <feFuncB tableValues="0.06 0.93" />
+            {/* Lift shadows warm (red-ish), keep highlights neutral */}
+            <feFuncR tableValues="0.07 1" />
+            <feFuncG tableValues="0.04 0.97" />
+            <feFuncB tableValues="0.06 0.94" />
           </feComponentTransfer>
         </filter>
       </defs>

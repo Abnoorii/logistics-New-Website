@@ -8,20 +8,25 @@ control tower: confident, terse, factual. Never salesy.
 
 | Token | Hex | Role |
 |-------|-----|------|
-| ink-950 | `#05070d` | Page background |
-| ink-900 | `#0a0e1a` | Section background |
-| ink-800 | `#101728` | Elevated surface |
-| ink-700 | `#182236` | Card background |
-| ink-600 | `#243049` | Card hover |
+| ink-950 | `#050813` | Page background |
+| ink-900 | `#0a1123` | Section background |
+| ink-800 | `#101a35` | Elevated surface |
+| ink-700 | `#182444` | Card background |
+| ink-600 | `#243359` | Card hover |
 | steel-100 | `#e6ebf3` | Primary text |
 | steel-300 | `#9ba7bb` | Secondary text |
 | steel-400 | `#6b7891` | Muted / caption |
-| amber-400 | `#f9ab27` | **Brand accent** — CTAs, active state |
-| amber-300 | `#fcc353` | Hover accent |
-| signal-500 | `#1ec2ad` | Secondary accent — data, status pips |
+| brand-navy-600 | `#16305A` | **Brand primary** — structure, calm, trust |
+| brand-red-500 | `#DA262E` | **Brand accent** — CTAs, active state, motion |
+| brand-red-400 | `#f87171` | Hover state on red surfaces |
+| signal-500 | `#1ec2ad` | Status pips (on-schedule, subscribed) |
 
-Base is deep navy (ink). Amber is used sparingly — reserve it for the one
-thing you want the user to look at in each viewport. Teal shows up in
+The `amber-*` scale is aliased to red for backwards compatibility across
+existing className strings. New code should reach for `brand-red-*` or
+`brand-navy-*` for clarity.
+
+Base is deep navy (ink). Brand red is used sparingly — reserve it for the
+one thing you want the user to look at in each viewport. Teal shows up in
 data indicators, small icons, and micro-flourishes.
 
 ## Typography
@@ -52,11 +57,18 @@ Timing curve of choice: `[0.22, 1, 0.36, 1]` (custom out-expo).
 All scroll reveal uses IntersectionObserver with a 15% threshold and
 `once: true`. Respects `prefers-reduced-motion`.
 
+## Brand assets
+
+- Full lockups: `public/brand/logistics-af-logo-*.svg`
+- Symbol only: `components/interactive/logo-mark.tsx` (inline for nav/footer)
+- Favicon: `app/icon.svg` (served automatically by Next)
+- Apple icon: `app/apple-icon.png` (served automatically by Next)
+
 ## Components
 
 - **Magnetic button** — cursor pulls the button 8px toward it, releases on leave
-- **Custom cursor** — 6px dot + 34px ring, expands to 68px on hover targets
 - **Reveal** — wraps any child; opacity 0 → 1, y 24px → 0
 - **Counter** — starts on view, cubic-out easing
 - **Marquee** — CSS keyframe, duplicated content, pause on hover
 - **Accordion** — Framer `motion.div` height auto
+- **TreatedImage** — next/image + subtle SVG filter + grid overlay

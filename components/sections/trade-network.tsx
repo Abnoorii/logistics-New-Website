@@ -150,12 +150,12 @@ function NetworkDiagram({
 
         {/* Center — Afghanistan */}
         <g>
-          <circle cx={cx} cy={cy} r={16} fill="rgba(249,171,39,0.15)" />
+          <circle cx={cx} cy={cy} r={16} fill="rgba(218,38,46,0.15)" />
           <motion.circle
             cx={cx}
             cy={cy}
             r={8}
-            fill="#f9ab27"
+            fill="#DA262E"
             animate={{ r: [8, 10, 8] }}
             transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -165,7 +165,7 @@ function NetworkDiagram({
             fontSize="12"
             fontWeight="500"
             textAnchor="middle"
-            fill="#f9ab27"
+            fill="#DA262E"
             style={{ fontFamily: "var(--font-display), sans-serif" }}
           >
             Afghanistan
@@ -206,7 +206,7 @@ function NetworkDiagram({
                 fontSize="10"
                 fontWeight="500"
                 textAnchor={c.labelAnchor}
-                fill={isActive ? "#feefc9" : "#c7d0de"}
+                fill={isActive ? "#fee2e2" : "#c7d0de"}
                 style={{ transition: "fill 200ms" }}
               >
                 {c.name}

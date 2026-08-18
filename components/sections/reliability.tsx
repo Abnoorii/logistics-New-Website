@@ -48,7 +48,7 @@ export function Reliability() {
     >
       <motion.div
         style={{ y: bgY }}
-        className="absolute inset-0 bg-[radial-gradient(1000px_500px_at_80%_20%,rgba(30,194,173,0.10),transparent_60%),radial-gradient(1000px_500px_at_10%_80%,rgba(249,171,39,0.10),transparent_60%)]"
+        className="absolute inset-0 bg-[radial-gradient(1000px_500px_at_80%_20%,rgba(30,194,173,0.10),transparent_60%),radial-gradient(1000px_500px_at_10%_80%,rgba(218,38,46,0.10),transparent_60%)]"
       />
       <div className="bg-grid absolute inset-0 opacity-30" />
 
@@ -177,8 +177,8 @@ export function Reliability() {
             >
               <defs>
                 <linearGradient id="truckBody" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0" stopColor="#f9ab27" />
-                  <stop offset="1" stopColor="#c26f05" />
+                  <stop offset="0" stopColor="#DA262E" />
+                  <stop offset="1" stopColor="#991616" />
                 </linearGradient>
               </defs>
               <rect x="140" y="70" width="260" height="80" rx="8" fill="#e6ebf3" opacity="0.9" />
@@ -224,7 +224,7 @@ function MilestoneDot({
           done
             ? "h-2 w-2 rounded-full bg-signal-400"
             : active
-            ? "h-2 w-2 rounded-full bg-amber-400 shadow-[0_0_0_4px_rgba(249,171,39,0.15)]"
+            ? "h-2 w-2 rounded-full bg-amber-400 shadow-[0_0_0_4px_rgba(218,38,46,0.15)]"
             : "h-2 w-2 rounded-full border border-white/20"
         }
       />
@@ -259,17 +259,17 @@ function SparkChart() {
     <svg viewBox={`0 0 ${w} ${h}`} className="mt-3 h-9 w-full">
       <defs>
         <linearGradient id="sparkFill" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0" stopColor="#f9ab27" stopOpacity="0.35" />
-          <stop offset="1" stopColor="#f9ab27" stopOpacity="0" />
+          <stop offset="0" stopColor="#DA262E" stopOpacity="0.35" />
+          <stop offset="1" stopColor="#DA262E" stopOpacity="0" />
         </linearGradient>
       </defs>
       <path d={area} fill="url(#sparkFill)" />
-      <path d={path} fill="none" stroke="#f9ab27" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d={path} fill="none" stroke="#DA262E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       <circle
         cx={(points.length - 1) * step}
         cy={y(points[points.length - 1])}
         r="2.5"
-        fill="#f9ab27"
+        fill="#DA262E"
       />
     </svg>
   );

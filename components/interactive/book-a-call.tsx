@@ -55,7 +55,7 @@ export function BookACall({
               </p>
               <Link
                 href="/contact"
-                className="mt-2 inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-3 text-sm font-medium text-ink-950 transition-colors hover:bg-amber-300"
+                className="mt-2 inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-amber-500"
               >
                 Send a note <ArrowRight className="h-4 w-4" />
               </Link>

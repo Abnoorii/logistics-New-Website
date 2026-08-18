@@ -59,7 +59,7 @@ export function CookieBanner() {
             </div>
             <button
               onClick={dismiss}
-              className="rounded-full bg-amber-400 px-4 py-2 text-xs font-medium text-ink-950 transition-colors hover:bg-amber-300"
+              className="rounded-full bg-amber-400 px-4 py-2 text-xs font-medium text-white transition-colors hover:bg-amber-500"
             >
               Got it
             </button>

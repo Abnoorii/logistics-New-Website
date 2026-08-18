@@ -59,7 +59,7 @@ export const COUNTRIES: Country[] = [
 
 export const TRADE_TYPES: Record<TradeType, { label: string; color: string; dotClass: string }> = {
   both: { label: "Import & export", color: "#4ad8c6", dotClass: "bg-signal-400" },
-  import: { label: "Import", color: "#f9ab27", dotClass: "bg-amber-400" },
+  import: { label: "Import", color: "#DA262E", dotClass: "bg-amber-400" },
   export: { label: "Export", color: "#60a5fa", dotClass: "bg-[#60a5fa]" },
 };
 

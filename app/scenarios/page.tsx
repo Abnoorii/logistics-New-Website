@@ -115,7 +115,7 @@ export default function ScenariosPage() {
             </div>
             <a
               href="mailto:info@logistics.af?subject=Case%20study%20nomination"
-              className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-3 text-sm font-medium text-ink-950 transition-colors hover:bg-amber-300"
+              className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-amber-500"
             >
               Volunteer your story
             </a>

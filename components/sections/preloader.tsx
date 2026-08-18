@@ -116,7 +116,7 @@ function WorldMap({ progress }: { progress: number }) {
       width={w}
       height={h}
       viewBox={`0 0 ${w} ${h}`}
-      className="drop-shadow-[0_0_40px_rgba(249,171,39,0.25)]"
+      className="drop-shadow-[0_0_40px_rgba(218,38,46,0.25)]"
     >
       {grid.map((row, y) =>
         row.split("").map((c, x) => {
@@ -129,7 +129,7 @@ function WorldMap({ progress }: { progress: number }) {
               cx={x * cell + cell / 2}
               cy={y * cell + cell / 2}
               r={2}
-              fill={activate ? "#f9ab27" : "#243049"}
+              fill={activate ? "#DA262E" : "#243359"}
               animate={activate ? { r: [2, 3, 2] } : {}}
               transition={{
                 duration: 1.4,

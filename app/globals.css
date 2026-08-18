@@ -7,7 +7,7 @@
 }
 
 html, body {
-  background: #05070d;
+  background: #050813;
   color: #e6ebf3;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -21,11 +21,11 @@ html.lenis, html.lenis body {
 .lenis.lenis-stopped { overflow: hidden; }
 
 /* Selection */
-::selection { background: #f9ab27; color: #05070d; }
+::selection { background: #DA262E; color: #ffffff; }
 
 /* Focus rings */
 *:focus-visible {
-  outline: 2px solid #f9ab27;
+  outline: 2px solid #DA262E;
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -35,8 +35,8 @@ html.lenis, html.lenis body {
   position: absolute;
   top: -60px;
   left: 16px;
-  background: #f9ab27;
-  color: #05070d;
+  background: #DA262E;
+  color: #ffffff;
   padding: 10px 16px;
   border-radius: 999px;
   font-weight: 600;

@@ -16,7 +16,7 @@ export default function OGImage() {
           justifyContent: "space-between",
           padding: 72,
           background:
-            "radial-gradient(circle at 20% 10%, rgba(249,171,39,0.30), transparent 55%), radial-gradient(circle at 90% 90%, rgba(30,194,173,0.18), transparent 60%), #05070d",
+            "radial-gradient(circle at 20% 10%, rgba(218,38,46,0.30), transparent 55%), radial-gradient(circle at 90% 90%, rgba(22,48,90,0.45), transparent 60%), #050813",
           color: "#e6ebf3",
           fontFamily: "sans-serif",
         }}

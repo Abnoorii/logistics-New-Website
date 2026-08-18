@@ -44,7 +44,7 @@ function ServiceCard({
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{
           background:
-            "radial-gradient(600px circle at var(--x,50%) var(--y,0%), rgba(249,171,39,0.12), transparent 40%)",
+            "radial-gradient(600px circle at var(--x,50%) var(--y,0%), rgba(218,38,46,0.12), transparent 40%)",
         }}
       />
       <div className="relative flex items-start justify-between">
