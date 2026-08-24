@@ -17,6 +17,7 @@ const LINKS: { href: string; key: string }[] = [
   { href: "/services", key: "nav.services" },
   { href: "/#trade-network", key: "nav.network" },
   { href: "/pricing", key: "nav.pricing" },
+  { href: "/insights", key: "nav.insights" },
   { href: "/about", key: "nav.about" },
   { href: "/track", key: "nav.track" },
 ];

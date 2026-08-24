@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { SCENARIOS } from "@/lib/scenarios";
+import { getAllPosts } from "@/lib/insights";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -14,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/compare`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE.url}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE.url}/sustainability`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE.url}/insights`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE.url}/press`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE.url}/api-docs`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE.url}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
@@ -37,5 +39,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...scenarioRoutes];
+  const insightRoutes: MetadataRoute.Sitemap = getAllPosts().map((p) => ({
+    url: `${SITE.url}/insights/${p.slug}`,
+    lastModified: new Date(p.date),
+    changeFrequency: "yearly",
+    priority: 0.7,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...serviceRoutes,
+    ...scenarioRoutes,
+    ...insightRoutes,
+  ];
 }
