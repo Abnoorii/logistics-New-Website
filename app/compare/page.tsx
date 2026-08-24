@@ -111,7 +111,7 @@ export default function ComparePage() {
             </Link>
             <Link
               href="/pricing"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-amber-400 hover:text-amber-300"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
             >
               See rate card
             </Link>
@@ -124,8 +124,8 @@ export default function ComparePage() {
           <div className="overflow-hidden rounded-3xl border border-white/10 bg-ink-800/40 backdrop-blur">
             <div className="grid grid-cols-12 gap-4 border-b border-white/5 px-4 py-4 text-[10px] uppercase tracking-widest text-steel-500 md:px-8">
               <div className="col-span-4 md:col-span-3">Dimension</div>
-              <div className="col-span-4 flex items-center gap-2 text-amber-300 md:col-span-5">
-                <span className="h-1 w-4 bg-amber-400" /> Logistics.af
+              <div className="col-span-4 flex items-center gap-2 text-brand-red-300 md:col-span-5">
+                <span className="h-1 w-4 bg-brand-red-500" /> Logistics.af
               </div>
               <div className="col-span-4">Traditional forwarder</div>
             </div>

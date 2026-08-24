@@ -69,7 +69,7 @@ export default async function ScenarioDetail({
             </Link>
             <Link
               href="/scenarios"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-amber-400 hover:text-amber-300"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
             >
               All scenarios
             </Link>
@@ -97,7 +97,7 @@ export default async function ScenarioDetail({
                 <div className="text-[10px] uppercase tracking-widest text-steel-500">
                   {m.label}
                 </div>
-                <div className="mt-2 font-display text-3xl text-amber-300">
+                <div className="mt-2 font-display text-3xl text-brand-red-300">
                   {m.value}
                 </div>
               </div>
@@ -116,8 +116,8 @@ export default async function ScenarioDetail({
 
       <Section>
         <Reveal>
-          <div className="rounded-2xl border border-amber-400/30 bg-amber-400/[0.04] p-6 text-sm text-amber-100">
-            <span className="font-medium text-amber-200">Illustrative.</span>{" "}
+          <div className="rounded-2xl border border-brand-red-500/30 bg-brand-red-500/[0.04] p-6 text-sm text-brand-red-100">
+            <span className="font-medium text-brand-red-200">Illustrative.</span>{" "}
             Details are drawn from real work but generalized. Referenceable
             customer case studies with names, numbers and contacts are available
             on request under NDA.
@@ -141,7 +141,7 @@ function Block({
 }) {
   const accent =
     tone === "amber"
-      ? "text-amber-300"
+      ? "text-brand-red-300"
       : tone === "signal"
       ? "text-signal-400"
       : "text-steel-300";

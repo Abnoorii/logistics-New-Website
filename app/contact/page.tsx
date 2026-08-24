@@ -50,21 +50,21 @@ export default function ContactPage() {
 
           <div className="lg:col-span-5 space-y-6">
             <Reveal>
-              <div className="rounded-3xl border border-amber-400/30 bg-amber-400/[0.04] p-8">
-                <div className="text-[10px] uppercase tracking-widest text-amber-300">
+              <div className="rounded-3xl border border-brand-red-500/30 bg-brand-red-500/[0.04] p-8">
+                <div className="text-[10px] uppercase tracking-widest text-brand-red-300">
                   What to expect
                 </div>
                 <ul className="mt-6 space-y-4 text-sm text-steel-200">
                   <li className="flex items-start gap-3">
-                    <Clock className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
+                    <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-red-500" />
                     Firm rate within four business hours on standard lanes.
                   </li>
                   <li className="flex items-start gap-3">
-                    <Clock className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
+                    <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-red-500" />
                     Project cargo: engineering-led quote in 1–3 business days.
                   </li>
                   <li className="flex items-start gap-3">
-                    <Clock className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
+                    <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-red-500" />
                     Named account lead on the reply, reachable in your time zone.
                   </li>
                 </ul>
@@ -75,7 +75,7 @@ export default function ContactPage() {
               <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-8">
                 <h3 className="font-display text-xl text-steel-100">Kabul HQ</h3>
                 <div className="mt-6 flex items-start gap-3 text-sm text-steel-200">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-red-300" />
                   <address className="not-italic leading-relaxed">
                     {ADDRESS.street}
                     <br />
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   href={`https://www.google.com/maps/search/?api=1&query=${ADDRESS.lat},${ADDRESS.lon}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex text-xs text-amber-300 underline underline-offset-4 hover:text-amber-200"
+                  className="mt-4 inline-flex text-xs text-brand-red-300 underline underline-offset-4 hover:text-brand-red-200"
                 >
                   Open in maps →
                 </a>
@@ -101,30 +101,30 @@ export default function ContactPage() {
                 <div className="mt-6 space-y-4 text-sm">
                   <a
                     href={CONTACT.sales.phoneHref}
-                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
+                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-brand-red-300"
                   >
-                    <PhoneCall className="h-4 w-4 text-amber-300" />
+                    <PhoneCall className="h-4 w-4 text-brand-red-300" />
                     {CONTACT.sales.phone} · {CONTACT.sales.label}
                   </a>
                   <a
                     href={CONTACT.ops.phoneHref}
-                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
+                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-brand-red-300"
                   >
-                    <PhoneCall className="h-4 w-4 text-amber-300" />
+                    <PhoneCall className="h-4 w-4 text-brand-red-300" />
                     {CONTACT.ops.phone} · {CONTACT.ops.label}
                   </a>
                   <a
                     href={`mailto:${CONTACT.emails.sales}`}
-                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
+                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-brand-red-300"
                   >
-                    <Mail className="h-4 w-4 text-amber-300" />
+                    <Mail className="h-4 w-4 text-brand-red-300" />
                     {CONTACT.emails.sales}
                   </a>
                   <a
                     href={`mailto:${CONTACT.emails.info}`}
-                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
+                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-brand-red-300"
                   >
-                    <Mail className="h-4 w-4 text-amber-300" />
+                    <Mail className="h-4 w-4 text-brand-red-300" />
                     {CONTACT.emails.info}
                   </a>
                 </div>

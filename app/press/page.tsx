@@ -44,7 +44,7 @@ export default function PressPage() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-amber-400 hover:text-amber-300"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
             >
               Media kit
             </Link>
@@ -69,10 +69,10 @@ export default function PressPage() {
                   href={p.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col justify-between gap-4 rounded-3xl border border-white/10 bg-ink-800/60 p-6 backdrop-blur transition-colors hover:border-amber-400/50 md:flex-row md:items-center md:p-8"
+                  className="group flex flex-col justify-between gap-4 rounded-3xl border border-white/10 bg-ink-800/60 p-6 backdrop-blur transition-colors hover:border-brand-red-500/50 md:flex-row md:items-center md:p-8"
                 >
                   <div>
-                    <div className="text-[10px] uppercase tracking-widest text-amber-300">
+                    <div className="text-[10px] uppercase tracking-widest text-brand-red-300">
                       {p.outlet} · {p.date}
                     </div>
                     <h3 className="mt-2 font-display text-xl text-steel-100 md:text-2xl">
@@ -84,7 +84,7 @@ export default function PressPage() {
                       </blockquote>
                     )}
                   </div>
-                  <span className="inline-flex items-center gap-1.5 text-sm text-steel-200 transition-colors group-hover:text-amber-300">
+                  <span className="inline-flex items-center gap-1.5 text-sm text-steel-200 transition-colors group-hover:text-brand-red-300">
                     Read <ArrowUpRight className="h-4 w-4" />
                   </span>
                 </a>
@@ -94,7 +94,7 @@ export default function PressPage() {
         ) : (
           <Reveal>
             <div className="flex flex-col items-center gap-6 rounded-3xl border border-dashed border-white/15 bg-white/[0.02] p-16 text-center">
-              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-amber-400/10 text-amber-300 ring-1 ring-inset ring-amber-400/20">
+              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-red-500/10 text-brand-red-300 ring-1 ring-inset ring-brand-red-500/20">
                 <Newspaper className="h-6 w-6" />
               </div>
               <div className="max-w-md">
@@ -108,9 +108,9 @@ export default function PressPage() {
               </div>
               <a
                 href={`mailto:${CONTACT.emails.info}?subject=Press%20inquiry`}
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm text-steel-100 transition-colors hover:border-amber-400 hover:text-amber-300"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm text-steel-100 transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
               >
-                <Mail className="h-4 w-4 text-amber-300" />
+                <Mail className="h-4 w-4 text-brand-red-300" />
                 {CONTACT.emails.info}
               </a>
             </div>

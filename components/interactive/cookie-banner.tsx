@@ -52,14 +52,14 @@ export function CookieBanner() {
                 We use browser storage to remember your region and skip the
                 intro on repeat visits, plus anonymized Vercel Analytics. No
                 advertising, no cross-site tracking. See our{" "}
-                <Link href="/cookies" className="text-amber-300 underline underline-offset-4 hover:text-amber-200">
+                <Link href="/cookies" className="text-brand-red-300 underline underline-offset-4 hover:text-brand-red-200">
                   cookie policy
                 </Link>.
               </p>
             </div>
             <button
               onClick={dismiss}
-              className="rounded-full bg-amber-400 px-4 py-2 text-xs font-medium text-white transition-colors hover:bg-amber-500"
+              className="rounded-full bg-brand-red-500 px-4 py-2 text-xs font-medium text-white transition-colors hover:bg-brand-red-600"
             >
               Got it
             </button>

@@ -81,16 +81,16 @@ export default function TrackPage() {
                 <div className="mt-6 space-y-4 text-sm">
                   <a
                     href={CONTACT.ops.phoneHref}
-                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
+                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-brand-red-300"
                   >
-                    <PhoneCall className="h-4 w-4 text-amber-300" />
+                    <PhoneCall className="h-4 w-4 text-brand-red-300" />
                     {CONTACT.ops.phone} · {CONTACT.ops.label}
                   </a>
                   <a
                     href={`mailto:${CONTACT.emails.info}`}
-                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-amber-300"
+                    className="flex items-center gap-3 text-steel-100 transition-colors hover:text-brand-red-300"
                   >
-                    <Mail className="h-4 w-4 text-amber-300" />
+                    <Mail className="h-4 w-4 text-brand-red-300" />
                     {CONTACT.emails.info}
                   </a>
                 </div>

@@ -45,7 +45,7 @@ export function Footer() {
 
             <address className="mt-8 space-y-3 not-italic text-sm text-steel-200">
               <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-red-300" />
                 <span>
                   {ADDRESS.street}
                   <br />
@@ -55,16 +55,16 @@ export function Footer() {
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <PhoneCall className="h-4 w-4 shrink-0 text-amber-300" />
-                <a href={CONTACT.sales.phoneHref} className="hover:text-amber-300">
+                <PhoneCall className="h-4 w-4 shrink-0 text-brand-red-300" />
+                <a href={CONTACT.sales.phoneHref} className="hover:text-brand-red-300">
                   {CONTACT.sales.phone}
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="h-4 w-4 shrink-0 text-amber-300" />
+                <Mail className="h-4 w-4 shrink-0 text-brand-red-300" />
                 <a
                   href={`mailto:${CONTACT.emails.info}`}
-                  className="hover:text-amber-300"
+                  className="hover:text-brand-red-300"
                 >
                   {CONTACT.emails.info}
                 </a>
@@ -125,7 +125,7 @@ export function Footer() {
                 key={a.body}
                 className="rounded-xl border border-white/10 bg-white/[0.02] px-3 py-2"
               >
-                <div className="text-xs font-medium text-amber-300">{a.body}</div>
+                <div className="text-xs font-medium text-brand-red-300">{a.body}</div>
                 <div className="mt-0.5 text-[10px] leading-tight text-steel-400">
                   {a.label}
                 </div>
@@ -176,7 +176,7 @@ function FooterLink({
 }) {
   return (
     <li>
-      <Link href={href} className="transition-colors hover:text-amber-300">
+      <Link href={href} className="transition-colors hover:text-brand-red-300">
         {children}
       </Link>
     </li>

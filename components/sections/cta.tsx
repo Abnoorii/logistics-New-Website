@@ -29,13 +29,13 @@ export function CTA() {
           className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-ink-800 via-ink-900 to-ink-950 p-10 md:p-20"
         >
           <div className="bg-grid pointer-events-none absolute inset-0 opacity-40" />
-          <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-amber-400/25 blur-3xl" />
+          <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-brand-red-500/25 blur-3xl" />
 
           <div className="relative grid gap-14 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-8">
               <Reveal>
-                <div className="mb-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400">
-                  <span className="h-1 w-6 bg-amber-400" /> Ready when you are
+                <div className="mb-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-brand-red-500">
+                  <span className="h-1 w-6 bg-brand-red-500" /> Ready when you are
                 </div>
               </Reveal>
               <Reveal>
@@ -60,9 +60,9 @@ export function CTA() {
               </Link>
               <a
                 href={CONTACT.ops.phoneHref}
-                className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-amber-400"
+                className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-brand-red-500"
               >
-                <PhoneCall className="h-4 w-4 text-amber-300" />
+                <PhoneCall className="h-4 w-4 text-brand-red-300" />
                 Talk to ops · {CONTACT.ops.phone}
               </a>
             </div>

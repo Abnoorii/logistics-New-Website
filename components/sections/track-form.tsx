@@ -52,21 +52,21 @@ export function TrackForm() {
 
   return (
     <div>
-      <div className="mb-6 flex items-start gap-3 rounded-2xl border border-amber-400/30 bg-amber-400/[0.05] px-4 py-3 text-sm text-amber-100">
-        <Info className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
+      <div className="mb-6 flex items-start gap-3 rounded-2xl border border-brand-red-500/30 bg-brand-red-500/[0.05] px-4 py-3 text-sm text-brand-red-100">
+        <Info className="mt-0.5 h-4 w-4 shrink-0 text-brand-red-300" />
         <div>
-          <span className="font-medium text-amber-200">Demo mode.</span>{" "}
+          <span className="font-medium text-brand-red-200">Demo mode.</span>{" "}
           The live carrier feed and dispatch integration go live at launch. Try{" "}
-          <span className="font-mono text-amber-200">LAFU-4489327</span> or{" "}
-          <span className="font-mono text-amber-200">demo</span> to preview the
+          <span className="font-mono text-brand-red-200">LAFU-4489327</span> or{" "}
+          <span className="font-mono text-brand-red-200">demo</span> to preview the
           tracking view. Real account holders will use a signed-in dashboard.
         </div>
       </div>
       <form
         onSubmit={submit}
-        className="relative flex items-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur transition-colors focus-within:border-amber-400"
+        className="relative flex items-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur transition-colors focus-within:border-brand-red-500"
       >
-        <PackageSearch className="ml-5 h-5 w-5 text-amber-300" />
+        <PackageSearch className="ml-5 h-5 w-5 text-brand-red-300" />
         <input
           value={ref}
           onChange={(e) => setRef(e.target.value)}
@@ -77,7 +77,7 @@ export function TrackForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="mr-2 inline-flex items-center gap-2 rounded-xl bg-amber-400 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-amber-500 disabled:opacity-60"
+          className="mr-2 inline-flex items-center gap-2 rounded-xl bg-brand-red-500 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-brand-red-600 disabled:opacity-60"
         >
           <Search className="h-4 w-4" />
           {status === "loading" ? "Searching…" : "Track"}
@@ -104,7 +104,7 @@ export function TrackForm() {
                 <div className="font-mono text-xs uppercase tracking-widest text-steel-500">
                   Shipment
                 </div>
-                <div className="mt-1 font-display text-2xl text-amber-300">
+                <div className="mt-1 font-display text-2xl text-brand-red-300">
                   {result.ref}
                 </div>
               </div>
@@ -129,7 +129,7 @@ export function TrackForm() {
                   <span
                     className={
                       m.active
-                        ? "mt-0.5 grid h-8 w-8 place-items-center rounded-full bg-amber-400 text-white"
+                        ? "mt-0.5 grid h-8 w-8 place-items-center rounded-full bg-brand-red-500 text-white"
                         : m.done
                         ? "mt-0.5 grid h-8 w-8 place-items-center rounded-full bg-signal-500/20 text-signal-400"
                         : "mt-0.5 grid h-8 w-8 place-items-center rounded-full border border-white/10 text-steel-500"

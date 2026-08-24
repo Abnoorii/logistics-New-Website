@@ -140,8 +140,8 @@ export default function SustainabilityPage() {
 
       <Section>
         <Reveal>
-          <div className="rounded-2xl border border-amber-400/30 bg-amber-400/[0.04] p-6 text-sm text-amber-100">
-            <span className="font-medium text-amber-200">In progress.</span>{" "}
+          <div className="rounded-2xl border border-brand-red-500/30 bg-brand-red-500/[0.04] p-6 text-sm text-brand-red-100">
+            <span className="font-medium text-brand-red-200">In progress.</span>{" "}
             This page states our direction of travel. Formal reporting, third-
             party verification, and full baselines are being built — this page
             will update quarterly with progress against each commitment.

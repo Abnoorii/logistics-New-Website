@@ -14,8 +14,8 @@ export function Partners() {
         <Reveal>
           <div className="mb-14 flex flex-wrap items-end justify-between gap-6">
             <div>
-              <div className="mb-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400">
-                <span className="h-1 w-6 bg-amber-400" />
+              <div className="mb-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-brand-red-500">
+                <span className="h-1 w-6 bg-brand-red-500" />
                 Carrier network
               </div>
               <h2 className="max-w-2xl font-display text-3xl leading-tight text-steel-100 md:text-4xl">
@@ -79,7 +79,7 @@ function LogoBadge({
   return (
     <div
       title={name}
-      className="flex h-16 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-8 text-steel-300 backdrop-blur transition-all duration-300 hover:border-amber-400/50 hover:text-amber-200"
+      className="flex h-16 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-8 text-steel-300 backdrop-blur transition-all duration-300 hover:border-brand-red-500/50 hover:text-brand-red-200"
     >
       {children}
     </div>

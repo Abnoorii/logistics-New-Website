@@ -33,7 +33,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-grid opacity-40" />
       <motion.div
         style={{ y: blurY }}
-        className="absolute -left-40 top-1/3 h-[520px] w-[520px] rounded-full bg-amber-400/20 blur-[120px]"
+        className="absolute -left-40 top-1/3 h-[520px] w-[520px] rounded-full bg-brand-red-500/20 blur-[120px]"
       />
       <motion.div
         style={{ y: blurY }}
@@ -48,7 +48,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-steel-200 backdrop-blur"
         >
-          <span className="h-1 w-6 bg-amber-400" />
+          <span className="h-1 w-6 bg-brand-red-500" />
           {t("hero.modeStrip")}
         </motion.div>
 
@@ -72,14 +72,14 @@ export function Hero() {
           >
             {t("hero.headlinePart2")}{" "}
             <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-red-300 via-brand-red-500 to-brand-red-600 bg-clip-text text-transparent">
                 {t("hero.headlinePart3")}
               </span>
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute -bottom-2 left-0 h-1 w-full origin-left bg-amber-400/60"
+                className="absolute -bottom-2 left-0 h-1 w-full origin-left bg-brand-red-500/60"
               />
             </span>
           </motion.span>
@@ -107,7 +107,7 @@ export function Hero() {
           </Link>
           <Link
             href="/services"
-            className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm font-medium text-steel-100 backdrop-blur transition-colors hover:border-amber-400 hover:text-amber-300"
+            className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm font-medium text-steel-100 backdrop-blur transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
           >
             {t("hero.secondaryCta")}
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -127,7 +127,7 @@ export function Hero() {
         <div className="absolute inset-0 rounded-full border border-white/10" />
         <div className="absolute inset-16 rounded-full border border-white/10" />
         <div className="absolute inset-32 rounded-full border border-white/10" />
-        <div className="absolute inset-52 rounded-full border border-dashed border-amber-400/40" />
+        <div className="absolute inset-52 rounded-full border border-dashed border-brand-red-500/40" />
         <Orbiter icon={<Plane className="h-4 w-4" />} radius={440} speed={22} />
         <Orbiter icon={<Ship className="h-4 w-4" />} radius={370} speed={30} reverse />
         <Orbiter icon={<Truck className="h-4 w-4" />} radius={300} speed={18} />
@@ -155,7 +155,7 @@ function Orbiter({
       transition={{ duration: speed, repeat: Infinity, ease: "linear" }}
     >
       <div
-        className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-ink-800/80 p-2 text-amber-300 backdrop-blur"
+        className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-ink-800/80 p-2 text-brand-red-300 backdrop-blur"
         style={{ left: "50%", top: 0 }}
       >
         {icon}

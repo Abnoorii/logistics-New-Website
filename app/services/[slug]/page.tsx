@@ -82,7 +82,7 @@ export default async function ServiceDetailPage({
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-amber-400 hover:text-amber-300"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
             >
               All services
             </Link>
@@ -136,8 +136,8 @@ export default async function ServiceDetailPage({
           <div className="lg:col-span-4">
             <Reveal>
               <div className="sticky top-32 space-y-6">
-                <div className="rounded-3xl border border-amber-400/30 bg-amber-400/[0.04] p-6">
-                  <div className="grid h-14 w-14 place-items-center rounded-2xl bg-amber-400/20 text-amber-300">
+                <div className="rounded-3xl border border-brand-red-500/30 bg-brand-red-500/[0.04] p-6">
+                  <div className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-red-500/20 text-brand-red-300">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h4 className="mt-6 font-display text-lg text-steel-100">
@@ -146,7 +146,7 @@ export default async function ServiceDetailPage({
                   <ul className="mt-4 space-y-3 text-sm text-steel-300">
                     {svc.lanes.map((l) => (
                       <li key={l} className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-brand-red-500" />
                         {l}
                       </li>
                     ))}
@@ -179,14 +179,14 @@ export default async function ServiceDetailPage({
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur transition-colors hover:border-amber-400/50"
+                className="group rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur transition-colors hover:border-brand-red-500/50"
               >
-                <div className="mb-6 grid h-12 w-12 place-items-center rounded-xl bg-amber-400/10 text-amber-300 ring-1 ring-inset ring-amber-400/20">
+                <div className="mb-6 grid h-12 w-12 place-items-center rounded-xl bg-brand-red-500/10 text-brand-red-300 ring-1 ring-inset ring-brand-red-500/20">
                   <OtherIcon className="h-5 w-5" />
                 </div>
                 <h3 className="font-display text-xl text-steel-100">{s.title}</h3>
                 <p className="mt-3 text-sm text-steel-300">{s.desc}</p>
-                <div className="mt-5 inline-flex items-center gap-1.5 text-xs text-amber-300">
+                <div className="mt-5 inline-flex items-center gap-1.5 text-xs text-brand-red-300">
                   Explore <ArrowUpRight className="h-3.5 w-3.5" />
                 </div>
               </Link>

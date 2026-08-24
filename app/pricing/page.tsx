@@ -121,7 +121,7 @@ export default function PricingPage() {
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-amber-400 hover:text-amber-300"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-steel-100 backdrop-blur transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
             >
               See services
             </Link>
@@ -169,7 +169,7 @@ export default function PricingPage() {
                   </div>
                   <div className="col-span-2 hidden text-steel-300 md:block">{l.mode}</div>
                   <div className="col-span-3 hidden text-steel-300 md:block">{l.spec}</div>
-                  <div className="col-span-4 text-right font-mono text-amber-300 md:col-span-2 md:text-left">
+                  <div className="col-span-4 text-right font-mono text-brand-red-300 md:col-span-2 md:text-left">
                     {l.rate}
                   </div>
                   <div className="col-span-4 text-right text-steel-300 md:col-span-1">{l.eta}</div>
@@ -212,7 +212,7 @@ export default function PricingPage() {
           {VARIABLES.map((v) => (
             <RevealItem key={v.label}>
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-                <div className="text-sm font-medium text-amber-300">{v.label}</div>
+                <div className="text-sm font-medium text-brand-red-300">{v.label}</div>
                 <div className="mt-2 text-sm leading-relaxed text-steel-300">
                   {v.note}
                 </div>

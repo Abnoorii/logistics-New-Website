@@ -68,7 +68,7 @@ export function TreatedImage({
 
       {/* Amber warm-shadow lift, keeps images cohesive with brand */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink-950/50 mix-blend-multiply" />
-      <div className="pointer-events-none absolute inset-0 bg-amber-400/[0.06] mix-blend-overlay" />
+      <div className="pointer-events-none absolute inset-0 bg-brand-red-500/[0.06] mix-blend-overlay" />
 
       {gridOverlay && (
         <div

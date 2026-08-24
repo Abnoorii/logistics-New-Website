@@ -46,11 +46,12 @@ const VALUES = [
 ];
 
 const TIMELINE = [
-  { year: "2018", note: "Logistics.af founded in Kabul with a single air-freight desk." },
-  { year: "2020", note: "Torkham and Chaman road corridors go live — Pakistan lanes at scale." },
-  { year: "2022", note: "Iran corridors added (Islam Qala) and 3PL warehousing launches in Kabul." },
-  { year: "2024", note: "Central Asia expansion — Uzbekistan, Turkmenistan and Tajikistan corridors named." },
-  { year: "2026", note: "13 trade partner markets, 6 named border corridors, project cargo team established." },
+  { year: "2011", note: "Logistics.af founded in Kabul with a single air-freight desk." },
+  { year: "2014", note: "Torkham and Chaman road corridors go live — Pakistan lanes at scale." },
+  { year: "2017", note: "Iran corridor added (Islam Qala) and 3PL warehousing launches in Kabul." },
+  { year: "2020", note: "Central Asia expansion — Uzbekistan, Turkmenistan and Tajikistan corridors named." },
+  { year: "2023", note: "Project cargo team stands up; air freight scaling out of KBL, DXB, IST, DEL." },
+  { year: "2026", note: "13 trade partner markets, 6 named border corridors, 1000+ shipments delivered." },
 ];
 
 export default function AboutPage() {
@@ -59,7 +60,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Logistics.af"
         title={<>Built by operators. Run for shippers.</>}
-        intro="We started in 2018 with a single air-freight desk in Kabul and a working theory: forwarders overpromise and underexplain. Eight years later, we run 13 named trade lanes into and out of Afghanistan — with a rebook rate our competitors keep asking about."
+        intro="We started in 2011 with a single air-freight desk in Kabul and a working theory: forwarders overpromise and underexplain. Fifteen years and 1000+ shipments later, we run 13 named trade lanes into and out of Afghanistan — with a rebook rate our competitors keep asking about."
       />
 
       <section className="container -mt-4">
@@ -80,8 +81,8 @@ export default function AboutPage() {
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           <div>
             <Reveal>
-              <div className="mb-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400">
-                <span className="h-1 w-6 bg-amber-400" /> The bet
+              <div className="mb-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-brand-red-500">
+                <span className="h-1 w-6 bg-brand-red-500" /> The bet
               </div>
             </Reveal>
             <Reveal>
@@ -101,10 +102,10 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
+            <Stat n={1000} suffix="+" label="Shipments delivered" />
             <Stat n={13} suffix="" label="Trade partner markets" />
-            <Stat n={6} suffix="" label="Named border corridors" />
+            <Stat n={15} suffix="+ yrs" label="Since 2011" />
             <Stat n={5} suffix="" label="Regions served" />
-            <Stat n={8} suffix="+ yrs" label="Since 2018" />
           </div>
         </div>
       </Section>
@@ -142,8 +143,8 @@ export default function AboutPage() {
               />
             </div>
             <div className="flex flex-col justify-center gap-6 md:col-span-2">
-              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400">
-                <span className="h-1 w-6 bg-amber-400" /> The team
+              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-brand-red-500">
+                <span className="h-1 w-6 bg-brand-red-500" /> The team
               </div>
               <h3 className="font-display text-2xl text-steel-100 md:text-3xl">
                 Operators, brokers, drivers and desk leads — across 13 trade partner markets.
@@ -174,13 +175,13 @@ export default function AboutPage() {
                         i % 2 ? "md:ml-14" : "md:mr-14"
                       }`}
                     >
-                      <div className="font-mono text-xs tracking-widest text-amber-400">
+                      <div className="font-mono text-xs tracking-widest text-brand-red-500">
                         {t.year}
                       </div>
                       <div className="mt-2 text-base text-steel-100">{t.note}</div>
                     </div>
                   </div>
-                  <span className="absolute left-4 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-amber-400 ring-4 ring-ink-950 md:left-1/2" />
+                  <span className="absolute left-4 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-brand-red-500 ring-4 ring-ink-950 md:left-1/2" />
                 </div>
               </RevealItem>
             ))}
@@ -197,7 +198,7 @@ export default function AboutPage() {
           {COUNTRIES.map((c) => (
             <div
               key={c.code}
-              className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition-colors hover:border-amber-400/40"
+              className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition-colors hover:border-brand-red-500/40"
             >
               <div className="flex items-center gap-4">
                 <span className="text-2xl">{c.flag}</span>

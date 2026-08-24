@@ -43,7 +43,7 @@ export function BookACall({
             />
           ) : (
             <div className="flex flex-col items-center justify-center gap-4 p-16 text-center">
-              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-amber-400/10 text-amber-300 ring-1 ring-inset ring-amber-400/20">
+              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-red-500/10 text-brand-red-300 ring-1 ring-inset ring-brand-red-500/20">
                 <CalendarClock className="h-6 w-6" />
               </div>
               <h3 className="font-display text-2xl text-steel-100">
@@ -55,7 +55,7 @@ export function BookACall({
               </p>
               <Link
                 href="/contact"
-                className="mt-2 inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-amber-500"
+                className="mt-2 inline-flex items-center gap-2 rounded-full bg-brand-red-500 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-brand-red-600"
               >
                 Send a note <ArrowRight className="h-4 w-4" />
               </Link>

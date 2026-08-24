@@ -71,8 +71,8 @@ export function NewsletterForm() {
             animate={{ opacity: 1 }}
             className="mt-5 flex flex-col gap-2"
           >
-            <div className="flex items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] transition-colors focus-within:border-amber-400">
-              <Mail className="ml-3 h-4 w-4 shrink-0 text-amber-300" />
+            <div className="flex items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] transition-colors focus-within:border-brand-red-500">
+              <Mail className="ml-3 h-4 w-4 shrink-0 text-brand-red-300" />
               <input
                 type="email"
                 required
@@ -89,7 +89,7 @@ export function NewsletterForm() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="mr-1.5 inline-flex items-center gap-1 rounded-lg bg-amber-400 px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-amber-500 disabled:opacity-60"
+                className="mr-1.5 inline-flex items-center gap-1 rounded-lg bg-brand-red-500 px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-brand-red-600 disabled:opacity-60"
               >
                 {status === "sending" ? "…" : "Subscribe"}
                 <ArrowRight className="h-3 w-3" />

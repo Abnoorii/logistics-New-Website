@@ -59,11 +59,11 @@ export function Testimonials() {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-amber-400/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-red-500/10 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-signal-500/10 blur-3xl" />
 
         <div className="relative flex items-start justify-between gap-6">
-          <Quote className="h-10 w-10 shrink-0 text-amber-400/60 md:h-14 md:w-14" />
+          <Quote className="h-10 w-10 shrink-0 text-brand-red-500/60 md:h-14 md:w-14" />
           <div className="hidden font-mono text-xs tracking-widest text-steel-500 md:block">
             {String(i + 1).padStart(2, "0")} /{" "}
             {String(PRINCIPLES.length).padStart(2, "0")}
@@ -83,13 +83,13 @@ export function Testimonials() {
               &ldquo;{current.quote}&rdquo;
             </blockquote>
             <div className="mt-10 flex items-center gap-4">
-              <div className="grid h-12 w-12 place-items-center rounded-full border border-amber-400/40 bg-amber-400/10 text-amber-300">
+              <div className="grid h-12 w-12 place-items-center rounded-full border border-brand-red-500/40 bg-brand-red-500/10 text-brand-red-300">
                 <span className="font-mono text-xs">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
               <div>
-                <div className="text-sm font-medium text-amber-300">
+                <div className="text-sm font-medium text-brand-red-300">
                   {current.category}
                 </div>
                 <div className="text-xs text-steel-400">{current.detail}</div>
@@ -110,7 +110,7 @@ export function Testimonials() {
                 <motion.span
                   animate={{ width: i === idx ? "100%" : "0%" }}
                   transition={{ duration: i === idx ? 6.8 : 0.3, ease: "linear" }}
-                  className="block h-full origin-left rounded-full bg-amber-400"
+                  className="block h-full origin-left rounded-full bg-brand-red-500"
                 />
               </button>
             ))}
@@ -120,14 +120,14 @@ export function Testimonials() {
               onClick={() =>
                 setI((v) => (v - 1 + PRINCIPLES.length) % PRINCIPLES.length)
               }
-              className="rounded-full border border-white/10 bg-white/5 p-3 text-steel-100 transition-colors hover:border-amber-400 hover:text-amber-300"
+              className="rounded-full border border-white/10 bg-white/5 p-3 text-steel-100 transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
               aria-label="Previous"
             >
               <ArrowLeft className="h-4 w-4" />
             </button>
             <button
               onClick={() => setI((v) => (v + 1) % PRINCIPLES.length)}
-              className="rounded-full border border-white/10 bg-white/5 p-3 text-steel-100 transition-colors hover:border-amber-400 hover:text-amber-300"
+              className="rounded-full border border-white/10 bg-white/5 p-3 text-steel-100 transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
               aria-label="Next"
             >
               <ArrowRight className="h-4 w-4" />

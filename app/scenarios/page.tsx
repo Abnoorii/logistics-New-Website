@@ -36,8 +36,8 @@ export default function ScenariosPage() {
       />
 
       <Section>
-        <div className="mb-8 rounded-2xl border border-amber-400/30 bg-amber-400/[0.04] p-5 text-sm text-amber-100">
-          <span className="font-medium text-amber-200">Illustrative.</span>{" "}
+        <div className="mb-8 rounded-2xl border border-brand-red-500/30 bg-brand-red-500/[0.04] p-5 text-sm text-brand-red-100">
+          <span className="font-medium text-brand-red-200">Illustrative.</span>{" "}
           These are representative engagement patterns — details are drawn from
           real work but generalized. Referenceable customer case studies are
           available on request under NDA.
@@ -48,7 +48,7 @@ export default function ScenariosPage() {
             <RevealItem key={s.slug}>
               <Link
                 href={`/scenarios/${s.slug}`}
-                className="group grid gap-8 overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 backdrop-blur transition-colors hover:border-amber-400/50 md:grid-cols-12"
+                className="group grid gap-8 overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 backdrop-blur transition-colors hover:border-brand-red-500/50 md:grid-cols-12"
               >
                 <div className="relative md:col-span-5">
                   <TreatedImage
@@ -59,7 +59,7 @@ export default function ScenariosPage() {
                     bordered={false}
                     className="!rounded-none md:!rounded-none"
                   />
-                  <span className="absolute left-6 top-6 z-10 rounded-full border border-white/15 bg-ink-900/70 px-3 py-1 text-[10px] uppercase tracking-widest text-amber-300 backdrop-blur">
+                  <span className="absolute left-6 top-6 z-10 rounded-full border border-white/15 bg-ink-900/70 px-3 py-1 text-[10px] uppercase tracking-widest text-brand-red-300 backdrop-blur">
                     {s.category}
                   </span>
                 </div>
@@ -80,14 +80,14 @@ export default function ScenariosPage() {
                         <div className="text-[10px] uppercase tracking-widest text-steel-500">
                           {m.label}
                         </div>
-                        <div className="mt-1 font-display text-lg text-amber-300 md:text-xl">
+                        <div className="mt-1 font-display text-lg text-brand-red-300 md:text-xl">
                           {m.value}
                         </div>
                       </div>
                     ))}
                   </div>
 
-                  <div className="inline-flex items-center gap-2 text-sm text-steel-200 transition-colors group-hover:text-amber-300">
+                  <div className="inline-flex items-center gap-2 text-sm text-steel-200 transition-colors group-hover:text-brand-red-300">
                     Read the full pattern <ArrowUpRight className="h-4 w-4" />
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export default function ScenariosPage() {
         title="Are you our next case study?"
         intro="If we've moved cargo for you and you're open to being featured — logo, quote and quantified result — we'd love to publish your story. In return: bespoke assets, cross-linking, and a $500 credit on your next shipment."
       >
-        <div className="rounded-3xl border border-amber-400/30 bg-amber-400/[0.06] p-8 md:p-10">
+        <div className="rounded-3xl border border-brand-red-500/30 bg-brand-red-500/[0.06] p-8 md:p-10">
           <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <h3 className="font-display text-2xl text-steel-100">
@@ -115,7 +115,7 @@ export default function ScenariosPage() {
             </div>
             <a
               href="mailto:info@logistics.af?subject=Case%20study%20nomination"
-              className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-amber-500"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-red-500 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-brand-red-600"
             >
               Volunteer your story
             </a>

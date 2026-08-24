@@ -89,11 +89,11 @@ export function ContactForm() {
           <p className="mt-3 max-w-md text-base text-steel-300">
             You&rsquo;ll hear back from a named ops lead within four business
             hours. If it&rsquo;s urgent, call the sales desk on
-            &nbsp;<a href={CONTACT.sales.phoneHref} className="text-amber-300 underline underline-offset-4">{CONTACT.sales.phone}</a>.
+            &nbsp;<a href={CONTACT.sales.phoneHref} className="text-brand-red-300 underline underline-offset-4">{CONTACT.sales.phone}</a>.
           </p>
           <button
             onClick={() => setStatus("idle")}
-            className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm text-steel-100 transition-colors hover:border-amber-400 hover:text-amber-300"
+            className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm text-steel-100 transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
           >
             Send another
           </button>
@@ -120,7 +120,7 @@ export function ContactForm() {
             </label>
           </div>
           {hydrated && (
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/[0.06] px-3 py-1.5 text-xs text-amber-200">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-red-500/30 bg-brand-red-500/[0.06] px-3 py-1.5 text-xs text-brand-red-200">
               <span className="text-base leading-none">{country.flag}</span>
               Serving from {country.name} · change in the top nav
             </div>
@@ -161,8 +161,8 @@ export function ContactForm() {
                     className={cn(
                       "rounded-full border px-4 py-2 text-sm transition-colors",
                       active
-                        ? "border-amber-400 bg-amber-400/10 text-amber-300"
-                        : "border-white/10 bg-white/[0.03] text-steel-200 hover:border-amber-400/40"
+                        ? "border-brand-red-500 bg-brand-red-500/10 text-brand-red-300"
+                        : "border-white/10 bg-white/[0.03] text-steel-200 hover:border-brand-red-500/40"
                     )}
                   >
                     {s}
@@ -180,7 +180,7 @@ export function ContactForm() {
               name="message"
               rows={5}
               placeholder="Weight, cubic metres, packaging, any temperature or handling constraints. The more you can share, the faster we can quote it."
-              className="mt-2 w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-base text-steel-100 placeholder:text-steel-500 focus:border-amber-400 focus:outline-none"
+              className="mt-2 w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-base text-steel-100 placeholder:text-steel-500 focus:border-brand-red-500 focus:outline-none"
             />
           </div>
 
@@ -197,7 +197,7 @@ export function ContactForm() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-amber-500 disabled:opacity-60"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-red-500 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-brand-red-600 disabled:opacity-60"
             >
               {status === "sending" ? "Sending…" : "Send request"}
               <Send className="h-4 w-4" />
@@ -230,7 +230,7 @@ function Field({
     <label className="block">
       <span className="text-[10px] uppercase tracking-widest text-steel-500">
         {label}
-        {required && <span className="ml-1 text-amber-400">*</span>}
+        {required && <span className="ml-1 text-brand-red-500">*</span>}
       </span>
       <input
         type={type}
@@ -239,7 +239,7 @@ function Field({
         placeholder={placeholder}
         autoComplete={autoComplete}
         defaultValue={defaultValue}
-        className="mt-2 w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-base text-steel-100 placeholder:text-steel-500 focus:border-amber-400 focus:outline-none"
+        className="mt-2 w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-base text-steel-100 placeholder:text-steel-500 focus:border-brand-red-500 focus:outline-none"
       />
     </label>
   );

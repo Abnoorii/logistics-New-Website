@@ -42,13 +42,13 @@ export default function GlobalError({
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <button
               onClick={reset}
-              className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-amber-500"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-red-500 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-brand-red-600"
             >
               <RotateCw className="h-4 w-4" /> Try again
             </button>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm text-steel-100 backdrop-blur transition-colors hover:border-amber-400 hover:text-amber-300"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm text-steel-100 backdrop-blur transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
             >
               Report the error
             </Link>

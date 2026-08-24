@@ -6,10 +6,9 @@ import type { Config } from "tailwindcss";
  * Navy  #16305A — brand primary (structure, calm, trust)
  * Red   #DA262E — brand accent  (motion, action, priority)
  *
- * The `amber` scale is aliased to red hex values so that ~200 existing
- * `amber-*` class references across the codebase resolve to brand red
- * instantly, without churning every className. New code should reach
- * for `brand-red-*` for clarity.
+ * Use `brand-navy-*` for structural surfaces and `brand-red-*` for
+ * accents/CTAs/focus. Backwards-compat amber alias has been fully
+ * removed from className strings.
  */
 const config: Config = {
   darkMode: "class",
@@ -66,16 +65,6 @@ const config: Config = {
           700: "#991616",
           800: "#7f1414",
           900: "#5c0f0f",
-        },
-        // Aliased amber → red so existing amber-* classes recolor without churn
-        amber: {
-          50: "#fef2f2",
-          100: "#fee2e2",
-          200: "#fecaca",
-          300: "#fca5a5",
-          400: "#DA262E", // primary CTA / accent — was #f9ab27
-          500: "#b91c22",
-          600: "#991616",
         },
         // Signal teal (kept, softened) — used for status/on-schedule dots only
         signal: {

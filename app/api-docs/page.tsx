@@ -63,7 +63,7 @@ export default function ApiDocsPage() {
           {CAPABILITIES.map((c) => (
             <RevealItem key={c.title}>
               <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-6 backdrop-blur">
-                <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-amber-400/10 text-amber-300 ring-1 ring-inset ring-amber-400/20">
+                <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-red-500/10 text-brand-red-300 ring-1 ring-inset ring-brand-red-500/20">
                   <c.icon className="h-5 w-5" />
                 </div>
                 <h3 className="font-display text-lg text-steel-100">{c.title}</h3>
@@ -93,8 +93,8 @@ export default function ApiDocsPage() {
 
       <Section>
         <Reveal>
-          <div className="rounded-2xl border border-amber-400/30 bg-amber-400/[0.04] p-6 text-sm text-amber-100">
-            <span className="font-medium text-amber-200">Docs on request.</span>{" "}
+          <div className="rounded-2xl border border-brand-red-500/30 bg-brand-red-500/[0.04] p-6 text-sm text-brand-red-100">
+            <span className="font-medium text-brand-red-200">Docs on request.</span>{" "}
             Public API documentation is being finalised. For access, an
             OpenAPI spec, sandbox credentials and a dedicated integration lead,
             request via the button above.

@@ -21,9 +21,9 @@ control tower: confident, terse, factual. Never salesy.
 | brand-red-400 | `#f87171` | Hover state on red surfaces |
 | signal-500 | `#1ec2ad` | Status pips (on-schedule, subscribed) |
 
-The `amber-*` scale is aliased to red for backwards compatibility across
-existing className strings. New code should reach for `brand-red-*` or
-`brand-navy-*` for clarity.
+Use `brand-red-*` for accents / CTAs / focus, and `brand-navy-*` for
+structural surfaces where the ink scale is too neutral. The legacy
+`amber-*` alias has been retired from all className strings.
 
 Base is deep navy (ink). Brand red is used sparingly — reserve it for the
 one thing you want the user to look at in each viewport. Teal shows up in

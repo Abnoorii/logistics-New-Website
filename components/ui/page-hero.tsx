@@ -22,8 +22,8 @@ export function PageHero({
 
       <div className="container relative">
         <Reveal>
-          <div className="mb-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400">
-            <span className="h-1 w-6 bg-amber-400" />
+          <div className="mb-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-brand-red-500">
+            <span className="h-1 w-6 bg-brand-red-500" />
             {eyebrow}
           </div>
         </Reveal>

@@ -70,8 +70,8 @@ export function TradeNetwork() {
                         className={cn(
                           "inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs transition-all",
                           active === c.code
-                            ? "border-amber-400 bg-amber-400/10 text-amber-200"
-                            : "border-white/10 bg-white/[0.02] text-steel-200 hover:border-amber-400/40"
+                            ? "border-brand-red-500 bg-brand-red-500/10 text-brand-red-200"
+                            : "border-white/10 bg-white/[0.02] text-steel-200 hover:border-brand-red-500/40"
                         )}
                       >
                         <span

@@ -19,10 +19,10 @@ export function LegalShell({
     <>
       <PageHero eyebrow={eyebrow} title={title} intro={`Last updated: ${updated}.`} />
       <Section>
-        <div className="mb-10 flex items-start gap-3 rounded-2xl border border-amber-400/30 bg-amber-400/[0.06] p-5 text-sm text-amber-100">
-          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-300" />
+        <div className="mb-10 flex items-start gap-3 rounded-2xl border border-brand-red-500/30 bg-brand-red-500/[0.06] p-5 text-sm text-brand-red-100">
+          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-brand-red-300" />
           <div>
-            <span className="font-medium text-amber-200">Template — review with counsel before launch.</span>{" "}
+            <span className="font-medium text-brand-red-200">Template — review with counsel before launch.</span>{" "}
             This text is a reasonable starting point but has not been reviewed
             by a lawyer. Adapt to your jurisdiction and the actual data flows
             in your business before publishing to production.
@@ -32,9 +32,9 @@ export function LegalShell({
           {children}
         </div>
         <div className="mt-14 flex flex-wrap gap-6 text-sm text-steel-400">
-          <Link href="/privacy" className="hover:text-amber-300">Privacy</Link>
-          <Link href="/terms" className="hover:text-amber-300">Terms</Link>
-          <Link href="/cookies" className="hover:text-amber-300">Cookies</Link>
+          <Link href="/privacy" className="hover:text-brand-red-300">Privacy</Link>
+          <Link href="/terms" className="hover:text-brand-red-300">Terms</Link>
+          <Link href="/cookies" className="hover:text-brand-red-300">Cookies</Link>
         </div>
       </Section>
     </>

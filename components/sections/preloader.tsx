@@ -72,7 +72,7 @@ export function Preloader() {
             </span>
             <div className="h-px flex-1 bg-white/10">
               <motion.div
-                className="h-full bg-amber-400"
+                className="h-full bg-brand-red-500"
                 animate={{ width: `${progress}%` }}
                 transition={{ ease: "linear", duration: 0.1 }}
               />

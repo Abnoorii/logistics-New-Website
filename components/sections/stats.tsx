@@ -4,9 +4,9 @@ import { Reveal, RevealItem, RevealStagger } from "@/components/interactive/reve
 import { Counter } from "@/components/interactive/counter";
 
 const STATS = [
+  { value: 1000, suffix: "+", label: "Shipments delivered" },
   { value: 13, suffix: "", label: "Trade partner markets" },
-  { value: 6, suffix: "", label: "Named border corridors" },
-  { value: 8, suffix: "+ yrs", label: "Moving cargo since 2018" },
+  { value: 15, suffix: "+ yrs", label: "Moving cargo since 2011" },
   { value: 24, suffix: "/7", label: "Ops desk during active shipments" },
 ];
 
@@ -25,8 +25,8 @@ export function Stats() {
           ))}
         </RevealStagger>
         <Reveal className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-steel-500">
-          <span className="h-px w-8 bg-amber-400/60" />
-          <span>Afghanistan-based since 2018 · 13 named lanes</span>
+          <span className="h-px w-8 bg-brand-red-500/60" />
+          <span>Afghanistan-based since 2011 · 13 named lanes</span>
         </Reveal>
       </div>
     </section>

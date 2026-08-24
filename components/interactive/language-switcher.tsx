@@ -23,9 +23,9 @@ export function LanguageSwitcher() {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-haspopup="listbox"
-        className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-steel-100 transition-colors hover:border-amber-400"
+        className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-steel-100 transition-colors hover:border-brand-red-500"
       >
-        <Languages className="h-4 w-4 text-amber-400" />
+        <Languages className="h-4 w-4 text-brand-red-500" />
         <span dir={current.dir}>{current.label}</span>
       </button>
       <AnimatePresence>
@@ -50,7 +50,7 @@ export function LanguageSwitcher() {
                   className={cn(
                     "flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm transition-colors",
                     locale === l.code
-                      ? "bg-amber-400/10 text-amber-300"
+                      ? "bg-brand-red-500/10 text-brand-red-300"
                       : "text-steel-100 hover:bg-white/5"
                   )}
                 >

@@ -6,18 +6,18 @@ import { forwardRef } from "react";
 import { Magnetic } from "@/components/interactive/magnetic";
 
 const buttonStyles = cva(
-  "relative inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-tight transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/60 disabled:opacity-50 disabled:cursor-not-allowed",
+  "relative inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-tight transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed",
   {
     variants: {
       variant: {
         primary:
-          "bg-amber-400 text-white hover:bg-amber-500 shadow-[0_10px_30px_-10px_rgba(218,38,46,0.6)]",
+          "bg-brand-red-500 text-white hover:bg-brand-red-600 shadow-[0_10px_30px_-10px_rgba(218,38,46,0.6)]",
         secondary:
           "bg-white/5 text-steel-100 hover:bg-white/10 border border-white/10",
         ghost:
-          "text-steel-100 hover:text-amber-300 border border-transparent",
+          "text-steel-100 hover:text-brand-red-300 border border-transparent",
         outline:
-          "text-steel-100 border border-white/15 hover:border-amber-400 hover:text-amber-300",
+          "text-steel-100 border border-white/15 hover:border-brand-red-500 hover:text-brand-red-300",
       },
       size: {
         sm: "h-9 px-4 text-sm",

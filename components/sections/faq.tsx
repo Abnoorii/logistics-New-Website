@@ -113,14 +113,14 @@ function FAQRow({
           <span className="mt-1.5 font-mono text-xs text-steel-500">
             {String(index + 1).padStart(2, "0")}
           </span>
-          <span className="font-display text-lg text-steel-100 transition-colors group-hover:text-amber-300 md:text-xl">
+          <span className="font-display text-lg text-steel-100 transition-colors group-hover:text-brand-red-300 md:text-xl">
             {q}
           </span>
         </div>
         <motion.span
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-1 shrink-0 rounded-full border border-white/15 bg-white/5 p-2 text-steel-200 transition-colors group-hover:border-amber-400 group-hover:text-amber-300"
+          className="mt-1 shrink-0 rounded-full border border-white/15 bg-white/5 p-2 text-steel-200 transition-colors group-hover:border-brand-red-500 group-hover:text-brand-red-300"
         >
           <Plus className="h-4 w-4" />
         </motion.span>

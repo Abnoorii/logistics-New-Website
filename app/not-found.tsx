@@ -9,10 +9,10 @@ export default function NotFound() {
       <div className="noise" />
       <div className="container relative">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="mx-auto mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-400/10 text-amber-300 ring-1 ring-inset ring-amber-400/30">
+          <div className="mx-auto mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-red-500/10 text-brand-red-300 ring-1 ring-inset ring-brand-red-500/30">
             <MapPinOff className="h-7 w-7" />
           </div>
-          <div className="mb-4 font-mono text-xs uppercase tracking-widest text-amber-400">
+          <div className="mb-4 font-mono text-xs uppercase tracking-widest text-brand-red-500">
             404 · Off-route
           </div>
           <h1 className="font-display text-4xl leading-tight text-steel-100 text-balance md:text-6xl">
@@ -25,13 +25,13 @@ export default function NotFound() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-amber-500"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-red-500 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-brand-red-600"
             >
               Back to home <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm text-steel-100 backdrop-blur transition-colors hover:border-amber-400 hover:text-amber-300"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm text-steel-100 backdrop-blur transition-colors hover:border-brand-red-500 hover:text-brand-red-300"
             >
               Talk to ops
             </Link>

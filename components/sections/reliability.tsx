@@ -55,8 +55,8 @@ export function Reliability() {
       <div className="container relative grid gap-14 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
           <Reveal>
-            <div className="mb-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400">
-              <span className="h-1 w-6 bg-amber-400" />
+            <div className="mb-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-brand-red-500">
+              <span className="h-1 w-6 bg-brand-red-500" />
               Reliability
             </div>
           </Reveal>
@@ -111,7 +111,7 @@ export function Reliability() {
               <div className="text-[10px] uppercase tracking-widest text-steel-400">
                 Container
               </div>
-              <div className="mt-1 font-mono text-lg text-amber-300">
+              <div className="mt-1 font-mono text-lg text-brand-red-300">
                 LAFU 4489327 · 40′ HC
               </div>
               <div className="mt-4 flex flex-col gap-2 text-xs text-steel-300">
@@ -131,17 +131,17 @@ export function Reliability() {
                 <div className="text-[10px] uppercase tracking-widest text-steel-400">
                   Dashboard preview
                 </div>
-                <span className="rounded-full bg-amber-400/15 px-1.5 py-0.5 text-[9px] uppercase tracking-widest text-amber-300">
+                <span className="rounded-full bg-brand-red-500/15 px-1.5 py-0.5 text-[9px] uppercase tracking-widest text-brand-red-300">
                   Sample
                 </span>
               </div>
               <div className="mt-1 font-display text-3xl text-steel-100">
-                On-time<span className="text-amber-400">·</span>trend
+                On-time<span className="text-brand-red-500">·</span>trend
               </div>
               <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/5">
                 <motion.div
                   style={{ width: progress }}
-                  className="h-full rounded-full bg-gradient-to-r from-amber-400 to-signal-400"
+                  className="h-full rounded-full bg-gradient-to-r from-brand-red-500 to-signal-400"
                 />
               </div>
               <SparkChart />
@@ -150,7 +150,7 @@ export function Reliability() {
                 <span>W-3</span>
                 <span>W-2</span>
                 <span>W-1</span>
-                <span className="text-amber-300">Now</span>
+                <span className="text-brand-red-300">Now</span>
               </div>
             </motion.div>
 
@@ -224,14 +224,14 @@ function MilestoneDot({
           done
             ? "h-2 w-2 rounded-full bg-signal-400"
             : active
-            ? "h-2 w-2 rounded-full bg-amber-400 shadow-[0_0_0_4px_rgba(218,38,46,0.15)]"
+            ? "h-2 w-2 rounded-full bg-brand-red-500 shadow-[0_0_0_4px_rgba(218,38,46,0.15)]"
             : "h-2 w-2 rounded-full border border-white/20"
         }
       />
       <span
         className={
           active
-            ? "text-amber-200"
+            ? "text-brand-red-200"
             : done
             ? "text-steel-100"
             : "text-steel-500"
