@@ -1,10 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { Marquee } from "@/components/interactive/marquee";
 import { Reveal } from "@/components/interactive/reveal";
 import {
   AIRLINE_LOGOS,
-  SHIPPING_LOGOS,
+  type PartnerLogo,
 } from "@/components/interactive/partner-logos";
 
 export function Partners() {
@@ -23,7 +24,7 @@ export function Partners() {
               </h2>
             </div>
             <p className="max-w-sm text-sm text-steel-400">
-              Direct commercial relationships across sea and air freight —
+              Direct commercial relationships across regional air freight —
               because good rates only matter if there&apos;s space.
             </p>
           </div>
@@ -32,26 +33,11 @@ export function Partners() {
         <div className="space-y-8">
           <LabelRow label="Air freight partners" />
           <Marquee>
-            {AIRLINE_LOGOS.map(({ name, Logo }) => (
-              <LogoBadge key={name} name={name}>
-                <Logo />
-              </LogoBadge>
-            ))}
-          </Marquee>
-
-          <LabelRow label="Ocean freight partners" />
-          <Marquee speed="slow" reverse>
-            {SHIPPING_LOGOS.map(({ name, Logo }) => (
-              <LogoBadge key={name} name={name}>
-                <Logo />
-              </LogoBadge>
+            {AIRLINE_LOGOS.map((logo) => (
+              <LogoBadge key={logo.name} logo={logo} />
             ))}
           </Marquee>
         </div>
-
-        <p className="mt-10 text-center text-[10px] uppercase tracking-widest text-steel-600">
-          Stylized wordmarks · replace with licensed brand assets when available
-        </p>
       </div>
     </section>
   );
@@ -69,19 +55,19 @@ function LabelRow({ label }: { label: string }) {
   );
 }
 
-function LogoBadge({
-  name,
-  children,
-}: {
-  name: string;
-  children: React.ReactNode;
-}) {
+function LogoBadge({ logo }: { logo: PartnerLogo }) {
   return (
     <div
-      title={name}
-      className="flex h-16 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-8 text-steel-300 backdrop-blur transition-all duration-300 hover:border-brand-red-500/50 hover:text-brand-red-200"
+      title={logo.name}
+      className="flex h-20 w-[180px] shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 backdrop-blur transition-all duration-300 hover:border-brand-red-500/50 hover:bg-white/[0.05]"
     >
-      {children}
+      <Image
+        src={logo.src}
+        alt={logo.name}
+        width={logo.width}
+        height={logo.height}
+        className="h-10 w-auto max-w-full object-contain opacity-90 transition-opacity duration-300 hover:opacity-100"
+      />
     </div>
   );
 }
